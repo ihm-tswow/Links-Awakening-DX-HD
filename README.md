@@ -7,7 +7,6 @@ This is an **unaffiliated fork** off [Link's Awakening DX HD](https://linksawake
 - (Very) Basic knowledge of C# and Visual Studio
 - [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
     - Make sure to select `.NET desktop development` components in the visual studio installer.
-    ![image](https://gist.github.com/assets/76849026/0d14d0fc-66f3-4d74-9f3a-f9597ad580d8)
 
 ## Build Instructions
 
