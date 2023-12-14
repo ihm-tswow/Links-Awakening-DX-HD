@@ -1,0 +1,5 @@
+1
+enemies.png
+idle;;5;0;2;2;267;289;131;30;28;1;1;0;0;0;0;False;False;267;256;130;32;30;0;0;0;0;0;0;False;False
+attack;idle;0;0;0;1;1000;224;128;32;32;0;0;0;0;0;0;False;False
+pre_attack;attack;0;0;2;1;267;256;130;32;30;0;0;0;0;0;0;False;False

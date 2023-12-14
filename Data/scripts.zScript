@@ -1,0 +1,1822 @@
+// test scripts
+test_sequence:0 -> [start_sequence:towerCollapse]
+
+test_dialog:0 -> [dialog:choice:npc_lost_boy_0:choice_Nope:choice_Cant]
+test_dialog_1:0 -> [dialog:choice:npc_hippo_0:choice_Nope:choice_Cant]
+test_dialog_2:0 -> [dialog:choice:npc_hippo_0:choice_Nope:choice_Cant:choice_Cant]
+test_dialog_3:0 -> [dialog:choice:npc_hippo_0:choice_Nope:choice_Cant:choice_Nope:choice_Cant]
+
+test_sign_0:0 -> [music:53:1] -> [stop_music:3000:1]
+test_sign_1:0 -> npc_tracy_8
+
+
+// overworld
+overworld:0 -> [set:dungeon_1:0] -> [set:dungeon_2:0] -> [set:dungeon_3:0] -> [set:dungeon_4:0] -> [set:dungeon_5:0] -> [set:dungeon_6:0] -> [set:dungeon_7:0] -> [set:dungeon_8:0] -> [set:crystal_hard:0] -> [set:pondReset:0] -> [set:rabbit_0Jump:533] -> [set:rabbit_1Jump:533] -> [set:rabbit_3Jump:533] -> [path:overworldMusic]
+
+// before the sword is collected the overworld music is changed
+overworldMusic:introMusic:1 -> [music:28:1]
+overworldMusic:0 ->
+
+// before the sword is collected the house music is changed
+houseMusic:introMusic:1 -> [music:28:1]
+houseMusic:0 ->
+
+bowWowHouse:villageAttacked:1 -> [set:npc09Jump:1125] -> [set:npc09Range:128] -> [music:13:2]
+bowWowHouse:0 ->
+
+ocarina:0 -> ocarina
+
+// dungeon intro text
+dungeon_1:0 -> dungeon_1 -> [set:1]
+dungeon_1:1 ->
+
+dungeon_2:0 -> dungeon_2 -> [set:1]
+dungeon_2:1 ->
+
+dungeon_3:0 -> dungeon_3 -> [set:1]
+dungeon_3:1 ->
+
+dungeon_4:0 -> dungeon_4 -> [set:1]
+dungeon_4:1 ->
+
+dungeon_5:0 -> dungeon_5 -> [set:1]
+dungeon_5:1 ->
+
+dungeon_6:0 -> dungeon_6 -> [set:1]
+dungeon_6:1 ->
+
+dungeon_7:0 -> dungeon_7 -> [set:1]
+dungeon_7:1 ->
+
+dungeon_8:0 -> dungeon_8 -> [set:1]
+dungeon_8:1 ->
+
+// maria in the house
+marin_intro:0 -> maria_0_0 -> [set:maria:1] -> [set:tarin:0] -> [set:introMusic:1]
+
+maria:1 -> maria_0_1
+
+// maria standing outside and singing
+// tarin is missing
+marin_start_singing:0 -> [wait:dialogOpen:0] -> [set:maria_sing:1]
+marin_start_singing_animals:0 -> [wait:dialogOpen:0] -> [set:maria_sing_animals:1]
+
+maria:2 -> maria_1_0 -> [path:marin_start_singing]
+maria:1_1 -> maria_1_1 -> [path:marin_start_singing]
+// tarin sleeping
+maria:1_2 -> maria_1_2 -> [path:marin_start_singing]
+
+maria:4 -> maria_1_8 -> [set:3]
+
+maria:marin_thanks:1 -> marin_5_0 -> [set:marin_thanks:]
+
+// tarin is back -> sing
+maria:maria_state:1 -> [check_item:ocarina_maria:1:learned_song] -> [path:maria_learned_song]
+// in the right village
+maria:maria_state:4 -> [check_item:ocarina_maria:1:learned_song] -> [path:maria_learned_song_2]
+
+maria:maria_state:6 -> [check_item:ocarina_maria:1:learned_song] -> [path:maria_learned_song_3]
+
+// coming out of the dungeon
+marin_dungeon_leave:marin_dungeon_hearts:1 -> marin_dungeon_hearts
+marin_dungeon_leave:marin_dungeon_hearts:2 -> marin_dungeon_hearts_alt
+marin_dungeon_leave:marin_dungeon_time:1 -> marin_dungeon_leave_time
+marin_dungeon_leave:0 -> marin_dungeon_leave
+
+// digging while marin is following the player
+dig_dialog:maria_state:3 -> [countdown:100] -> marin_digging
+dig_dialog:0 ->
+
+break_pot:maria_state:3 -> [path:marin_break_pot_dungeon]
+break_pot:0 ->
+// dont show the message in the dungeon when marin is not following the player
+marin_break_pot_dungeon:maria_dungeon:0 -> [path:marin_break_pot]
+marin_break_pot_dungeon:maria_dungeon:1 ->
+marin_break_pot:0 -> [countdown:275] -> marin_pot_0 -> [set:1]
+marin_break_pot:1 -> [countdown:275] -> marin_pot_1
+
+// hitting a bird
+bird_hit:maria_state:3 -> [path:bird_hit_marin]
+bird_hit:0 ->
+
+bird_hit_marin:0 -> marin_cucco_0 -> [set:1]
+bird_hit_marin:1 -> marin_cucco_1
+
+// marin in the mountains
+marin_help:0 -> [update_objects] -> marin_4_0 -> marin_4_1
+marin_saved:0 -> [save_history:true] -> [set:link_direction:2] -> [freeze:250] -> marin_4_2 -> marin_4_3 -> marin_4_4 -> [set:seq_tarin:1] -> [set:seqTarinFade:-125] -> [set:seqTarinMove:72,0,1] -> [freeze:seqTarinMoving:0] -> [set:seqTarinAnimation:stand_1] -> [set:maria_play_animation:stand_3] -> marin_4_5 -> [freeze:600] -> [set:link_direction:3] -> marin_4_6 -> [freeze:600] -> [set:maria_play_animation:stand_0] -> [set:seqTarinAnimation:-] -> [set:seqTarinMove:-72,0,0.5] -> [set:maria_walk:0,14,0.5] -> [freeze:1] -> [set:maria_walk:-14,0,0.5] -> [freeze:marinMoving:0] -> [set:maria_play_animation:stand_1] -> [freeze:1000] -> [set:seqTarinFade:125] -> [freeze:500] -> [set:maria_walk:-64,0,0.75] -> [freeze:1000] -> [set:maria_fade:125] -> [set:seq_tarin:0] -> [set:marin_thanks:1] -> [set:owl:8_0] -> [save_history:false]
+
+npc08:0 -> npc08_0
+npc08:1 -> npc08_1
+
+// lost boy on the mountain
+npc_lost_boy:0 -> [check_item:trade6:1:has_item] -> [path:npc_lost_boy_item]
+npc_lost_boy:1 -> npc_lost_boy_4
+
+npc_lost_boy_item:has_item:0 -> [dialog:choice:npc_lost_boy_0:choice_Nope:choice_Cant] -> [path:npc_lost_boy_choice_0]
+npc_lost_boy_item:has_item:1 -> [dialog:choice:npc_lost_boy_0:choice_Yes:choice_Nope] -> [path:npc_lost_boy_choice_1]
+// do not have the item so we cant trade it
+npc_lost_boy_choice_0:choice:0 -> npc_lost_boy_1
+npc_lost_boy_choice_0:choice:1 -> npc_lost_boy_1
+
+// trading sequence
+npc_lost_boy_choice_1:choice:0 -> [save_history:true] -> [remove_item:trade6:1:result] -> npc_lost_boy_2 -> [wait:dialogOpen:0] -> [music_speed:1.5] -> [set:npc_lost_boy_eat:1] -> [freeze:3300] -> [music_speed:1] -> npc_lost_boy_3 -> [wait:dialogOpen:0] -> [add_item:trade7:1] -> [set:ow_npc_bag:0] -> [set:npc_lost_boy_state:2] -> [set:npc08:1] -> [set:npc07:0] -> [set:npc_lost_boy:1] -> [save_history:false]
+npc_lost_boy_choice_1:choice:1 -> npc_lost_boy_1
+
+// not learned song -> check ocarina || learned song -> just sing
+maria_learned_song:learned_song:0 -> [check_item:ocarina:1:has_ocarina] -> [path:marin_singing]
+maria_learned_song:learned_song:1 -> maria_1_1 -> [path:marin_start_singing]
+// no ocarina -> sing for herself || ocarina -> teach song
+marin_singing:has_ocarina:0 -> maria_1_1 -> [path:marin_start_singing]
+marin_singing:has_ocarina:1 -> maria_1_3 -> [wait:dialogOpen:0] -> [freeze:350] -> [set:maria_start_duo:1]
+
+maria_learned_song_3:learned_song:0 -> [check_item:ocarina:1:has_ocarina] -> [path:marin_singing]
+maria_learned_song_3:learned_song:1 -> [path:marin_learned_song]
+// learned the song after getting saved
+marin_learned_song:0 -> maria_1_8 -> [set:1]
+marin_learned_song:1 -> marin_5_1
+
+maria_learned_song_2:learned_song:0 -> [check_item:ocarina:1:has_ocarina] -> [path:marin_singing_2]
+maria_learned_song_2:learned_song:1 -> maria_1_9 -> [path:marin_start_singing_animals]
+marin_singing_2:has_ocarina:0 -> maria_1_9 -> [path:marin_start_singing_animals]
+marin_singing_2:has_ocarina:1 -> maria_1_3 -> [wait:dialogOpen:0] -> [freeze:350] -> [set:maria_start_duo:1]
+
+marin_singing_end:0 -> [dialog:choice:maria_1_4:choice_Yes:choice_No] -> [path:maria_song_repeat]
+
+// get the song || replay the song
+maria_song_repeat:choice:0 -> [set:maria:4] -> [add_item:ocarina_maria:1]
+maria_song_repeat:choice:1 -> maria_1_6 -> [wait:dialogOpen:0] -> [freeze:350] -> [set:maria_start_duo:1]
+
+// maria at the beach
+maria:6 -> [dialog:choice:marin_2_0:choice_Yes!:choice_No...] -> [path:maria_beach_choice]
+maria_beach_choice:choice:0 -> [set:maria:7] -> [start_sequence:marinBeach]
+maria_beach_choice:choice:1 -> marin_2_1
+
+maria:7 ->
+
+ocarina_bad:maria_state:3 -> ocarina_bad_marin
+ocarina_bad:0 -> ocarina_bad
+
+// rooster wake up dialog
+rooster:0 -> [save_history:true] -> [set:chicken_dude:1] -> [set:has_rooster:1] -> [set:ulrira_d7:2] -> [freeze:1000] -> rooster_0 -> [save_history:false]
+
+// ghost grave powder dialog
+ghost_grave_powder_dialog:has_ghost:0 -> [set:ghost_grave_powder:0]
+ghost_grave_powder_dialog:0 -> ghost_grave_powder -> [set:ghost_grave_powder:0]
+
+// ghost
+ghost_start_following:0 -> [set:has_ghost:1] -> [set:ghost_blockade:1] -> [set:ulrira_ghost:1]
+
+ghost_return:0 -> [cooldown:60000:result] -> [path:ghost_return_cooldown]
+ghost_return:1 ->
+ghost_return_cooldown:result:0 ->
+ghost_return_cooldown:result:1 -> [sound:D360-45-2D] -> [path:ghost_return_dialog]
+ghost_return_dialog:0 -> ghost_0
+ghost_return_dialog:1 -> ghost_5
+
+// go in dialog
+ghost_house_dialog:0 -> [path:ghost_house_dialog_check]
+ghost_house_dialog:1 -> 
+ghost_house_dialog_check:has_ghost:0 ->
+ghost_house_dialog_check:has_ghost:1 -> [cooldown:60000:result] -> [path:ghost_house_dialog_cooldown]
+ghost_house_dialog_cooldown:result:0 ->
+ghost_house_dialog_cooldown:result:1 -> ghost_2
+
+// house sequence
+ghost_house_sequence:has_ghost:0 ->
+ghost_house_sequence:has_ghost:1 -> [path:ghost_house_seq]
+ghost_house_seq:0 -> [save_history:true] -> [set:1] -> [set:ghost_return_dialog:1] -> [set:ghost_house_dialog:1] -> [set:ghost_move:0,-56,0.5] -> [freeze:2500] -> [set:ghost_move:-21,-10,0.5] -> [freeze:2000] -> [set:ghost_move:-10,-21,0.5] -> [freeze:1700] -> [set:ghost_move:53,13,0.5] -> [freeze:3100] -> ghost_3 -> [set:ghost_move:-20,50,0.5] -> [freeze:1750] -> ghost_4 -> [set:ghost_follow:1] -> [wait:dialogOpen:0] -> [set:link_move:0,1] -> [set:lock_player:1000] -> [save_history:false]
+ghost_house_seq:1 ->
+
+// grave sequence
+ghost_grave_sequence:has_ghost:0 ->
+ghost_grave_sequence:has_ghost:1 -> [update_objects] -> [save_history:true] -> [set:ghost_blockade:0] -> [set:ghost_return:1] -> [set:ghost_shell:1] -> [freeze:2000] -> ghost_6 -> [wait:dialogOpen:0] -> [set:ghost_fade:175] -> [freeze:500] -> [remove_item:ghost:1:result] -> [set:has_ghost:0] -> [set:ulrira_ghost:0] -> [set:owl:5_0] -> [save_history:false]
+
+
+// beach sequence
+seq_beach:0 -> [save_history:true] -> [music:77:2] -> [countdown:2000] -> [set:1] -> [path:seq_beach]
+seq_beach:1 -> marin_2_2 -> [wait:dialogOpen:0] -> [seq_play:marin:ocean_look] -> [countdown:3300] -> marin_2_3 -> [wait:dialogOpen:0] -> [seq_play:marin:ocean_look] -> [countdown:4000] -> [seq_play:marin:ocean_ask] -> [dialog:choice:marin_2_4:choice_Yeah:choice_No...] -> [path:maria_beach_listening]
+maria_beach_listening:choice:0 -> marin_2_6 -> [set:seq_beach:2] -> [wait:dialogOpen:0] -> [seq_play:marin:ocean_sit] -> [countdown:750] -> [path:seq_beach]
+maria_beach_listening:choice:1 -> marin_2_5 -> [set:seq_beach:1] -> [wait:dialogOpen:0] -> [seq_play:marin:ocean_sit] -> [countdown:750] -> [path:seq_beach]
+seq_beach:2 -> [seq_play:marin:ocean_ask] -> marin_2_7 -> [wait:dialogOpen:0] -> [countdown:1000] -> [close_overlay] -> [music:-1:2] -> [set:maria:7] -> [set:maria_state:3] -> [add_item:marin:1] -> [set:has_marin:1] -> [save_history:false]
+
+// block walking into dungeons when the ghost is following the player
+ghost_blockade:0 ->
+ghost_blockade:1 -> ghost_1
+
+
+// waking up the walrus
+walrus:has_marin:0 -> [update_objects] -> walrus_0
+walrus:has_marin:1 -> [update_objects] -> [dialog:choice:maria_3_0:choice_Yes:choice_No...] -> [path:walrus_choice]
+walrus_choice:choice:0 -> [path:walrus_sequence]
+walrus_choice:choice:1 -> marin_3_1
+walrus_sequence:0 -> [update_objects] -> [save_history:true] -> [set:maria_sing_walrus:1] -> [set:walrus_despawn:1] -> [set:walrus_dance:1] -> [freeze:16000] -> [set:maria_stop_singing:1] -> [set:maria_play_animation:stand_2] -> [set:link_direction:2] -> [freeze:750] -> [set:maria_play_animation:stand_3] -> [set:link_direction:3] -> maria_3_2 -> [wait:dialogOpen:0] -> [freeze:500] -> [set:seq_rabit:1] -> [set:seqRabitFade:-100] -> [set:seqRabitMove:96,0,0.75] -> [freeze:1000] -> [set:maria_play_animation:stand_0] -> [set:link_direction:0] -> [freeze:1500] -> [set:seqRabitJump:1000] -> [freeze:500] -> maria_3_3 -> [freeze:50] -> [wait:dialogOpen:0] -> [set:maria_play_animation:stand_2] -> [freeze:50] -> maria_3_4 -> [wait:dialogOpen:0] -> [set:seqRabitMove:-128,0,1.25] -> [freeze:250] -> [set:maria_walk:-128,0,0.75] -> [freeze:750] -> [set:seqRabitFade:100] -> [freeze:750] -> [set:maria_fade:100] -> [freeze:100] -> [remove_item:marin:1:result] -> [set:has_marin:0] -> [set:maria_state:4] -> [set:seq_rabit:0] -> [set:hide_rabbit_0:1] -> [set:hide_rabbit_1:1] -> [set:hide_rabbit_2:1] -> [set:hide_rabbit_3:1] -> [set:npc_chef:2] -> [set:npc_boy_0:2] -> [set:npc_boy_1:3] -> [set:npc_boy_2:1] -> [set:npc_boy_ball_left:2] -> [set:npc_boy_ball_right:2] -> [set:tarin:7] -> [set:tarin_state:6] -> [save_history:false]
+
+walrus_swim:0 -> [update_objects] -> walrus_1
+
+// show a different message when marin is following the player
+npc_house_chest:has_marin:1 -> npc_house_chest_marin
+npc_house_chest:0 -> npc_house_chest
+
+bookcase:has_marin:1 -> npc_house_chest_marin
+bookcase:0 -> bookcase
+
+// tarin house
+// can not look into the chest while tarin is around awake
+tarin_chest:tarin_state:0 -> tarin_chest
+tarin_chest:tarin_state:3 -> tarin_chest
+tarin_chest:0 -> [path:npc_house_chest]
+
+// tarin
+tarin:0 -> tarin_0 -> [add_item:shield:1] -> [set:1]
+tarin:1 -> tarin_1
+
+// tarin is in the woods
+// raccoon sequence
+raccoon:0 -> raccoon_0
+// warning message shown before the teleport point
+raccoon_warning:0 -> [update_objects] -> raccoon_1 -> [set:raccoon_warning:1]
+raccoon_warning:1 ->
+
+raccoon_transformed:0 -> tarin_raccoon_2 -> [set:1] -> [set:tarin:2] -> [set:tarin_state:2] -> [set:maria:1_2] -> [set:raccoon_warning:]
+tarin_healed:0 -> tarin_raccoon_3
+
+// tarin sleeping
+tarin:2 -> tarin_2
+tarin:3 -> tarin_3
+// banana
+tarin:4 -> tarin_4
+
+// collecting the stick => tarin stands next to the tree after the stick is collected
+trade4:0 -> trade4 -> [set:tarin:5] -> [set:tarin_state:4]
+
+// tarin trading sequence
+tarin:5 -> [dialog:choice:tarin_stick:choice_Can:choice_Cant] -> [path:tarin_stick]
+tarin_stick:choice:0 -> [save_history:true] -> [remove_item:trade4:1:result] -> [set:tarinAnimation:show] -> [set:tarinStickAnimation:show] -> [music:-1:-1] -> [sound:D360-01-01] -> [freeze:1800] -> [set:tarinAnimation:walk_0] -> [set:tarinStickAnimation:walk_0] -> [set:tarinMove:-3,-18,0.75] -> [freeze:225] -> [set:link_direction:1] -> [freeze:tarinMoving:0] -> [set:tarinAnimation:stick_down] -> [set:tarinStickAnimation:stick_down] -> [freeze:50] -> [music:51:2] -> [freeze:500] -> [set:tarinAnimation:stick_up] -> [set:tarinStickAnimation:stick_up] -> [freeze:550] -> [set:honeycombHit:1] -> [set:tarinAnimation:stick_down] -> [set:tarinStickAnimation:stick_down] -> [freeze:550] -> [set:honeycombReset:1] -> [set:tarinAnimation:stick_up] -> [set:tarinStickAnimation:stick_up] -> [freeze:550] -> [set:honeycombHit:1] -> [set:tarinAnimation:stick_down] -> [set:tarinStickAnimation:stick_down] -> [freeze:550] -> [set:honeycombReset:1] -> [set:tarinAnimation:stick_up] -> [set:tarinStickAnimation:stick_up] -> [freeze:550] -> [set:tarinAnimation:-] -> [set:tarinStickAnimation:] -> [set:tarinJump:1.75,-0.125] -> [freeze:550] -> [path:bee_chase] -> [save_history:false]
+tarin_stick:choice:1 -> tarin_stick_no
+
+// bee chase
+bee_chase:0 -> [save_history:true] -> [set:honeycombAttack:1] -> [set:tarinMove:22,0,2] -> [freeze:0] -> [set:beeTargetMove:56,6,2.5] -> [freeze:1] -> [set:tarinMove:0,-44,2] -> [set:beeTargetMove:0,-44,2] -> [freeze:1] -> [set:tarinMove:-80,0,2] -> [set:beeTargetMove:-80,0,2] -> [freeze:1] -> [set:tarinMove:0,80,2] -> [set:beeTargetMove:0,80,2] -> [freeze:1] -> [set:tarinMove:80,0,2] -> [set:beeTargetMove:80,0,2] -> [freeze:1] -> [set:tarinMove:0,-80,2] -> [set:beeTargetMove:0,-80,2] -> [freeze:1] -> [set:tarinMove:-80,0,2] -> [set:beeTargetMove:-80,0,2] -> [freeze:1] -> [set:tarinMove:0,80,2] -> [set:beeTargetMove:0,80,2] -> [freeze:1] -> [set:tarinMove:80,0,2] -> [set:beeTargetMove:80,0,2] -> [freeze:1] -> [set:tarinMove:0,-80,2] -> [set:beeTargetMove:0,-80,2] -> [freeze:1] -> [set:tarinMove:-80,0,2] -> [set:beeTargetMove:-80,0,2] -> [freeze:1] -> [set:tarinMove:-50,25,2.5] -> [set:beeTargetMove:-50,25,2.25] -> [freeze:tarinMoving:0] -> [set:tarinMove:-50,25,2.5] -> [set:beeTargetMove:-50,25,2.25] -> [set:tarinFade:125] -> [freeze:100]  -> [set:honeycombFade:125] -> [freeze:400] -> [set:honeycombFall:1] -> [set:ow_honeycomb_fallen:1] -> [set:tarin:6] -> [set:tarin_state:5] -> [countdown:1500] -> [music:-1:2] -> [save_history:false]
+
+// tarin sleeping after the trading sequence
+tarin:6 -> tarin_5
+
+shield_intro:0 -> shield_intro -> [set:1]
+shield_intro:1 ->
+
+sword1Collected:0 -> [update_objects] -> [save_history:true] -> sword1 -> [countdown:750] -> [music:-1:1] -> [music:-1:2] -> [stop_music] -> [set:introMusic:0] -> [wait:dialogOpen:0] -> [music:48:0] -> [save_history:false]
+sword2Collected:0 -> [sound:D368-16-10] -> sword2 -> [set:hasSword2:1]
+
+heartMeterFilled:0 -> heartMeterFilled -> [sound:D360-25-19]
+
+heartMeterFull:0 -> [music:-1:2]
+
+maria_collected:0 -> [music:-1:-1] -> maria_collected -> [wait:dialogOpen:0] -> [music:48:0]
+
+goldLeaf:0 -> goldLeaf -> [set:1]
+goldLeaf:1 -> goldLeaf -> [set:2]
+goldLeaf:2 -> goldLeaf -> [set:3]
+goldLeaf:3 -> goldLeaf -> [set:4]
+goldLeaf:4 -> goldLeafLast
+
+// don't show any message?
+door_smallkey:0 ->
+
+toadstool_check:0 -> [check_item:toadstool:1:has_toadstool] -> [check_item:powder:1:has_powder]
+
+toadstool_hole:0 -> [freeze:550] -> toadstool_hole
+
+// only show the message when at least 60 seconds have passed and the player does not have a stonelifter
+stone:0 -> [check_item:stonelifter:1:has_stonelifter] -> [check_item:stonelifter2:1:has_stonelifter2] -> [cooldown:600000:result] -> [path:stone_cooldown]
+stone_cooldown:result:0 ->
+stone_cooldown:result:1 -> [path:stone_message]
+stone_message:has_stonelifter:1 ->
+stone_message:has_stonelifter2:1 ->
+stone_message:0 -> stone
+
+ice_block:0 -> [cooldown:600000:result] -> [path:ice_block_cooldown]
+ice_block_cooldown:result:0 ->
+ice_block_cooldown:result:1 -> ice_block_message
+
+rock_cracks:0 -> [cooldown:600000:result] -> [path:rock_cracks_cooldown]
+rock_cracks_cooldown:result:0 ->
+rock_cracks_cooldown:result:1 -> rock_cracks_message
+
+// Ulrira
+// show an init message one time
+npc04:0 -> npc04 -> npc04_game
+
+phone:0 -> phone_1 -> [set:1]
+
+// green boy next to the game house
+npc_boy_0:grandma_gone_dialog:1 -> npc_boy_grandmother
+npc_boy_0:maria_state:3 -> npc_boy_marin_following
+npc_boy_0:0 -> [path:npc05_help]
+npc_boy_0:1 -> npc_boy_island
+npc_boy_0:2 -> npc_boy_marin_gone
+
+// village
+npc_boy_1:grandma_gone_dialog:1 -> npc_boy_grandmother
+npc_boy_1:maria_state:3 -> npc_boy_marin_following
+npc_boy_1:0 -> [path:npc05_help]
+npc_boy_1:1 -> npc_boy_marin
+npc_boy_1:2 -> npc_boy_shrine
+npc_boy_1:3 -> npc_boy_marin_gone
+
+// boy next to the rooster statue
+npc_boy_2:grandma_gone_dialog:1 -> npc_boy_grandmother
+npc_boy_2:maria_state:3 -> npc_boy_marin_following
+npc_boy_2:0 -> npc_boy_marin_beach
+npc_boy_2:1 -> npc_boy_marin_gone
+npc_boy_2:2 -> npc_boy_island
+
+// boys playing ball
+npc_boy_ball_left:grandma_gone_dialog:1 -> npc_boy_grandmother
+npc_boy_ball_left:maria_state:3 -> npc_boy_marin_following
+npc_boy_ball_left:0 -> [path:npc05_help]
+npc_boy_ball_left:1 -> npc_ball_left
+npc_boy_ball_left:2 -> npc_boy_marin_gone
+
+npc_boy_ball_right:grandma_gone_dialog:1 -> npc_boy_grandmother
+npc_boy_ball_right:maria_state:3 -> npc_boy_marin_following
+npc_boy_ball_right:0 -> [path:npc05_help]
+npc_boy_ball_right:1 -> npc_ball_right
+npc_boy_ball_right:2 -> npc_boy_marin_gone
+
+// attacked ball boys
+npc_kid_attacked:0 -> [update_objects] -> npc_kid_attacked
+
+npc05_help:0 -> npc05_1 -> [set:1]
+npc05_help:1 -> npc05_2 -> [set:2]
+npc05_help:2 -> npc05_3 -> [set:0]
+//npc05_help:3 -> npc05_3 -> [set:0]
+
+// Family house
+// husband lost in the mountains
+npc07:1 -> npc07_5
+npc07:trade0:0 -> [check_item:trade0:1:result] -> [path:npc07_traded]
+npc07:trade0:1 -> npc07_0
+
+npc07_traded:result:0 -> npc07_0 -> npc07_1
+npc07_traded:result:1 -> [dialog:choice:npc07_2:choice_Yes:choice_No] -> [path:npc07_trade]
+
+npc07_trade:choice:0 -> npc07_4 -> [save_history:true] -> [remove_item:trade0:1:result] -> [add_item:trade1:1] -> [set:trade0:1] -> trade0 -> [save_history:false]
+npc07_trade:choice:1 -> npc07_3
+
+// girl in the bowwow house
+// BowWow is missing
+npc09:bowWow:1 -> npc09_1
+// give BowWow back
+npc09:bowWow:3 -> npc09_3 -> [wait:dialogOpen:0] -> [set:bowWow:4] -> [set:has_bowWow:0] -> [set:ulrira:3_1] -> [fill_hearts]
+// player has bowwow and not finished the second dungeon
+npc09:has_bowWow:1 -> npc09_2
+
+npc09:0 -> npc09_0
+
+bowWow2:0 -> bowWow2
+
+npc12:0 -> npc10_0
+
+npc_chef:maria_state:3 -> [set:npc_chefAnimation:left] -> npc_chef_marin -> [wait:dialogOpen:0] -> [set:npc_chefAnimation:idle]
+
+npc_chef:0 -> [set:npc_chefAnimation:left] -> [check_item:trade5:1:result] -> [path:npc_chef_item]
+npc_chef:1 -> [set:npc_chefAnimation:left] -> npc_chef_4 -> [wait:dialogOpen:0] -> [set:npc_chefAnimation:idle]
+npc_chef:2 -> [set:npc_chefAnimation:left] -> npc_chef_0 -> [wait:dialogOpen:0] -> [set:npc_chefAnimation:idle]
+
+npc_chef_item:result:0 -> npc_chef_1 -> [wait:dialogOpen:0] -> [set:npc_chefAnimation:idle]
+npc_chef_item:result:1 -> [dialog:choice:npc_chef_2:choice_Yes:choice_No] -> [path:npc_chef_trade]
+
+npc_chef_trade:choice:0 -> [save_history:true] -> [remove_item:trade5:1:result] -> [add_item:trade6:1] -> [sound:D368-16-10] -> [set:npc_chef:1] -> [set:pineapple_gone:1] -> [set:npc_chefAnimation:idle] -> [save_history:false]
+npc_chef_trade:choice:1 -> npc_chef_3 -> [wait:dialogOpen:0] -> [set:npc_chefAnimation:idle]
+
+// marin at the beach; boy getting lost in the mountains
+trade6Collected:0 -> [save_history:true] -> trade6 -> [wait:player_shows_item:0] -> [freeze:250] -> npc_chef_4 -> [set:maria_state:2] -> [set:maria:6] -> [set:npc_lost_boy_state:1] -> [set:ow_npc_bag:1] -> [set:npc07:1] -> [set:spawned_npc_boy_2:1] -> [save_history:false]
+
+// small bowwow
+bowWow3:0 -> bowWow3_0 -> [check_item:trade1:1:result] -> [path:bowWow3_trade]
+bowWow3_trade:result:1 -> [dialog:choice:bowWow3_1:choice_Yes:choice_No!] -> [path:bowWow3_traded]
+bowWow3_trade:result:0 -> 
+
+bowWow3_traded:choice:0 -> [sound:D370-24-18] -> bowWow3_3 -> [save_history:true] -> [remove_item:trade1:1:result] -> [set:trade1:1] -> [add_item:trade2:1] -> trade1 -> [save_history:false]
+bowWow3_traded:choice:1 -> [sound:D370-24-18] -> bowWow3_2
+
+bowWow_dig:0 -> [cooldown:5000:result] -> [path:bowWow_dig_cooldown]
+bowWow_dig_cooldown:result:0 ->
+bowWow_dig_cooldown:result:1 -> bowWow_dig
+
+// fisherman
+npc_fisherman:0 -> npc_fisherman_0 -> [dialog:choice:npc_fisherman_choice:choice_Fish:choice_Not_Now] -> [path:npc_fisherman_choice]
+npc_fisherman_choice:choice:0 -> [check_item:ruby:10:result] -> [path:npc_fisherman_money]
+npc_fisherman_choice:choice:1 -> npc_fisherman_1
+
+npc_fisherman_money:result:0 -> npc_fisherman_2
+npc_fisherman_money:result:1 -> [remove_item:ruby:10:result] -> npc_fisherman_3 -> [set:enterPond:yes]
+
+// fisherman under the bridge
+npc_bridge:0 -> [set:npc_bridgeAnimation:look] -> [check_item:trade10:1:result] -> [path:npc_bridge_trade]
+npc_bridge:1 -> [path:npc_bridge_trade_finished]
+
+npc_bridge_trade:result:0 -> [path:npc_bridge_trade_finished]
+npc_bridge_trade:result:1 -> [dialog:choice:npc_bridge_1:choice_Okay:choice_No] -> [path:npc_bridge_choice]
+
+npc_bridge_choice:choice:0 -> [save_history:true] -> [remove_item:trade10:1:result] -> npc_bridge_3 -> [freeze:dialogOpen:0] -> [music_speed:1.75] -> [set:npc_bridgeAnimation:look] -> [set:npc_bridgeAnimation:idle] -> [freeze:800] -> [set:npc_bridgeAnimation:down] -> [freeze:200] -> [set:npc_bridgeAnimation:idle] -> [freeze:300] -> [set:npc_bridgeAnimation:down] -> [freeze:100] -> [set:npc_bridgeAnimation:idle] -> [freeze:400] -> [set:npc_bridgeAnimation:down] -> [freeze:100] -> [set:npc_bridgeAnimation:idle] -> [freeze:300] -> [set:npc_bridgeAnimation:down] -> [freeze:150] -> [set:npc_bridgeAnimation:idle] -> [freeze:150] -> [set:npc_bridgeAnimation:pull] -> [freeze:800] -> [set:npc_bridgeAnimation:pull_look] -> npc_bridge_4 -> [wait:dialogOpen:0] -> [set:npc_bridgeAnimation:pull] -> [freeze:500] -> [set:npc_bridgeAnimation:idle] -> [music_speed:1.0] -> [set:spawn_necklace:1] -> [freeze:1000] -> [set:npc_bridge:1] -> [save_history:false]
+npc_bridge_choice:choice:1 -> [set:npc_bridgeAnimation:look] -> npc_bridge_2
+
+// already traded?
+npc_bridge_trade_finished:bridge_photo:0 -> [path:photo_sequence_bridge]
+npc_bridge_trade_finished:0 -> npc_bridge_5
+
+trade11:0 -> [set:npc_bridgeAnimation:look] -> trade11 -> [wait:dialogOpen:0] -> [freeze:500]
+
+// letter boy over the forest
+npc_letter_boy:0 -> [check_item:trade8:1:result] -> [path:npc_letter_boy_item]
+npc_letter_boy:1 -> npc_letter_boy_4 -> [set:2]
+npc_letter_boy:2 -> npc_letter_boy_5
+
+npc_letter_boy_item:result:0 -> npc_letter_boy_0
+npc_letter_boy_item:result:1 -> npc_letter_boy_1 -> [wait:dialogOpen:0] -> [start_sequence:picture]
+
+close_picture:0 -> [freeze:250] -> [dialog:choice:npc_letter_boy_2:choice_Fine:choice_No...] -> [path:npc_letter_boy_choice]
+
+npc_letter_boy_choice:choice:0 -> [save_history:true] -> [remove_item:trade8:1:result] -> [add_item:trade9:1] -> [set:ulrira_wife:1] -> [set:npc_letter_boy:1] -> [set:missing_broom:1] -> [path:grandma_gone_check]
+npc_letter_boy_choice:choice:1 -> [path:npc_letter_boy_please]
+
+grandma_gone_check:npc_grandmother_moved:0 -> [set:grandma_gone_dialog:0] -> [save_history:false]
+grandma_gone_check:npc_grandmother_moved:1 -> [check_item:trade9:1:result] -> [path:grandma_gone_check_broom]
+grandma_gone_check_broom:result:0 -> [set:grandma_gone_dialog:0] -> [save_history:false]
+grandma_gone_check_broom:result:1 -> [set:grandma_gone_dialog:1] -> [save_history:false]
+
+npc_letter_boy_please:0 -> [dialog:choice:npc_letter_boy_3:choice_Fine:choice_No_Way] -> [path:npc_letter_boy_choice]
+
+// mermaid in the water
+npc_mermaid_dive:0 -> [freeze:250] -> npc_mermaid_1 -> [wait:dialogOpen:0] -> [freeze:100] -> [set:npc_mermaid_dive:1] -> [freeze:350]
+
+npc_mermaid:0 -> [check_item:trade11:1:result] -> [path:npc_mermaid_item]
+npc_mermaid:1 -> npc_mermaid_5
+
+npc_mermaid_item:result:0 -> npc_mermaid_0
+npc_mermaid_item:result:1 -> [dialog:choice:npc_mermaid_2:choice_Give:choice_Keep] -> [path:npc_mermaid_choice]
+
+npc_mermaid_choice:choice:0 -> [save_history:true] -> [remove_item:trade11:1:result] -> [set:link_dive:1500] -> [freeze:750] -> npc_mermaid_3 -> [freeze:750] -> [freeze:500] -> [add_item:trade12:1] -> [set:npc_painter:1] -> [set:mermaid_state:1] -> [set:npc_mermaid:1] -> [save_history:false]
+npc_mermaid_choice:choice:1 -> npc_mermaid_4
+
+// would look better if there would be a little pause where the player is not holding the item
+trade12:0 -> trade12 -> [wait:dialogOpen:0] -> [set:npc_mermaid_leave:1] -> [set:npc_mermaid_gone:1]
+
+trade13:0 -> trade13 -> [set:npc_painter:2]
+
+// woman with the broom
+npc_grandmother:villageAttacked:1 -> npc_broom_bowwow
+// init state
+npc_grandmother:missing_broom:0 -> npc_broom_0
+
+// missing broom
+npc_grandmother:missing_broom:1 -> [path:npc_broom]
+npc_broom:0 -> [check_item:trade9:1:result] -> [path:npc_broom_check_item]
+npc_broom_check_item:result:0 -> npc_broom_1
+npc_broom_check_item:result:1 -> [dialog:choice:npc_broom_2:choice_Yes:choice_No] -> [path:npc_broom_choice]
+
+npc_broom_choice:choice:0 -> [save_history:true] -> [sound:D360-01-01] -> [remove_item:trade9:1:result] -> [set:grandma_gone_dialog:0] -> [set:show_broom:1] -> [freeze:2200] -> [set:show_broom:0] -> [set:missing_broom:2] -> [freeze:500] -> npc_broom_3 -> [add_item:trade10:1] -> [set:ulrira_wife:0] -> [save_history:false]
+npc_broom_choice:choice:1 -> npc_broom_5
+
+// got the broom back
+npc_grandmother:missing_broom:2 -> npc_broom_4
+
+
+// letter girl in the right town
+npc_letter_girl:0 -> [check_item:trade7:1:result] -> [path:npc_letter_girl_trade]
+npc_letter_girl:1 -> npc_letter_girl_4
+
+npc_letter_girl_trade:result:0 -> npc_letter_girl_0
+npc_letter_girl_trade:result:1 -> [dialog:choice:npc_letter_girl_1:choice_Yes:choice_No] -> [path:npc_letter_girl_choice]
+npc_letter_girl_choice:choice:0 -> npc_letter_girl_2 -> [save_history:true] -> [wait:dialogOpen:0] -> [remove_item:trade7:1:result] -> [add_item:trade8:1] -> [set:npc_letter_girl:1] -> [set:flower_traded:1] -> [save_history:false]
+npc_letter_girl_choice:choice:1 -> npc_letter_girl_3
+
+
+// raft ride
+npc_raft:raft_active:0 -> [dialog:choice:npc_raft_0:choice_Yes:choice_No_Way] -> [path:npc_raft_choice]
+npc_raft:raft_active:1 -> npc_raft_1
+
+npc_raft_choice:choice:0 -> [remove_item:ruby:100:removedMoney] -> [path:npc_raft_money]
+npc_raft_choice:choice:1 ->
+
+npc_raft_money:removedMoney:0 -> npc_raft_2
+npc_raft_money:removedMoney:1 -> npc_raft_1 -> [set:raft_active:1]
+
+// boy from the castle with the frogs
+// do not talk to player when he walks in with bowwow
+npc_frog_boy:has_bowWow:1 -> npc_frog_body_bowwow
+
+npc_frog_boy:0 -> [dialog:choice:npc_frog_boy_0:choice_Okay:choice_No_Way] -> [set:1] -> [set:ulrira_banana:1] -> [path:npc_frog_boy_choice]
+
+npc_frog_boy_choice:choice:0 -> npc_frog_body_impressed
+npc_frog_boy_choice:choice:1 -> npc_frog_body_coward
+
+npc_frog_boy:1 -> [save_history:true] -> [remove_item:goldLeaf:5:result] -> [path:npc_frog_boy_leafs]
+npc_frog_boy:2 -> [path:npc_frog_boy_finished]
+
+npc_frog_boy_finished:frogHouseMovedStone:0 -> npc_frog_body_bien
+npc_frog_boy_finished:frogHouseMovedStone:1 -> npc_frog_body_debt
+
+npc_frog_boy_leafs:result:0 -> npc_frog_body_please -> [save_history:false]
+npc_frog_boy_leafs:result:1 -> npc_frog_body_bien -> [set:npc_frog_boy:2] -> [set:npc_frog_boyMove:-16,0,0.5] -> [set:npc_frog_house:1] -> [set:ulrira_leafs:0] -> [set:ulrira:shovel] -> [save_history:false]
+
+// instantly move to the target position
+npc_frog_house:0 ->
+npc_frog_house:1 -> [set:npc_frog_boyMove:-16,0,32]
+
+ow_castle_bush_sound:0 -> [sound:D360-02-02] -> [set:1]
+ow_castle_bush_sound:1 ->
+
+castle_boss_door_sound:0 -> [sound:D360-02-02] -> [set:1]
+castle_boss_door_sound:1 ->
+
+castle_boss_door_open:0 -> [sound:D360-02-02] -> [set:1]
+castle_boss_door_open:1 ->
+
+// fishing game
+fish_big:0 -> npc_fisherman_6 -> [add_item:ruby:20] -> [dialog:choice:npc_fisherman_6_1:choice_Cast:choice_Not_Now] -> [path:fishing_replay]
+fish_small:0 -> npc_fisherman_7 -> [add_item:ruby:5] -> [dialog:choice:npc_fisherman_7_1:choice_Okay:choice_No] -> [path:fishing_replay]
+fish_big_heart:0 -> [sound:D360-01-01] -> [set:pondHeart:1] -> [set:pondReset:1] -> [add_item:heartMeterSilent:1] -> [add_item:ruby:20] -> [check_item:heartMeter:1:result] -> [path:fish_heart_full]
+
+// different dialog depending on if the piece fills out a complete heart or not
+fish_heart_full:result:1 -> npc_fisherman_8 -> [dialog:choice:npc_fisherman_8_1:choice_Yes:choice_No] -> [path:fishing_replay]
+fish_heart_full:result:0 -> npc_fisherman_8_full -> [dialog:choice:npc_fisherman_8_1:choice_Yes:choice_No] -> [path:fishing_replay]
+
+fishing_replay:choice:0 -> [check_item:ruby:10:money] -> [path:fishing_replay_money]
+fishing_replay:choice:1 -> [set:leavePond:yes]
+
+fishing_replay_money:money:0 -> npc_fisherman_2 -> [set:leavePond:yes]
+fishing_replay_money:money:1 -> [path:fishing_replay_pond]
+
+fishing_replay_pond:emptyPond:0 -> [remove_item:ruby:10:result] -> npc_fisherman_3
+fishing_replay_pond:emptyPond:1 -> [path:fish_empty_pound]
+
+fish_empty_pound:0 -> npc_fisherman_9 -> [dialog:choice:npc_fisherman_9_1:choice_Okay:choice_No] -> [path:fish_empty_pound_choice]
+fish_empty_pound_choice:0 -> npc_fisherman_10 -> [set:leavePond:yes]
+fish_empty_pound_choice:1 -> npc_fisherman_1 -> [set:leavePond:yes]
+
+fishing_empty:0 -> [dialog:choice:npc_fisherman_4:choice_Cast:choice_Not_Now] -> [path:fishing_replay]
+fishing_loss:0 -> [dialog:choice:npc_fisherman_5:choice_Cast:choice_Not_Now] -> [path:fishing_replay]
+
+// npc
+alligator:trade2:0 -> [update_objects] -> [check_item:trade2:1:result] -> [path:alligator_trade]
+alligator:trade2:1 -> [update_objects] -> [path:alligator_postTrade]
+
+// in the original game the new line is given when the player reenters the house
+// not so sure if this is better but currently there is no way to do this in the engine
+alligator_postTrade:alligator_thanks:0 -> [update_objects] -> alligator_6 -> [set:alligator_thanks:1]
+alligator_postTrade:alligator_thanks:1 -> [update_objects] -> alligator_7
+
+alligator_trade:result:1 -> [update_objects] -> alligator_1 -> [dialog:choice:alligator_2:choice_Give:choice_Dont] -> [path:alligator_traded]
+alligator_trade:result:0 -> [update_objects] -> alligator_0
+
+alligator_traded:choice:0 -> [update_objects] -> alligator_4 -> [wait:dialogOpen:0] -> [set:alligator_eat:eat]
+alligator_traded:choice:1 -> [update_objects] -> alligator_3
+
+alligator_after_eat:0 -> [update_objects] -> [save_history:true] -> alligator_5 -> [remove_item:trade2:1:result] -> [add_item:trade3:1] -> trade2 -> [set:trade2:1] -> [set:tarin:gone] -> [save_history:false]
+
+
+npc11:0 -> [path:npc05]
+
+// shop
+shopkeeper:holdItem:0 -> [update_objects] -> shopkeeper_0
+shopkeeper:holdItem:1 -> [path:shopkeeper_buy]
+
+shopkeeper_buy:itemShopItem:bow -> [update_objects] -> [dialog:choice:itemShop_bow:itemShop_buy:itemShop_no_way] -> [path:itemShop]
+shopkeeper_buy:itemShopItem:arrow -> [update_objects] -> [dialog:choice:itemShop_arrow:itemShop_buy:itemShop_dont] -> [path:itemShop]
+shopkeeper_buy:itemShopItem:shovel -> [update_objects] -> [dialog:choice:itemShop_shovel:itemShop_buy:itemShop_no_way!] -> [path:itemShop]
+shopkeeper_buy:itemShopItem:heart -> [update_objects] -> [dialog:choice:itemShop_hearts:itemShop_buy:itemShop_dont] -> [path:itemShop]
+shopkeeper_buy:itemShopItem:shield -> [update_objects] -> [dialog:choice:itemShop_shield:itemShop_buy:itemShop_dont] -> [path:itemShop]
+shopkeeper_buy:itemShopItem:bomb -> [update_objects] -> [dialog:choice:itemShop_bomb:itemShop_buy:itemShop_dont] -> [path:itemShop]
+shopkeeper_buy:0 -> [update_objects] -> [dialog:choice:itemShop_dialog:itemShop_buy:itemShop_dont] -> [path:itemShop]
+
+shopkeeper_try_steal:0 -> shopkeeper_4
+shopkeeper_steal:0 -> shopkeeper_5 -> [path:stealing_photo]
+// unlock the photo if link already talked to the photo mouse
+stealing_photo:photo_1:0 ->
+stealing_photo:photo_1:1 -> [set:photo_7:1] -> [path:photo_count_increase]
+
+itemShop:choice:0 -> [buy:result] -> [path:itemBuy]
+itemShop:choice:1 -> [set:result:1] -> [set:holdItem:0]
+
+itemBuy:result:0 -> [update_objects] -> shopkeeper_1 -> [wait:dialogOpen:0] -> [set:holdItem:0]
+itemBuy:result:1 -> [update_objects] -> shopkeeper_2 -> [wait:dialogOpen:0] -> [set:holdItem:0]
+itemBuy:result:2 -> [update_objects] -> shopkeeper_3 -> [wait:dialogOpen:0] -> [set:holdItem:0]
+
+itemBuy_steal:0 -> itemShop_steal
+
+itemShop_revenge:0 -> [update_objects] -> [music:24:2] -> itemShop_revenge
+
+// set shopItem0 variable
+check_item0:npc_hidden:1 -> [check_item:bow:0:has_bow] -> [path:check_bow]
+check_item0:0 -> [check_item:shovel:1:has_shovel] -> [path:check_shovel]
+
+check_shovel:has_shovel:0 -> [set:shopItem0:0]
+check_shovel:has_shovel:1 -> [check_item:bow:0:has_bow] -> [path:check_bow]
+
+check_bow:has_bow:0 -> [set:shopItem0:1]
+check_bow:has_bow:1 -> [set:shopItem0:2]
+
+// -- candy trendy --
+npc_trendy:trendy_closed:1 -> npc_trendy_closed
+
+npc_trendy:0 -> [path:npc_trand_init_0]
+// play again dialog
+npc_trendy:1 -> [path:npc_trand_init_1]
+
+npc_trand_init_0:can_play:0 -> [dialog:choice:npc_trendy_open:npc_trendy_play:npc_trendy_no_play] -> [path:npc_trendy_choice]
+npc_trand_init_0:can_play:1 -> npc_trendy_start
+
+npc_trand_init_1:can_play:0 -> [dialog:choice:npc_trendy_again:npc_trendy_play:npc_trendy_no_play] -> [path:npc_trendy_choice]
+npc_trand_init_1:can_play:1 -> npc_trendy_start
+
+// check if the player has enought cash
+npc_trendy_choice:choice:0 -> [check_item:ruby:10:result] -> [path:npc_trendy_money]
+npc_trendy_choice:choice:1 ->
+
+npc_trendy_money:result:0 -> npc_trendy_no_cash
+npc_trendy_money:result:1 -> [path:npc_trendy_start_game]
+
+npc_trendy_start_game:npc_trendy:1 -> npc_trendy_good_luck -> [set:can_play:1] -> [set:trendy_button_1:1] -> [remove_item:ruby:10:result]
+npc_trendy_start_game:0 -> npc_trendy_start -> [set:npc_trendy:1] -> [set:can_play:1] -> [set:trendy_button_1:1] -> [remove_item:ruby:10:result]
+
+// marin playing the game
+trendy_marin:0 -> [update_objects] -> [path:trendy_marin_check]
+trendy_marin:1 ->
+
+trendy_marin_check:has_marin:0 ->
+trendy_marin_check:has_marin:1 -> [update_objects] -> [save_history:true] -> [set:trendy_marin:1] -> [dialog:choice:maria_game_0:choice_Okay:choice_No_Way] -> [path:trendy_marin_choice]
+
+trendy_marin_choice:choice:0 -> [path:trendy_marin_start]
+trendy_marin_choice:choice:1 -> [update_objects] -> [dialog:choice:maria_game_1:choice_Yes:choice_Okay] -> [path:trendy_marin_start]
+
+trendy_marin_start:0 -> [update_objects] -> npc_trendy_start -> [wait:dialogOpen:0] -> [set:trendy_button_1:1] -> [set:maria_walk:40,106,0.5,] -> [freeze:500] -> [set:link_direction:0] -> [freeze:marinMoving:0] -> [set:maria_play_animation:stand_1] -> [freeze:1000] -> [set:trendy_marin_game:1] -> [freeze:3000] -> [set:link_direction:1] -> [freeze:8600] -> [set:link_direction:2] -> [freeze:8500] -> [set:link_direction:1] -> [freeze:2500] -> [set:link_direction:0]
+
+trendy_marin_end:0 -> [update_objects] -> maria_game_2 -> [wait:dialogOpen:0] -> [map_transition:overworld.map:s2] -> [save_history:false]
+
+// bat
+// first choice does not matter
+npcBat:0 -> [dialog:choice:npcBat_Intro:choice_Yes:choice_N-No] -> [path:npcBatPowder]
+
+npcBatPowder:upgradePowder:0 -> [dialog:choice:npcBat_Powder:choice_Yes:choice_N-No] -> [path:npcBatPowderChoice]
+npcBatPowder:upgradePowder:1 -> [path:npcBatBomb]
+npcBatPowderChoice:choice:0 -> [set:npcBatThunder:1] -> [freeze:3300] -> [set:upgradePowder:1] -> [add_item_amount:powder:40] -> [set:npcBatThunder:0] -> [freeze:100] -> npcBat_End -> [save_hitory:false]
+npcBatPowderChoice:choice:1 -> [path:npcBatBomb]
+
+npcBatBomb:upgradeBomb:0 -> [dialog:choice:npcBat_Bombs:choice_Yes:choice_N-No] -> [path:npcBatBombChoice]
+npcBatBomb:upgradeBomb:1 -> [path:npcBatArrow]
+npcBatBombChoice:choice:0 -> [set:npcBatThunder:1] -> [freeze:3300] -> [set:upgradeBomb:1] -> [add_item_amount:bomb:60] -> [set:npcBatThunder:0] -> [freeze:100] -> npcBat_End -> [save_hitory:false]
+npcBatBombChoice:choice:1 -> [path:npcBatArrow]
+
+npcBatArrow:upgradeBow:0 -> [dialog:choice:npcBat_Arrows:choice_Yes:choice_N-No] -> [path:npcBatArrowChoice]
+npcBatArrow:upgradeBow:1 -> [path:npcBatPowder]
+npcBatArrowChoice:choice:0 -> [set:npcBatThunder:1] -> [freeze:3300] -> [set:upgradeBow:1] -> [add_item_amount:bow:60] -> [set:npcBatThunder:0] -> [freeze:100] -> npcBat_End -> [save_hitory:false]
+npcBatArrowChoice:choice:1 -> [path:npcBatPowder]
+
+// Library
+book1:0 -> book1_0 -> [dialog:choice:book:book_yes:book_no] -> [path:cbook1]
+cbook1:choice:0 -> [set:book1_open:1] -> book1_1 -> [wait:dialogOpen:0] -> [set:book1_open:0]
+cbook1:choice:1 ->
+
+book2:0 -> book2_0 -> [dialog:choice:book:book_yes:book_no] -> [path:cbook2]
+cbook2:choice:0 -> [set:book2_open:1] -> book2_1 -> [wait:dialogOpen:0] -> [set:book2_open:0]
+cbook2:choice:1 ->
+
+book3:0 -> book3_0 -> [dialog:choice:book:book_yes:book_no] -> [path:cbook3]
+cbook3:choice:0 -> [set:book3_open:1] -> book3_1 -> [wait:dialogOpen:0] -> [set:book3_open:0]
+cbook3:choice:1 ->
+
+book4:0 -> book4_0 -> [dialog:choice:book:book_yes:book_no] -> [path:cbook4]
+cbook4:choice:0 -> [set:book4_open:1] -> book4_1 -> [wait:dialogOpen:0] -> [set:book4_open:0]
+cbook4:choice:1 ->
+
+book5:0 -> book5_0 -> [dialog:choice:book:book_yes:book_no] -> [path:cbook5]
+cbook5:choice:0 -> [set:book5_open:1] -> book5_1 -> [wait:dialogOpen:0] -> [set:book5_open:0]
+cbook5:choice:1 ->
+
+book6:0 -> book6_0 -> [dialog:choice:book:book_yes:book_no] -> [path:cbook6]
+cbook6:choice:0 -> [set:book6_open:1] -> book6_1 -> [wait:dialogOpen:0] -> [set:book6_open:0]
+cbook6:choice:1 ->
+
+book7:0 -> book7_0 -> [dialog:choice:book7_1:book_look:book_dont] -> [path:cbook7]
+cbook7:choice:0 -> [set:book7_open:1] -> [freeze:250] -> [start_sequence:map] -> [freeze:250] -> [wait:dialogOpen:0] -> [set:book7_open:0]
+cbook7:choice:1 ->
+
+book8:0 -> book8_0 -> [dialog:choice:book_realy_read:choice_YES:choice_NO] -> [path:cbook8]
+cbook8:choice:0 -> [set:book8_open:1] -> [check_item:trade13:1:result] -> [path:cbook8_item]
+cbook8:choice:1 ->
+// check if the player has the glasses
+cbook8_item:result:0 -> book8_1 -> [wait:dialogOpen:0] -> [set:book8_open:0]
+cbook8_item:result:1 -> [path:cbook8_open]
+
+cbook8_open:eggDirections:0 -> book8_2 -> [wait:dialogOpen:0] -> [set:book8_open:0]
+cbook8_open:eggDirections:1 -> book8_3 -> [wait:dialogOpen:0] -> [set:book8_open:0]
+cbook8_open:eggDirections:2 -> book8_4 -> [wait:dialogOpen:0] -> [set:book8_open:0]
+cbook8_open:eggDirections:3 -> book8_5 -> [wait:dialogOpen:0] -> [set:book8_open:0]
+
+book9:0 -> [dialog:choice:book_read:book_yes:book_no] -> [path:cbook9]
+cbook9:choice:0 -> [set:book9_open:1] -> book9_1 -> [wait:dialogOpen:0] -> [set:book9_open:0]
+cbook9:choice:1 ->
+
+photo_book:0 -> [dialog:choice:photo_book:choice_Look:choice_Dont] -> [path:photo_book_choice]
+photo_book_choice:choice:0 -> [open_book]
+photo_book_choice:choice:1 ->
+
+
+// == ulrira ==
+// init dialog only shown one time
+ulrira:0 -> ulrira_0 -> [set:ulrira:1]
+
+// player already has the banana?
+ulrira:ulrira_banana:1 -> [check_item:trade3:1:result] -> [path:ulrira_banana]
+ulrira_banana:result:0 -> ulrira_3_2
+ulrira_banana:result:1 -> ulrira_3_1
+
+// two different tips for finding the golden leafs
+ulrira:ulrira_leafs:1 -> [check_item:goldLeaf:5:result] -> [path:ulrira_leafs_check]
+// all leafs collected => show other message
+ulrira_leafs_check:result:0 -> [path:ulrira_leaf_tip]
+ulrira_leafs_check:result:1 -> ulrira_shovel
+
+// go through 3 different tips
+ulrira_leaf_tip:0 -> [set:1] -> ulrira_leaf_0
+ulrira_leaf_tip:1 -> [set:2] -> ulrira_leaf_1
+ulrira_leaf_tip:2 -> [set:0] -> ulrira_leaf_2
+
+ulrira:ulrira_ghost:1 -> ulrira_ghost
+ulrira:ulrira_wife:1 -> ulrira_wife
+
+ulrira:ulrira_d3:1 -> ulrira_3_3
+
+ulrira:ulrira_d4:1 -> ulrira_4_0
+ulrira:ulrira_d4:2 -> ulrira_4_1
+
+ulrira:ulrira_d5:1 -> ulrira_5_0
+
+ulrira:ulrira_mamu:1 -> ulrira_mamu
+
+ulrira:ulrira_d6:1 -> ulrira_6_0
+
+ulrira:ulrira_d7:1 -> ulrira_7_0
+ulrira:ulrira_d7:2 -> ulrira_7_1
+ulrira:ulrira_d7:3 -> ulrira_7_2
+
+ulrira:ulrira_d8:1 -> ulrira_8_0
+ulrira:ulrira_d8:2 -> ulrira_8_1
+
+ulrira:ulrira_d9:1 -> ulrira_9_0
+ulrira:ulrira_d9:2 -> ulrira_9_1
+
+
+// fairy woods
+fairy:0 -> [update_objects] -> [set:link_direction:1] -> fairy_0
+
+// alligator
+alligator:0 -> alligator_0
+
+// owl
+owl:x ->
+// beach
+owl:0 -> owl_1_0 -> [set:link_direction:1] -> [set:1_1] -> [set:maria_state:1] -> [set:tarin_state:1] -> [set:tarin:1] -> [set:maria:2] -> [set:map_owl_shore:1]
+// woods entry
+owl:1_1 -> owl_1_1 -> [set:x] -> [set:map_owl_woods_entry:1]
+// woods chest getting the first dungeon key
+owl:1_2 -> owl_1_2 -> [set:x] -> [set:map_owl_woods:1]
+
+// after defeating the first boss
+owl:2_0 -> owl_2_0 -> [set:x] -> [set:map_owl_level_1:1]
+// saving bowwow
+owl:2_1 -> owl_2_1 -> [set:2_2] -> [set:map_owl_tal_tal_heights:1]
+
+// post dungeon 3
+owl:3_0 -> owl_3_0 -> [set:x] -> [set:map_owl_level_3:1]
+// getting the key in the desert
+owl:3_1 -> owl_3_1 -> [set:x] -> [set:map_owl_desert:1]
+
+// ghost grave
+owl:5_0 -> owl_5_0 -> [set:x] -> [set:map_owl_prairie:1]
+
+// before entering the area above the right village
+owl:6_0 -> owl_6_0 -> [set:x] -> [set:map_owl_level_6:1]
+// owl infront of the shrine when the player leaves after having looked at the wall
+owl_shrine:1 -> owl_6_1 -> [set:x] -> [set:map_owl_shrine:1]
+
+// after finishing dungeon 6
+owl:7_0 -> owl_7_0 -> [set:7_1] -> [set:map_owl_level_6_post:1]
+owl:7_1 -> owl_7_1 -> [set:x] -> [set:map_owl_mountain:1]
+
+// after saving marin on the bridge
+owl:8_0 -> owl_8_0 -> [set:link_direction:2] -> [set:map_owl_bridge:1] -> [set:maria_state:6] -> [set:x]
+
+// sitting on the stairs infront of the egg
+owl_stairs:0 -> owl_stairs -> [set:map_owl_fish:1] -> [set:1]
+
+// after breaking open the egg
+owl:9_0 -> owl_9_0 -> [set:link_direction:1] -> [set:x]
+
+
+// map owl text
+map_owl_shore:0 -> map_toronbo_shores
+map_owl_shore:1 -> owl_1_0
+
+map_owl_woods_entry:0 -> map_mysterious_woods
+map_owl_woods_entry:1 -> owl_1_1
+
+map_owl_woods:0 -> map_mysterious_woods
+map_owl_woods:1 -> owl_1_2
+
+map_owl_level_1:0 -> map_south_village
+map_owl_level_1:1 -> owl_2_0
+
+map_owl_tal_tal_heights:0 -> map_tal_tal_heights
+map_owl_tal_tal_heights:1 -> owl_2_1
+
+map_owl_level_3:0 -> map_ukuku_prairie
+map_owl_level_3:1 -> owl_3_0
+
+map_owl_desert:0 -> map_yarna_desert
+map_owl_desert:1 -> owl_3_1
+
+map_owl_prairie:0 -> map_koholint_prairie
+map_owl_prairie:1 -> owl_5_0
+
+map_owl_level_6:0 -> map_face_shrine
+map_owl_level_6:1 -> owl_6_0
+
+map_owl_shrine:0 -> map_face_shrine
+map_owl_shrine:1 -> owl_6_1
+
+map_owl_level_6_post:0 -> map_face_shrine
+map_owl_level_6_post:1 -> owl_7_0
+
+map_owl_mountain:0 -> map_tal_tal
+map_owl_mountain:1 -> owl_7_1
+
+map_owl_bridge:0 -> map_tal_tal
+map_owl_bridge:1 -> owl_8_0
+
+map_owl_fish:0 -> map_tal_tal
+map_owl_fish:1 -> owl_stairs
+
+
+// rabbit
+rabbit_0:maria_state:3 -> rabbit_marin
+rabbit_0:0 -> rabbit_0_0
+rabbit_0:1 -> rabbit_0_1
+
+rabbit_1:maria_state:3 -> rabbit_marin
+rabbit_1:0 -> rabbit_1_0
+rabbit_1:1 -> rabbit_1_1
+
+rabbit_2:maria_state:3 -> rabbit_marin
+rabbit_2:0 -> rabbit_2_0
+rabbit_2:1 -> rabbit_2_1
+
+rabbit_3:maria_state:3 -> rabbit_marin
+rabbit_3:0 -> rabbit_3_0
+rabbit_3:1 -> rabbit_3_1
+
+rabbit_2_script:0 -> [set:rabbit_2Jump:533]
+
+
+desert_bones:0 -> desert_bone_0 -> [set:desert_bones_powder:0]
+
+desertLanmola_enter:ow_desertLanmola:0 -> desertLanmola
+desertLanmola_enter:ow_desertLanmola:1 ->
+
+// tracy
+npc_tracy:0 -> npc_tracy_0 -> [check_item:potion:1:hasPotion] -> [set:1]
+npc_tracy:hasPotion:0 -> [path:npc_tracy_offer]
+npc_tracy:hasPotion:1 -> npc_tracy_6 -> [set:npc_tracy:0]
+
+npc_tracy_offer:npc_tracy_price:0 -> [dialog:choice:npc_tracy_1:tracy_give:tracy_dont] -> [path:npc_tracy_choice_0]
+npc_tracy_choice_0:choice:0 -> [save_history:true] -> [remove_item:ruby:28:result] -> [path:npc_tracy_money]
+npc_tracy_choice_0:choice:1 -> npc_tracy_7 -> [set:npc_tracy:0]
+
+npc_tracy_offer:npc_tracy_price:1 -> [dialog:choice:npc_tracy_2:tracy_give:tracy_dont] -> [path:npc_tracy_choice_1]
+npc_tracy_choice_1:choice:0 -> [save_history:true] -> [remove_item:ruby:42:result] -> [path:npc_tracy_money]
+npc_tracy_choice_1:choice:1 -> npc_tracy_7 -> [set:npc_tracy:0]
+
+npc_tracy_offer:npc_tracy_price:2 -> [dialog:choice:npc_tracy_3:tracy_give:tracy_dont] -> [path:npc_tracy_choice_2]
+npc_tracy_choice_2:choice:0 -> [save_history:true] -> [remove_item:ruby:7:result] -> [path:npc_tracy_money]
+npc_tracy_choice_2:choice:1 -> npc_tracy_7 -> [set:npc_tracy:0]
+
+// try to buy the potion
+npc_tracy_money:result:0 -> npc_tracy_5 -> [save_history:false]
+npc_tracy_money:result:1 -> [add_item:potion_show:1] -> npc_tracy_4 -> [set:npc_tracy:0] -> [fill_hearts] -> [save_history:false] -> [path:npc_tracy_heal]
+
+npc_tracy_heal:fullHearts:0 -> npc_tracy_8
+npc_tracy_heal:fullHearts:1 ->
+
+// in the original this dialog seems to be randomized
+npc_hippo:0 -> [update_objects] -> npc_hippo_0 -> [set:1]
+npc_hippo:1 -> [update_objects] -> npc_hippo_0 -> [set:2]
+npc_hippo:2 -> [update_objects] -> npc_hippo_0 -> [set:3]
+npc_hippo:3 -> [update_objects] -> npc_hippo_1 -> [set:4]
+npc_hippo:4 -> [update_objects] -> npc_hippo_0 -> [set:5]
+npc_hippo:5 -> [update_objects] -> npc_hippo_0 -> [set:6]
+npc_hippo:6 -> [update_objects] -> npc_hippo_0 -> [set:7]
+npc_hippo:7 -> [update_objects] -> npc_hippo_2 -> [set:0]
+
+npc_painter:0 -> npc_painter_0
+// player has the scale
+npc_painter:1 -> npc_painter_1
+// player has the lense
+npc_painter:2 -> npc_painter_2
+
+// signpost game
+signpost_failed:0 -> [sound:D360-29-1D] -> [freeze:250] -> signpost_TryAgain -> [set:sgame:0]
+
+shieldGame1:mamu_gone:1 -> signpost_Gone
+shieldGame1:sgame:0 -> signpost_Down -> [set:sgame:1]
+shieldGame1:sgame:1 -> signpost_Down -> [set:sgame:1]
+shieldGame1:0 -> [path:signpost_failed]
+
+shieldGame2:mamu_gone:1 -> signpost_Gone
+shieldGame2:sgame:1 -> signpost_Right -> [set:sgame:2]
+shieldGame2:0 -> [path:signpost_failed]
+
+shieldGame3:mamu_gone:1 -> signpost_Gone
+shieldGame3:sgame:2 -> signpost_Down -> [set:sgame:3]
+shieldGame3:0 -> [path:signpost_failed]
+
+shieldGame4:mamu_gone:1 -> signpost_Gone
+shieldGame4:sgame:3 -> signpost_Left -> [set:sgame:4]
+shieldGame4:0 -> [path:signpost_failed]
+
+shieldGame5:mamu_gone:1 -> signpost_Gone
+shieldGame5:sgame:4 -> signpost_Up -> [set:sgame:5]
+shieldGame5:0 -> [path:signpost_failed]
+
+shieldGame6:mamu_gone:1 -> signpost_Gone
+shieldGame6:sgame:5 -> signpost_Right -> [set:sgame:6]
+shieldGame6:0 -> [path:signpost_failed]
+
+shieldGame7:mamu_gone:1 -> signpost_Gone
+shieldGame7:sgame:6 -> signpost_Down -> [set:sgame:7]
+shieldGame7:0 -> [path:signpost_failed]
+
+shieldGame8:mamu_gone:1 -> signpost_Gone
+shieldGame8:sgame:7 -> signpost_Right -> [set:sgame:8]
+shieldGame8:0 -> [path:signpost_failed]
+
+shieldGame9:mamu_gone:1 -> signpost_Gone
+shieldGame9:sgame:8 -> signpost_Up -> [set:sgame:9]
+shieldGame9:0 -> [path:signpost_failed]
+
+shieldGame10:mamu_gone:1 -> signpost_Gone
+shieldGame10:sgame:9 -> signpost_Left -> [set:sgame:10]
+shieldGame10:0 -> [path:signpost_failed]
+
+shieldGame11:mamu_gone:1 -> signpost_Gone
+shieldGame11:sgame:10 -> signpost_Down -> [set:sgame:11]
+shieldGame11:0 -> [path:signpost_failed]
+
+shieldGame12:mamu_gone:1 -> signpost_Gone
+shieldGame12:sgame:11 -> signpost_Right -> [set:sgame:12]
+shieldGame12:0 -> [path:signpost_failed]
+
+shieldGame13:mamu_gone:1 -> signpost_Gone
+shieldGame13:sgame:12 -> signpost_Down -> [set:sgame:13]
+shieldGame13:0 -> [path:signpost_failed]
+
+shieldGame14:mamu_gone:1 -> signpost_Gone
+shieldGame14:sgame:13 -> signpost_Left -> [set:sgame:14]
+shieldGame14:0 -> [path:signpost_failed]
+
+shieldGame15:mamu_gone:1 -> signpost_Gone
+// spawn the stairs
+shieldGame15:sgame:14 -> signpost_Great -> [wait:dialogOpen:0] -> [set:sgame:15] -> [set:frogStairs:1]
+shieldGame15:0 -> [path:signpost_failed]
+
+shieldGameStairs:0 -> [spawn:animatorL:3.Particles/spawn.run.True] -> [sound:D360-02-02] -> [set:1] -> [path:shieldGameStairs]
+shieldGameStairs:1 ->
+
+
+// == mamu ==
+// check if the player has the ocarina
+mamu:0 -> [update_objects] -> [freeze:250] -> [set:link_direction:1] -> [check_item:ocarina:1:result] -> [path:mamu_ocarina]
+mamu:1 -> [update_objects] -> ocarina_frog_song_end
+
+mamu_ocarina:result:0 -> mamu0
+mamu_ocarina:result:1 -> [dialog:choice:mamu1:choice_Pay:choice_Leave] -> [path:mamu_ocarina_choice]
+
+mamu_ocarina_choice:choice:0 -> [check_item:ruby:300:money] -> [path:mamu_ocarina_money]
+mamu_ocarina_choice:choice:1 -> mamu2
+
+// no money
+mamu_ocarina_money:money:0 -> mamu2
+mamu_ocarina_money:money:1 -> [save_history:true] -> [remove_item:ruby:300:result] -> [set:mamu_sing:1]
+
+// finished playing the song
+mamu_finished:0 -> mamu3 -> [add_item:ocarina_frog:1] -> [set:mamu:1] -> [set:mamu_gone:1] -> [set:ulrira_mamu:0] -> [music:-1:2] -> [save_history:false]
+
+
+// == manbo ==
+manbo:0 -> [dialog:choice:manbo0:choice_Yes:choice_No] -> [path:manbo_song_choice]
+manbo:1 -> manbo4
+
+manbo_song_choice:choice:0 -> [check_item:ocarina:1:result] -> [path:manbo_ocarina]
+manbo_song_choice:choice:1 -> manbo1
+
+manbo_ocarina:result:0 -> manbo3
+manbo_ocarina:result:1 -> manbo2 -> [save_history:true] -> [wait:dialogOpen:0] -> [set:manbo_start_song:1]
+
+manbo_finished:0 -> [add_item:ocarina_manbo:1] -> [set:manbo:1] -> [save_history:false]
+
+
+// ocarina songs
+ocarina_frog_collected:0 -> ocarina_frog_song -> [wait:player_shows_item:0] -> ocarina_frog_song_end
+ocarina_manbo_collected:0 -> ocarina_manbo_song
+
+ocarina_maria_collected:0 -> ocarina_maria_song -> [wait:player_shows_item:0] -> [path:marin_remember]
+// @TODO: we show different messages depending on where marin stands; needs to be verified
+marin_remember:maria_state:1 -> maria_1_6
+marin_remember:maria_state:4 -> maria_1_7
+marin_remember:maria_state:6 -> maria_1_6
+
+// dungeon 1 key
+dkey1:0 -> [set:owl:1_2] -> dkey1
+// dungeon 3 key
+dkey2:0 -> dkey2 -> [set:ulrira_d3:1] -> [set:ulrira:seashells]
+// dungeon 4 key
+dkey3:0 -> dkey3 -> [set:owl:3_1] -> [set:ulrira_d4:2]
+
+dkey4:0 -> dkey4 -> [set:owl:6_1]
+
+dkey5:0 -> dkey5 -> [set:ulrira_d7:3]
+
+// hidden npc
+// trade
+npc_hidden:0 -> [dialog:choice:npc_hidden_0:choice_Okay:choice_No] -> [path:npc_hidden_choice]
+// try to get the boomerang back
+npc_hidden:1 -> [dialog:choice:npc_hidden_3:choice_Okay:choice_Not_Now] -> [path:npc_hidden_return]
+
+npc_hidden_choice:choice:0 -> [set:boomerang_trade:1]
+npc_hidden_choice:choice:1 -> npc_hidden_2
+
+npc_hidden_boomerang:0 -> npc_hidden_1 -> [wait:dialogOpen:0] -> [add_item:boomerang:1] -> [set:npc_hidden:1]
+
+npc_hidden_return:choice:0 -> [set:npc_hidden:0] -> [set:boomerang_trade_return:1]
+npc_hidden_return:choice:1 -> npc_hidden_2
+
+npc_hidden_reject:0 -> npc_hidden_5
+
+ow_mountain_cave:0 -> [sound:D360-02-02] -> [set:1] -> [path:ow_mountain_cave]
+ow_mountain_cave:1 -> [spawn:stairsCastle:] -> [spawn:door:16.16.bc2.caveBat2$map.bc2.0.1.True]
+
+ow_village_tunnel_spawn:0 -> [sound:D360-02-02] -> [set:1] -> [path:ow_village_tunnel_spawn]
+ow_village_tunnel_spawn:1 -> [spawn:stairsCastle:] -> [spawn:door:16.16.cave9left.cave9$map.cave9left.3.1.True]
+
+// shrine image
+shrine_message:0 -> [start_sequence:shrine] -> [freeze:2000] -> shrine_message -> [wait:dialogOpen:0] -> [freeze:2000] -> [path:owl_shrine_show]
+// only spawn the owl one time
+owl_shrine_show:0 -> [set:owl_shrine:1] -> [set:1]
+owl_shrine_show:1 ->
+
+// shell mansion
+shell_mansion_entry:0 -> shell_mansion_0 -> [set:1]
+shell_mansion_entry:1 ->
+
+shell_mansion_nothing:0 -> shell_mansion_1
+
+seashell:0 -> seashell -> [wait:dialogOpen:0] -> [check_item:shell:20:allShells] -> [path:seashellsFound]
+seashellsFound:allShells:0 ->
+// @HACK: we wait 175ms for the item to fade away because the chest will get deactivated and the sprite would get stuck (only a problem for the chest in the forest)
+seashellsFound:allShells:1 -> [freeze:175] -> [set:shellsFound:1]
+
+shell_mansion_sword:0 -> [update_objects] -> [save_history:true] -> shell_mansion_2 -> [music:85:2] -> [wait:dialogOpen:0] -> [freeze:600] -> [set:spawnSwordParticle:1] -> [freeze:1300] -> [set:spawnSword:1] -> [save_history:false]
+
+// == dungeon one ==
+
+// play soundeffect the first time the key gets spawned
+d1k1spawn:0 -> [spawn:item:d.d1k1.smallkey.one] -> [sound:D360-02-02] -> [set:1]
+d1k1spawn:1 -> [spawn:item:.d1k1.smallkey.one]
+
+d1_button_0:0 -> [spawn:animatorL:3.Particles/spawn.run.True] -> [sound:D360-02-02] -> [set:1] -> [path:d1_button_0]
+d1_button_0:1 -> [spawn:chest:smallkeyChest.one.d1k2.0]
+
+d1c2:0 -> [spawn:animatorL:3.Particles/spawn.run.True] -> [sound:D360-02-02] -> [set:1] -> [path:d1c2]
+d1c2:1 -> [spawn:chest:dmap.one.d1_map.0]
+
+d1c3:0 -> [spawn:animatorL:3.Particles/spawn.run.True] -> [sound:D360-02-02] -> [set:1] -> [path:d1c3]
+d1c3:1 -> [spawn:chest:ruby20..d1_r20.0]
+
+d1_cave0:0 -> [spawn:animatorL:3.Particles/spawn.run.True] -> [sound:D360-02-02] -> [set:1] -> [path:d1_cave0]
+d1_cave0:1 -> [spawn:dungeon_stairs:] -> [spawn:light:64.255.255.255.75] -> [spawn:door:16.16.d1s1.dungeon1_2d_1$map.d1s1.3.1.False]
+
+d1_moveStone:0 -> [sound:D360-02-02] -> [set:1]
+d1_moveStone:1 ->
+
+d1_boys_sound:0 -> [spawn:animatorL:3.Particles/spawn.run.True] -> [sound:D360-02-02] -> [set:1] -> [path:d1_boys_sound]
+d1_boys_sound:1 -> [spawn:chest:stonebeak.one.d1_beak.0]
+
+// people are worried about the village and bowwow is missing
+sound_secrete:0 -> [sound:D360-02-02]
+
+d1_beak_1:0 -> [check_item:stonebeak:1:result] -> [path:d1_beak_1_result]
+d1_beak_1_result:result:0 -> beak_nop
+d1_beak_1_result:result:1 -> beak_d1_1
+
+d1_beak_2:0 -> [check_item:stonebeak:1:result] -> [path:d1_beak_2_result]
+d1_beak_2_result:result:0 -> beak_nop
+d1_beak_2_result:result:1 -> beak_d1_2
+
+
+// nightmare
+d1_n_enter_dialog:d1_n1_killed:0 -> [update_objects] -> [music:24:2] -> [freeze:250] -> nightmare1 -> [wait:dialogOpen:0] -> [set:d1_n_trigger:1]
+d1_n_enter_dialog:0 ->
+
+// play music in the instrument room
+d1_instrument_music:d1_instrument:0 -> [music:23:2]
+d1_instrument_music:0 ->
+
+// trigger the bowWow missing part; update npc dialogs
+instrument0:0 -> [update_objects] -> instrument0 -> [set:npc_boy_0:1] -> [set:npc_boy_1:1] -> [set:ulrira:2_0] -> [set:owl:2_0] -> [set:villageAttacked:1] -> [set:bowWow:1] -> [set:mc_enemies:1] -> [set:tarin:3]
+
+
+// == dungeon two ==
+d2_open_door:0 -> [sound:D360-02-02]
+
+d2_beak_1:0 -> [check_item:stonebeak:1:result] -> [path:d2_beak_1_result]
+d2_beak_1_result:result:0 -> beak_nop
+d2_beak_1_result:result:1 -> beak_d2_1
+
+d2_beak_2:0 -> [check_item:stonebeak:1:result] -> [path:d2_beak_2_result]
+d2_beak_2_result:result:0 -> beak_nop
+d2_beak_2_result:result:1 -> beak_d2_2
+
+d2_beak_3:0 -> [check_item:stonebeak:1:result] -> [path:d2_beak_3_result]
+d2_beak_3_result:result:0 -> beak_nop
+d2_beak_3_result:result:1 -> beak_d2_3
+
+d2_spawn_key_0:0 -> [spawn:animatorL:3.Particles/spawn.run.True] -> [sound:D360-02-02] -> [set:1] -> [path:d2_spawn_key_0]
+d2_spawn_key_0:1 -> [spawn:chest:smallkeyChest.two.d2_smallkey_3.0]
+
+d2_spawn_key_1:0 -> [spawn:item:d.d2_key_1.smallkey.two] -> [sound:D360-02-02] -> [set:1]
+d2_spawn_key_1:1 -> [spawn:item:.d2_key_1.smallkey.two]
+
+d2_spawn_key_3:0 -> [spawn:item:d.d2_key_3.smallkey.two] -> [sound:D360-02-02] -> [set:1]
+d2_spawn_key_3:1 -> [spawn:item:.d2_key_3.smallkey.two]
+
+d2_spawn_compass:0 -> [spawn:animatorL:3.Particles/spawn.run.True] -> [sound:D360-02-02] -> [set:1] -> [path:d2_spawn_compass]
+d2_spawn_compass:1 -> [spawn:chest:compass.two.d2_compass.0]
+
+d2_spawn_stairs_0:0 -> [spawn:animatorL:3.Particles/spawn.run.True] -> [sound:D360-02-02] -> [set:1] -> [path:d2_spawn_stairs_0]
+d2_spawn_stairs_0:1 -> [spawn:dungeon_6_stairs:] -> [spawn:light:64.255.255.255.255] -> [spawn:door:16.16.d2c0r.dungeon2_2d_1$map.d2c0r.3.1.False]
+
+d2_spawn_stairs_1:0 -> [spawn:animatorL:3.Particles/spawn.run.True] -> [sound:D360-02-02] -> [set:1] -> [path:d2_spawn_stairs_1]
+d2_spawn_stairs_1:1 -> [spawn:dungeon_6_stairs:] -> [spawn:light:64.255.255.255.75] -> [spawn:door:16.16.d2_cave_2_right.dungeon2_2d_3$map.d2_cave_2_right.3.1.False]
+
+d2_spawn_nkey:0 -> [spawn:animatorL:3.Particles/spawn.run.True] -> [sound:D360-02-02] -> [set:1] -> [path:d2_spawn_nkey]
+d2_spawn_nkey:1 -> [spawn:chest:nightmarekey.two.d2_nkey.0]
+
+d2_spawn_stonelifter:0 -> [spawn:animatorL:3.Particles/spawn.run.True] -> [sound:D360-02-02] -> [set:1] -> [path:d2_spawn_stonelifter]
+d2_spawn_stonelifter:1 -> [spawn:chest:stonelifter.two.d2_stonelifter.0]
+
+d2_boss:0 -> [music:24:2] -> [freeze:250] -> d2_boss_0
+
+d2_instrument_music:d2_instrument:0 -> [music:23:2]
+d2_instrument_music:0 ->
+
+// set bowwow to a state where it gets returned; make bomb buyable in the shop
+instrument1:0 -> [update_objects] -> instrument1 -> [set:bowWow:3] -> [set:ulrira:3_0] -> [set:tarin:4] -> [set:tarin_state:3] -> [set:maria:1_1] -> [set:npc_boy_1:2] -> [set:shopLevel:1]
+
+
+// == dungeon three ==
+
+// first floor
+d3_spawn_1:0 -> [spawn:animatorL:3.Particles/spawn.run.True] -> [sound:D360-02-02] -> [set:1] -> [path:d3_spawn_1]
+d3_spawn_1:1 -> [spawn:chest:smallkeyChest.three.d3k2.0]
+
+d3_spawn_2:0 -> [spawn:animatorL:3.Particles/spawn.run.True] -> [sound:D360-02-02] -> [set:1] -> [path:d3_spawn_2]
+d3_spawn_2:1 -> [spawn:chest:ruby200..d3_r200.0]
+
+// second floor
+d3_spawn_3:0 -> [sound:D360-02-02] -> [set:1]
+d3_spawn_3:1 ->
+
+d3_spawn_4:0 -> [sound:D360-02-02] -> [set:1]
+d3_spawn_4:1 ->
+
+d3_spawn_5:0 -> [sound:D360-02-02] -> [set:1]
+d3_spawn_5:1 ->
+
+// third floor
+d3_spawn_6:0 -> [spawn:item:d.d3k8.smallkey.three] -> [sound:D360-02-02] -> [set:1]
+d3_spawn_6:1 -> [spawn:item:.d3k8.smallkey.three]
+
+d3_spawn_7:0 -> [spawn:item:d.d3k6.smallkey.three] -> [sound:D360-02-02] -> [set:1]
+d3_spawn_7:1 -> [spawn:item:.d3k6.smallkey.three]
+
+d3_spawn_8:0 -> [spawn:animatorL:3.Particles/spawn.run.True] -> [sound:D360-02-02] -> [set:1] -> [path:d3_spawn_8]
+d3_spawn_8:1 -> [spawn:chest:ruby50..d3_r50.0]
+
+d3_spawn_9:0 -> [spawn:item:d.d3k7.smallkey.three] -> [sound:D360-02-02] -> [set:1]
+d3_spawn_9:1 -> [spawn:item:.d3k7.smallkey.three]
+
+d3_spawn_10:0 -> [sound:D360-02-02] -> [set:1]
+d3_spawn_10:1 ->
+
+d3_sound:0 -> [sound:D360-02-02]
+
+d3_instrument_music:d3_instrument:0 -> [music:23:2]
+d3_instrument_music:0 ->
+
+d3_boss:0 -> [music:24:2] -> [freeze:250] -> d3_boss
+
+instrument2:0 -> [update_objects] -> instrument2 -> [set:owl:3_0] -> [set:ulrira_d3:0] -> [set:ulrira_d4:1] 
+
+// dungeon breaks
+d3_beak_1:0 -> [check_item:stonebeak:1:result] -> [path:d3_beak_1_result]
+d3_beak_1_result:result:0 -> beak_nop
+d3_beak_1_result:result:1 -> beak_d3_1
+
+d3_beak_2:0 -> [check_item:stonebeak:1:result] -> [path:d3_beak_2_result]
+d3_beak_2_result:result:0 -> beak_nop
+d3_beak_2_result:result:1 -> beak_d3_2
+
+d3_beak_3:0 -> [check_item:stonebeak:1:result] -> [path:d3_beak_3_result]
+d3_beak_3_result:result:0 -> beak_nop
+d3_beak_3_result:result:1 -> beak_d3_3
+
+// only reshow the dialog after 600 seconds is passed
+crystal_hard:0 -> [cooldown:600000:result] -> [path:crystal_hard_cooldown]
+crystal_hard_cooldown:result:0 ->
+crystal_hard_cooldown:result:1 -> crystal_hard
+
+cracked_rock:0 -> [cooldown:600000:result] -> [path:cracked_rock_cooldown]
+cracked_rock_cooldown:result:0 ->
+cracked_rock_cooldown:result:1 -> rock_cracks_message
+
+// == dungeon four ==
+
+d4_beak_1:0 -> [check_item:stonebeak:1:result] -> [path:d4_beak_1_result]
+d4_beak_1_result:result:0 -> beak_nop
+d4_beak_1_result:result:1 -> beak_d4_1
+
+d4k4spawn:0 -> [sound:D360-02-02] -> [set:1]
+d4k4spawn:1 ->
+
+d4_nightmare:0 -> [music:24:2] -> [lock_player:500] -> d4_nightmare
+
+d4_instrument_music:d4_instrument:0 -> [music:23:2]
+d4_instrument_music:0 ->
+
+instrument3:0 -> [update_objects] -> instrument3 -> [set:ulrira_d4:0] -> [set:ulrira_d5:1] -> [set:spawn_ghost:1]
+
+
+// spawn the effect then the door
+d4_spawn_stairs:0 -> [spawn:animatorL:3.Particles/spawn.run.True] -> [sound:D360-02-02] -> [set:1] -> [path:d4_spawn_stairs]
+d4_spawn_stairs:1 -> [spawn:dungeon_6_stairs:] -> [spawn:light:64.255.255.255.75] -> [spawn:door:16.16.d4_2d_3r.dungeon4_2d_3$map.d4_2d_3r.-1.1.False]
+
+
+// == dungeon five ==
+
+beak_d5_1:0 -> [check_item:stonebeak:1:result] -> [path:beak_d5_1_result]
+beak_d5_1_result:result:0 -> beak_nop
+beak_d5_1_result:result:1 -> beak_d5_1
+
+beak_d5_2:0 -> [check_item:stonebeak:1:result] -> [path:beak_d5_2_result]
+beak_d5_2_result:result:0 -> beak_nop
+beak_d5_2_result:result:1 -> beak_d5_2
+
+master_stalfos_chest:0 -> [freeze:500] -> master_stalfos_3
+
+d5_chest_0:0 -> [spawn:animatorL:3.Particles/spawn.run.True] -> [sound:D360-02-02] -> [set:1] -> [path:d5_chest_0]
+d5_chest_0:1 -> [spawn:chest:stonebeak.five.d5_beak.0]
+
+d5_spawn_key_1:0 -> [spawn:item:d.d5_key_1.smallkey.five] -> [sound:D360-02-02] -> [set:1]
+d5_spawn_key_1:1 -> [spawn:item:.d5_key_1.smallkey.five]
+
+slime_eel:0 -> [music:24:2] -> [freeze:250] -> slime_eel_0
+
+d5_instrument_music:d5_instrument:0 -> [music:23:2]
+d5_instrument_music:0 ->
+
+instrument4:0 -> [update_objects] -> instrument4 -> [set:ulrira_d5:0] -> [set:ulrira_d6:1] -> [set:owl:6_0] -> [set:ulrira_mamu:1] -> [set:npc_grandmother_moved:1] -> [path:instrument4Broom]
+
+// the trade could have already happend so we need to make sure to not set the again
+instrument4Broom:missing_broom:0 -> [set:missing_broom:1] -> [path:grandma_gone_check]
+instrument4Broom:0 -> [path:grandma_gone_check]
+
+// == dungeon six ==
+
+d6_beak_1:0 -> [check_item:stonebeak:1:result] -> [path:d6_beak_1_result]
+d6_beak_1_result:result:0 -> beak_nop
+d6_beak_1_result:result:1 -> beak_d6_1
+
+d6_beak_2:0 -> [check_item:stonebeak:1:result] -> [path:d6_beak_2_result]
+d6_beak_2_result:result:0 -> beak_nop
+d6_beak_2_result:result:1 -> beak_d6_2
+
+d6_beak_3:0 -> [check_item:stonebeak:1:result] -> [path:d6_beak_3_result]
+d6_beak_3_result:result:0 -> beak_nop
+d6_beak_3_result:result:1 -> beak_d6_3
+
+d6_etChest_0:0 -> [spawn:animatorL:3.Particles/spawn.run.True] -> [sound:D360-02-02] -> [set:1] -> [path:d6_etChest_0]
+d6_etChest_0:1 -> [spawn:chest:dmap.six.d6_map.0]
+
+d6_smallkey_0_spawn:0 -> [sound:D360-02-02] -> [spawn:item:d.d6_smallkey_1.smallkey.six] -> [set:1]
+d6_smallkey_0_spawn:1 -> [spawn:item:.d6_smallkey_1.smallkey.six]
+
+d6_smallkey_1_spawn:0 -> [sound:D360-02-02] -> [spawn:item:d.d6_smallkey_2.smallkey.six] -> [set:1]
+d6_smallkey_1_spawn:1 -> [spawn:item:.d6_smallkey_2.smallkey.six]
+
+d6_button_sound_0:0 -> [sound:D360-02-02] -> [set:1]
+d6_button_sound_0:1 ->
+
+d6_door_sound_0:0 -> [sound:D360-02-02] -> [set:1]
+d6_door_sound_0:1 ->
+
+d6_door_sound_1:0 -> [sound:D360-02-02] -> [set:1]
+d6_door_sound_1:1 ->
+
+// spawn a ladder
+d6_ladder_spawn:0 -> [spawn:animatorL:3.Particles/spawn.run.True] -> [sound:D360-02-02] -> [set:1] -> [path:d6_ladder_spawn]
+d6_ladder_spawn:1 -> [spawn:dungeon_6_stairs:.] -> [spawn:door:16.16.d6_2d_3R.dungeon6_2d_3$map.d6_2d_3R.0.1.False] -> [spawn:light:64.255.255.255.75]
+
+// start the boss music
+d6_mboss_enter:d6_et_12:0 -> [music:79:2]
+d6_mboss_enter:0 ->
+// stop the boss music
+d6_mboss_leave:0 -> [music:-1:2]
+d6_mboss_killed:0 -> [music:-1:2] -> [sound:D360-02-02]
+
+facade_death:0 -> [countdown:750] -> [music:-1:-1] -> facade_death -> [wait:dialogOpen:0] -> [music:-1:2]
+
+d6_instrument_music:d6_instrument:0 -> [music:23:2]
+d6_instrument_music:0 ->
+
+// change marin position
+instrument5:0 -> [update_objects] -> instrument5 -> [set:owl:7_0] -> [set:hide_rabbit_0:0] -> [set:hide_rabbit_1:0] -> [set:hide_rabbit_2:0] -> [set:hide_rabbit_3:0] -> [set:rabbit_0:1] -> [set:rabbit_1:1] -> [set:rabbit_2:1] -> [set:rabbit_3:1] -> [maria:state:5] -> [set:npc_boy_0:1] -> [set:npc_boy_1:1] -> [set:npc_boy_2:2] -> [set:npc_boy_ball_left:1] -> [set:npc_boy_ball_right:1]-> [set:ulrira_d6:0] -> [set:ulrira_d7:1] -> [set:maria_state:hidden]
+
+// == dungeon seven ==
+
+ow_d7_keyhole:0 -> [check_item:dkey5:1:result] -> [path:ow_d7_keyhole_check]
+ow_d7_keyhole:1 ->
+
+ow_d7_keyhole_check:result:0 ->
+ow_d7_keyhole_check:result:1 -> [set:ow_d7_tower:1] -> [set:d7_tower_keyhole:1]
+
+// why was this done like this???
+d7_et_0_init:0 -> [set:1]
+d7_et_0_init:1 ->
+d7_spawn_key_0:0 -> [sound:D360-02-02] -> [spawn:item:d.d7_smallkey_0.smallkey.seven] -> [set:1]
+d7_spawn_key_0:1 -> [spawn:item:.d7_smallkey_0.smallkey.seven]
+
+d7_spawn_key_1:0 -> [sound:D360-02-02] -> [spawn:item:d.d7_smallkey_1.smallkey.seven] -> [set:1]
+d7_spawn_key_1:1 -> [spawn:item:.d7_smallkey_1.smallkey.seven]
+
+d7_spawn_chest_0:0 -> [spawn:animatorL:3.Particles/spawn.run.True] -> [sound:D360-02-02] -> [set:1] -> [path:d7_spawn_chest_0]
+d7_spawn_chest_0:1 -> [spawn:chest:dmap.seven.d7_map.0]
+
+d7_spawn_chest_1:0 -> [spawn:animatorL:3.Particles/spawn.run.True] -> [sound:D360-02-02] -> [set:1] -> [path:d7_spawn_chest_1]
+d7_spawn_chest_1:1 -> [spawn:chest:compass.seven.d7_compass.0]
+
+d7_spawn_chest_2:0 -> [spawn:animatorL:3.Particles/spawn.run.True] -> [sound:D360-02-02] -> [set:1] -> [path:d7_spawn_chest_2]
+d7_spawn_chest_2:1 -> [spawn:chest:bombChest.seven.d7_chestBomb.0]
+
+d7_spawn_chest_3_init:0 -> [set:1]
+d7_spawn_chest_3_init:1 ->
+d7_spawn_chest_3:0 -> [spawn:animatorL:3.Particles/spawn.run.True] -> [sound:D360-02-02] -> [set:1] -> [path:d7_spawn_chest_3]
+d7_spawn_chest_3:1 -> [spawn:chest:nightmarekey.seven.d7_nkey.0]
+
+d7_spawn_chest_4:0 -> [spawn:animatorL:3.Particles/spawn.run.True] -> [sound:D360-02-02] -> [set:1] -> [path:d7_spawn_chest_4]
+d7_spawn_chest_4:1 -> [spawn:chest:potion..d7_potion.0]
+
+beak_d7_1:0 -> [check_item:stonebeak:1:result] -> [path:beak_d7_1_result]
+beak_d7_1_result:result:0 -> beak_nop
+beak_d7_1_result:result:1 -> beak_d7_1
+
+beak_d7_2:0 -> [check_item:stonebeak:1:result] -> [path:beak_d7_2_result]
+beak_d7_2_result:result:0 -> beak_nop
+beak_d7_2_result:result:1 -> beak_d7_2
+
+beak_d7_3:0 -> [check_item:stonebeak:1:result] -> [path:beak_d7_3_result]
+beak_d7_3_result:result:0 -> beak_nop
+beak_d7_3_result:result:1 -> beak_d7_3
+
+// tower collapse sequences
+tower_collapse_sequence:0 -> [start_sequence:towerCollapse] -> [set:1] -> [set:seven_2_map:_alt] -> [set:seven_3_map:_alt]
+tower_collapse_sequence:1 ->
+
+grim_creeper_enter:0 -> [freeze:250] -> grim_creeper_enter
+grim_creeper_end:0 -> [freeze:250] -> grim_creeper_2 -> [wait:dialogOpen:0] -> [music:-1:2]
+
+grim_creeper_3:0 -> grim_creeper_3 -> [music:91:2] -> [wait:dialogOpen:0] -> [music:83:2]
+grim_creeper_4:0 -> grim_creeper_4 -> [wait:dialogOpen:0] -> [music:-1:2]
+
+d7_instrument_music:d7_instrument:0 -> [music:23:2]
+d7_instrument_music:0 ->
+
+beak_d8_1:0 -> [check_item:stonebeak:1:result] -> [path:beak_d8_1_result]
+beak_d8_1_result:result:0 -> beak_nop
+beak_d8_1_result:result:1 -> beak_d8_1
+
+beak_d8_2:0 -> [check_item:stonebeak:1:result] -> [path:beak_d8_2_result]
+beak_d8_2_result:result:0 -> beak_nop
+beak_d8_2_result:result:1 -> beak_d8_2
+
+beak_d8_3:0 -> [check_item:stonebeak:1:result] -> [path:beak_d8_3_result]
+beak_d8_3_result:result:0 -> beak_nop
+beak_d8_3_result:result:1 -> beak_d8_3
+
+// remove the rooster
+instrument6:0 -> [update_objects] -> instrument6 -> [remove_item:rooster:1:result] -> [set:has_rooster:0] -> [set:chicken_dude:2] -> [set:maria_state:5] -> [set:ulrira_d7:0] -> [set:ulrira_d8:1]
+
+// == dungeon eight ==
+turtle_rock_killed:0 -> [set:ulrira_d8:2]
+
+d8_et_0_sound:0 -> [set:1] -> [sound:D360-02-02]
+d8_et_0_sound:1 ->
+
+d8_spawn_chest_0:0 -> [spawn:animatorL:3.Particles/spawn.run.True] -> [sound:D360-02-02] -> [set:1] -> [path:d8_spawn_chest_0]
+d8_spawn_chest_0:1 -> [spawn:chest:ruby20..d8_ruby20.0]
+
+d8_spawn_chest_1:0 -> [spawn:animatorL:3.Particles/spawn.run.True] -> [sound:D360-02-02] -> [spawn:chest:smallkeyChest.eight.d8_smallkey_3.0]
+
+d8_spawn_chest_2:0 -> [spawn:animatorL:3.Particles/spawn.run.True] -> [sound:D360-02-02] -> [set:1] -> [path:d8_spawn_chest_2]
+d8_spawn_chest_2:1 -> [spawn:chest:smallkeyChest.eight.d8_smallkey_5.0]
+
+d8_spawn_chest_3:0 -> [spawn:animatorL:3.Particles/spawn.run.True] -> [sound:D360-02-02] -> [set:1] -> [path:d8_spawn_chest_3]
+d8_spawn_chest_3:1 -> [spawn:chest:nightmarekey.eight.d8_nkey.0]
+
+d8_spawn_key_0:0 -> [sound:D360-02-02] -> [set:1] -> [path:d8_spawn_key_0]
+d8_spawn_key_0:1 -> [spawn:item:d.d8_smallkey_0.smallkey.eight]
+
+d8_spawn_key_1:0 -> [sound:D360-02-02] -> [set:1] -> [path:d8_spawn_key_1]
+d8_spawn_key_1:1 -> [spawn:item:d.d8_smallkey_1.smallkey.eight]
+
+d8_spawn_key_2:0 -> [sound:D360-02-02] -> [set:1] -> [path:d8_spawn_key_2]
+d8_spawn_key_2:1 -> [spawn:item:d.d8_smallkey_2.smallkey.eight]
+
+d8_spawn_key_3:0 -> [sound:D360-02-02] -> [set:1] -> [path:d8_spawn_key_3]
+d8_spawn_key_3:1 -> [spawn:item:d.d8_smallkey_6.smallkey.eight]
+
+d8_secret_door:0 -> [spawn:animatorL:3.Particles/spawn.run.True] -> [sound:D360-02-02] -> [set:1] -> [path:d8_secret_door]
+d8_secret_door:1 -> [spawn:dungeon_6_stairs:] -> [spawn:light:64.255.255.255.75] -> [spawn:door:16.16.d8_2d_6L.dungeon8_2d_6$map.d8_2d_6L.0.1.False]
+
+// d8_smallkey_4 is in the chest with the block infront of
+
+hot_head:0 -> [music:79:2] -> [freeze:250] -> hot_head_0
+hot_head_death:0 -> hot_head_1 -> [wait:dialogOpen:0] -> [music:-1:2]
+
+d8_instrument_music:d8_instrument:0 -> [music:23:2]
+d8_instrument_music:0 ->
+
+instrument7:0 -> [update_objects] -> instrument7 -> [set:ulrira_d8:0] -> [set:ulrira_d9:1]
+
+// == color dungeon ==
+
+// entry npc blue
+npc_color_blue:0 -> [dialog:choice:npc_color_0:choice_Red:choice_Blue] -> [path:npc_color_blue_chose]
+npc_color_blue:1 ->
+npc_color_blue_chose:choice:0 -> npc_color_1
+npc_color_blue_chose:choice:1 -> npc_color_2 -> [set:npc_color_blue:1] -> [path:npc_color_blue_m]
+
+// 0: start; 1: center; 2: side
+npc_color_blue_m:npc_color_blue_state:0 -> [set:npc_color_blue_state:2] -> [set:npc_color_red_state:1] -> [set:npc_color_blue_move:1] -> [set:npc_color_red_move:1]
+npc_color_blue_m:npc_color_blue_state:1 -> [set:npc_color_blue_state:2] -> [set:npc_color_blue_move:1]
+npc_color_blue_m:npc_color_blue_state:2 ->
+
+// entry npc red
+npc_color_red:0 -> [dialog:choice:npc_color_0:choice_Red:choice_Blue] -> [path:npc_color_red_chose]
+npc_color_red:1 ->
+npc_color_red_chose:choice:0 -> npc_color_2 -> [set:npc_color_red:1] -> [path:npc_color_red_m]
+npc_color_red_chose:choice:1 -> npc_color_1
+
+npc_color_red:0 -> [path:npc_color_red_m]
+npc_color_red_m:npc_color_red_state:0 -> [set:npc_color_red_state:2] -> [set:npc_color_blue_state:1]  -> [set:npc_color_red_move:1] -> [set:npc_color_blue_move:1]
+npc_color_red_m:npc_color_red_state:1 -> [set:npc_color_red_state:2] -> [set:npc_color_red_move:1]
+npc_color_red_m:npc_color_red_state:2 ->
+
+// both moved?
+npc_color_3:npc_color_blue:1 -> npc_color_3 -> [sound:D360-02-02]
+npc_color_3:0 -> npc_color_3
+
+npc_color_4:npc_color_red:1 -> npc_color_4 -> [sound:D360-02-02]
+npc_color_4:0 -> npc_color_4
+
+// player cant move the last gravestone when he is with a follower
+grave_locked:0 -> [cooldown:7500:result] -> [path:grave_locked_cooldown]
+grave_locked_cooldown:result:0 ->
+grave_locked_cooldown:result:1 -> grave_locked
+
+dc_entry:0 -> [sound:D360-02-02] -> [spawn:stairsCastle:.] -> [spawn:door:16.16..dungeon_color$map.dc_entry.3.1.False]
+
+dc_switch_1_sound:0 -> [sound:D360-02-02] -> [set:1]
+dc_switch_1_sound:1 ->
+
+dc_spawn_chest_0:0 -> [spawn:animatorL:3.Particles/spawn.run.True] -> [sound:D360-02-02] -> [set:1] -> [path:dc_spawn_chest_0]
+dc_spawn_chest_0:1 -> [spawn:chest:compass.dColor.dc_compass.0]
+
+dc_spawn_chest_1:0 -> [spawn:animatorL:3.Particles/spawn.run.True] -> [sound:D360-02-02] -> [set:1] -> [path:dc_spawn_chest_1]
+dc_spawn_chest_1:1 -> [spawn:chest:stonebeak.dColor.dc_beak.0]
+
+dc_spawn_chest_2:0 -> [spawn:animatorL:3.Particles/spawn.run.True] -> [sound:D360-02-02] -> [set:1] -> [path:dc_spawn_chest_2]
+dc_spawn_chest_2:1 -> [spawn:chest:dmap.dColor.dc_map.0]
+
+dc_spawn_key_0:0 -> [sound:D360-02-02] -> [set:1] -> [spawn:item:d.dc_smallkey_1.smallkey.dColor]
+dc_spawn_key_0:1 -> [spawn:item:.dc_smallkey_1.smallkey.dColor]
+
+dc_spawn_key_1:0 -> [sound:D360-02-02] -> [set:1] -> [spawn:item:d.dc_smallkey_2.smallkey.dColor]
+dc_spawn_key_1:1 -> [spawn:item:.dc_smallkey_2.smallkey.dColor]
+
+// beaks
+beak_dc_1:0 -> [check_item:stonebeak:1:result] -> [path:beak_dc_1_result]
+beak_dc_1_result:result:0 -> beak_nop
+beak_dc_1_result:result:1 -> beak_dc_1
+
+// hinox
+stone_hinox:0 -> [update_objects] -> [music:79:2] -> [freeze:125] -> stone_hinox -> [wait:dialogOpen:0]
+
+// buzz blob
+giant_buzz_blob_enter:0 -> [update_objects] -> [music:79:2] -> [freeze:125] -> giant_buzz_blob_enter -> [wait:dialogOpen:0]
+
+// nightmare
+hardhit_beetle_enter:0 -> [update_objects] -> [music:24:2] -> [freeze:125] -> hardhit_beetle_0 -> [wait:dialogOpen:0]
+
+// fairy
+color_fairy:0 -> [update_objects] -> [set:link_direction:1] -> [dialog:choice:color_fairy_0:choice_RED:choice_BLUE] -> [path:color_fairy_chose]
+color_fairy_reask:0 -> [update_objects] -> [set:link_direction:1] -> [dialog:choice:color_fairy_1:choice_RED:choice_BLUE] -> [path:color_fairy_chose]
+
+// red
+color_fairy_chose:choice:0 -> [update_objects] -> [dialog:choice:color_fairy_2:choice_NO:choice_YES] -> [path:color_fairy_red]
+color_fairy_red:choice:0 -> [path:color_fairy_reask]
+color_fairy_red:choice:1 -> [remove_item:cloakBlue:1:result] -> [add_item:cloakRed:1]
+
+// blue
+color_fairy_chose:choice:1 -> [update_objects] -> [dialog:choice:color_fairy_2:choice_NO:choice_YES] -> [path:color_fairy_blue]
+color_fairy_blue:choice:0 -> [path:color_fairy_reask]
+color_fairy_blue:choice:1 -> [remove_item:cloakRed:1:result] -> [add_item:cloakBlue:1]
+
+cloak_blue:0 -> [update_objects] -> color_fairy_3 -> [set:cloak_transition:1]
+cloak_red:0 -> [update_objects] -> color_fairy_3 -> [set:cloak_transition:1]
+
+// play music in the instrument room
+dc_fairy_music:0 -> [music:11:2]
+
+// witch
+// remove the toadstool and reactivate it again on the overworld
+witch:0 -> [check_item:toadstool:1:hasToadstool] -> [set:ow_toadstool:0] -> [path:witchTrade]
+witchTrade:hasToadstool:0 -> [update_objects] -> witch_0
+witchTrade:hasToadstool:1 -> [update_objects] -> [save_history:true] -> witch_1 -> [wait:dialogOpen:0] -> [remove_item:toadstool:1:result] -> [music_speed:2] -> [set:blockWitchDoor:1] -> [set:witchAnimation:mix] -> [freeze:witchFinished:1] -> [set:witchAnimation:idle] -> [set:witchFinished:0] -> [music_speed:1] -> witch_2 -> [wait:dialogOpen:0] -> [set:witch_lamp_lit:0] -> [set:blockWitchDoor:] -> [add_item:powderPD:20] -> [save_history:false]
+
+witch_lamp_lit:0 -> [update_objects] -> [countdown:350] -> witch_3 -> [set:1]
+witch_lamp_lit:1 -> 
+
+// cukeman
+cukeman:0 -> cukeman_0 -> [set:1]
+cukeman:1 -> cukeman_1 -> [set:2]
+cukeman:2 -> cukeman_2 -> [set:3]
+cukeman:3 -> cukeman_3 -> [set:0]
+
+// chicken dude in the mountains
+chicken_dude:0 -> [update_objects] -> chicken_dude_0
+// link has the flying rooster
+chicken_dude:1 -> [update_objects] -> chicken_dude_1
+chicken_dude:2 -> [update_objects] -> chicken_dude_2
+
+// moblin cave
+mc_entry:mc_enemies:1 -> [music:61:2] -> bow_wow_cave_entry -> [set:mc_room_1:0] -> [set:mc_room_2:1] -> [set:mc_room_3:1]
+mc_entry:0 ->
+
+mc_boss_enter:0 -> [freeze:250] -> bow_wow_cave_boss
+mc_boss_defeat:0 -> [set:mc_enemies:0] -> [music:-1:2]
+
+// save the bowwow if he is in the lost state
+mc_bow_wow:bowWow:1 -> bow_wow_cave_bw -> [sound:D368-16-10] -> [set:villageAttacked:0] -> [set:ulrira:2_1] -> [set:npc_boy_ball_left:1] -> [set:npc_boy_ball_right:1] -> [set:bowWow:2] -> [set:has_bowWow:1] -> [set:owl:2_1]
+mc_bow_wow:0 ->
+
+// monkey at the castle
+castle_monkey:has_bowWow:0 -> [path:castle_monkey_start]
+castle_monkey:has_bowWow:1 -> castle_monkey_bowwow
+
+castle_monkey_start:0 -> [check_item:trade3:1:result] -> [path:castle_monkey_trade]
+
+castle_monkey_trade:result:0 -> castle_monkey_hunger
+castle_monkey_trade:result:1 -> [dialog:choice:castle_monkey_banana:choice_Yes:choice_No!] -> [path:castle_monkey_choice]
+
+castle_monkey_choice:choice:0 -> [save_history:true] -> [set:monkeyBusiness:1] -> [set:trade3:1] -> [remove_item:trade3:1:result]
+castle_monkey_choice:choice:1 -> castle_monkey_hunger
+
+castle_monkey_business:0 -> castle_monkey_banana_yes -> [wait:dialogOpen:0] -> [music:53:2] -> [stop_music:16000:2] -> [set:1] -> [set:monkeyBusiness:2]
+castle_monkey_business:1 -> castle_monkey_done -> [set:monkeyBusiness:3] -> [set:ulrira_banana:0] -> [set:ulrira_leafs:1] -> [save_history:false]
+
+// button that opens the front door
+ow_castle_door:0 -> [freeze:500] -> [shake:1000:1:0:5:0] -> [sound:D378-17-11] -> [freeze:1250] -> castle_button -> [set:1]
+ow_castle_door:1 ->
+
+castle_spawn_0:0 -> [spawn:item:d.goldLeaf0.goldLeaf.] -> [sound:D360-02-02] -> [set:1]
+castle_spawn_0:1 -> [spawn:item:.goldLeaf0.goldLeaf.]
+
+// photo sequences
+// tell the player how many photos are still left
+photo_mouse_house:photo_count_increase:1 -> photo_left_11
+photo_mouse_house:photo_count_increase:2 -> photo_left_10
+photo_mouse_house:photo_count_increase:3 -> photo_left_9
+photo_mouse_house:photo_count_increase:4 -> photo_left_8
+photo_mouse_house:photo_count_increase:5 -> photo_left_7
+photo_mouse_house:photo_count_increase:6 -> photo_left_6
+photo_mouse_house:photo_count_increase:7 -> photo_left_5
+photo_mouse_house:photo_count_increase:8 -> photo_left_4
+photo_mouse_house:photo_count_increase:9 -> photo_left_3
+photo_mouse_house:photo_count_increase:10 -> photo_left_2
+photo_mouse_house:photo_count_increase:11 -> photo_left_1
+photo_mouse_house:photo_count_increase:12 -> photo_left_0
+
+photo_count_increase:0 -> [set:1]
+photo_count_increase:1 -> [set:2]
+photo_count_increase:2 -> [set:3]
+photo_count_increase:3 -> [set:4]
+photo_count_increase:4 -> [set:5]
+photo_count_increase:5 -> [set:6]
+photo_count_increase:6 -> [set:7]
+photo_count_increase:7 -> [set:8]
+photo_count_increase:8 -> [set:9]
+photo_count_increase:9 -> [set:10]
+photo_count_increase:10 -> [set:11]
+photo_count_increase:11 -> [set:12]
+
+// dont talk to the player when he has a follower
+photo_mouse_house:has_bowWow:1 -> photo_mouse_follower
+photo_mouse_house:has_ghost:1 -> photo_mouse_follower
+photo_mouse_house:has_marin:1 -> photo_mouse_follower
+photo_mouse_house:has_rooster:1 -> photo_mouse_follower
+
+// photo sequence 1
+photo_mouse_house:0 -> [update_objects] -> [save_history:true] -> [set:1] -> [set:photoMouseActive:1] -> [dialog:choice:photo_01_0:choice_YES:choice_NO] -> [path:photo_mouse_choice]
+photo_mouse_house:1 -> photo_01_1
+
+photo_mouse_choice:choice:0 -> photo_01_1 -> [set:photo_house_blocked:1]
+photo_mouse_choice:choice:1 -> [dialog:choice:photo_01_5:choice_YES:choice_NO] -> [path:photo_mouse_2_choice]
+
+photo_mouse_2_choice:choice:0 -> photo_01_1 -> [set:photo_house_blocked:1]
+photo_mouse_2_choice:choice:1 -> [update_objects] -> [set:photo_mouse_houseMove:-16,0,0.5] -> [freeze:50] -> [set:link_push:400] -> [dialog:choice:photo_01_5:choice_YES:choice_NO] -> [path:photo_mouse_3_choice]
+
+photo_mouse_3_choice:choice:0 -> photo_01_1 -> [set:photo_house_blocked:1]
+photo_mouse_3_choice:choice:1 -> [update_objects] -> [set:photo_mouse_houseMove:-24,24,0.5] -> [freeze:1] -> [set:photo_mouse_houseMove:0,-28,0.5] -> [freeze:1650] -> [set:link_push:0,-18,400] -> [dialog:choice:photo_01_5:choice_YES:choice_NO] -> [path:photo_mouse_4_choice]
+
+photo_mouse_4_choice:choice:0 -> photo_01_1 -> [set:photo_house_blocked:1]
+photo_mouse_4_choice:choice:1 -> [update_objects] -> [set:photo_mouse_houseMove:0,-16,0.5] -> [freeze:125] -> [set:link_push:0,-17,400] -> [dialog:choice:photo_01_5:choice_YES:choice_NO] -> [path:photo_mouse_5_choice]
+
+photo_mouse_5_choice:choice:0 -> photo_01_1 -> [set:photo_house_blocked:1]
+photo_mouse_5_choice:choice:1 -> [update_objects] -> [set:photo_mouse_houseMove:0,-16,0.5] -> [freeze:150] -> [set:link_push:0,-17,400] -> [dialog:choice:photo_01_6:choice_Yes:choice_No_way] -> [path:photo_mouse_6_choice]
+
+photo_mouse_6_choice:choice:0 -> photo_01_1 -> [set:photo_house_blocked:1]
+photo_mouse_6_choice:choice:1 -> [update_objects] -> photo_01_7 -> [wait:dialogOpen:0] -> [set:photo_mouse_houseMove:0,-16,0.5] -> [freeze:250] -> [set:link_push:0,-16,200] -> [freeze:250] -> [set:link_animation:pushed_over] -> photo_01_8 -> [wait:dialogOpen:0] -> [set:photo_1_alt:1] -> [set:photo_flash:1] -> [freeze:1000] -> [set:photo_mouse_houseMove:-26,0,1] -> [freeze:1] -> [path:photo_mouse_take_photo]
+
+photo_mouse_photo_0:0 -> [update_objects] -> [freeze:photo_mouse_houseMoving:0] -> [freeze:250] -> photo_01_2 -> [wait:dialogOpen:0] -> [set:photo_flash:1] -> [freeze:1000] -> [set:photo_mouse_houseMove:-26,0,1] -> [freeze:1] -> [set:photo_mouse_houseMove:0,-10,1] -> [path:photo_mouse_take_photo]
+photo_mouse_take_photo:0 -> [update_objects] -> [freeze:photo_mouse_houseMoving:0] -> [set:photo_mouse_houseAnimation:stand_0] -> photo_01_3 -> [wait:dialogOpen:0] -> [set:spawned_photo_book:1] -> [freeze:500] -> [set:photo_mouse_houseAnimation:stand_2] -> photo_01_4 -> [set:photo_house_blocked:0] -> [wait:dialogOpen:0] -> [set:link_idle:1] -> [set:photo_1:1] -> [path:photo_count_increase] -> [save_history:false]
+
+// the player can not leave the house after triggering the sequence
+photo_house_blockade:0 -> photo_01_9
+
+// photo sequence Ulrich
+photo_sequence_2:photoMouseActive:0 ->
+photo_sequence_2:photoMouseActive:1 -> [path:photo_sequence_ulrich]
+
+photo_sequence_ulrich:0 -> [update_objects] -> [save_history:true] -> [set:1] -> [set:spawnMouseSeq2:1] -> [set:mouseSeq2Fade:-75] -> [set:mouseSeq2Move:-56,0,1] -> [freeze:mouseSeq2Moving:0] -> [freeze:500] -> [set:link_direction:2] -> photo_02_0 -> [wait:dialogOpen:0] -> [set:mouseSeq2Move:-10,0,1] -> [set:link_push:-10,0,200] -> [freeze:1] -> [freeze:mouseSeq2Moving:0] -> [set:mouseSeq2Animation:stand_1] -> [set:link_direction:1] -> photo_02_1 -> [wait:dialogOpen:0] -> [set:photo_flash:1] -> [freeze:350] -> [set:photo_5:1] -> [set:photoSequencePhoto:photo_5] -> [start_sequence:photo] -> [set:spawnMouseSeq2:0] -> [set:mouseSeq2Move:56,0,1] -> [freeze:350] -> [set:mouseSeq2Fade:75] -> [save_history:false] -> [path:photo_count_increase]
+photo_sequence_ulrich:1 ->
+
+// photo sequence BowWow
+start_BowWow_Seq:photoMouseActive:0 ->
+start_BowWow_Seq:photoMouseActive:1 -> [path:photo_sequence_BowWow]
+// check if BowWow is at the pool
+photo_sequence_BowWow:bowWow:0 -> [path:photo_sequence_3]
+photo_sequence_BowWow:bowWow:4 -> [path:photo_sequence_3]
+photo_sequence_BowWow:0 ->
+
+photo_sequence_3:0 -> [save_history:true] -> [set:1] -> [set:photo_6:1] -> [start_sequence:bowWow]
+photo_sequence_3:1 -> [set:2] -> photo_03_0
+photo_sequence_3:2 -> [set:3] -> photo_03_1 -> [freeze:1000] -> photo_03_2
+photo_sequence_3:3 -> [set:4] -> photo_03_3
+photo_sequence_3:4 -> [set:5] -> photo_03_4 -> photo_03_5 -> [path:photo_count_increase]
+photo_sequence_3:5 -> [save_history:false]
+
+// photo castle sequence
+photo_sequence_4:photoMouseActive:0 ->
+photo_sequence_4:photoMouseActive:1 -> [path:photo_sequence_castle]
+
+photo_sequence_castle:1 ->
+photo_sequence_castle:npc_frog_boy:1 -> [save_history:true] -> [set:1] -> [set:photo_10:1] -> [start_sequence:castle] -> [path:photo_count_increase]
+photo_sequence_castle:0 ->
+
+castle_sequence:0 -> [music:63:2] -> [freeze:1000] -> [seq_lerp:castleLink:91:-35:0.325] -> [seq_play:castleLink:walk] -> [seq_lerp:castleMouse:22:0:0.255] -> [seq_play:castleMouse:walk_2] -> [freeze:castleMouseMoving:0] -> [seq_finish_animation:castleMouse:0] -> [freeze:1000] -> [seq_lerp:castleMouse:-32:0:0.25] -> [seq_play:castleMouse:walk_0] -> [freeze:castleMouseMoving:0] -> [seq_finish_animation:castleMouse:0] -> [freeze:castleLinkMoving:0] -> [seq_finish_animation:castleLink:0] -> photo_05_0 -> [wait:dialogOpen:0] -> [seq_lerp:castleBoy:-44:-14:0.325] -> [seq_play:castleBoy:walk] -> [freeze:castleBoyMoving:0] -> [seq_finish_animation:castleBoy:0] -> photo_05_1 -> [wait:dialogOpen:0] -> [seq_play:castleLink:forward] -> [seq_lerp:castleMouse:0:64:0.25] -> [seq_play:castleMouse:walk_3] -> [seq_lerp:castleBoy:-39:-11:0.325] -> [seq_play:castleBoy:walk] -> [freeze:castleBoyMoving:0] -> [seq_play:castleBoy:forward] -> photo_05_2 -> [wait:dialogOpen:0] -> [freeze:1000] -> [seq_play:castleLink:piece] -> [seq_play:castleBoy:piece] -> [freeze:750] -> [sound:D378-63-40] -> [seq_color:castleFlash:255:255:255:255:0] -> [freeze:125] -> [seq_color:castleFlash:0:0:0:0:150] -> [freeze:750] -> [seq_play:castleBoy:stand] -> photo_05_3 -> [wait:dialogOpen:0] -> [seq_play:castleLink:forward] -> [seq_lerp:castleBoy:-112:28:0.325] -> [seq_play:castleBoy:walk] -> [freeze:2500] -> [close_overlay] -> [music:-1:2] -> [save_history:false]
+
+
+photo_sequence_grave:photoMouseActive:0 ->
+photo_sequence_grave:photoMouseActive:1 -> [path:photo_sequence_grave_start]
+
+photo_sequence_grave_start:0 -> [save_history:true] -> [set:1] -> [set:photo_11:1] -> [start_sequence:gravestone] -> [path:photo_count_increase]
+photo_sequence_grave_start:1 ->
+
+// photo sequence gravestone
+seq_gravestone:0 -> [music:71:2] -> [seq_lerp:graveMouse:-64:0:0.325] -> [seq_play:graveMouse:walk_0] -> [freeze:graveMouseMoving:0] -> [seq_finish_animation:graveMouse:0] -> photo_06_0 -> [wait:dialogOpen:0] -> [seq_play:graveLink:right] -> photo_06_1 -> [wait:dialogOpen:0] -> [seq_lerp:graveMouse:-28:58:0.325] -> [seq_play:graveMouse:walk_0] -> [seq_lerp:graveLink:25:-5:0.325]] -> [seq_play:graveLink:walk] -> [freeze:graveLinkMoving:0] -> [seq_play:graveLink:forward] -> [freeze:graveMouseMoving:0] -> photo_06_2 -> [wait:dialogOpen:0] -> [seq_play:graveLink:lean] -> [freeze:1000] -> [sound:D378-63-40] -> [seq_color:gravePhotoFlash:255:255:255:255:0] -> [freeze:125] -> [seq_color:gravePhotoFlash:0:0:0:0:150] -> [seq_color:gravePhoto:255:255:255:255:0] -> [freeze:2000] -> [music:-1:2] -> [close_overlay] -> [save_history:false]
+
+// photo sequence zora
+npc_zora_script:0 -> [check_item:trade13:1:result] -> [path:npc_zora_item_check]
+
+npc_zora_item_check:result:0 ->
+npc_zora_item_check:result:1 -> [path:npc_zora_spawn]
+
+npc_zora_spawn:photoMouseActive:0 -> [path:npc_spawn_zora_normal]
+npc_zora_spawn:photoMouseActive:1 -> [path:npc_zora_photo_sequence]
+
+npc_spawn_zora_normal:npc_spawn_zora:0 -> [update_objects] -> [set:npc_spawn_zora:1] -> [set:npc_zoraAnimation:spawn] -> [freeze:750] -> [set:npc_zoraAnimation:idle]
+npc_spawn_zora_normal:0 ->
+
+npc_zora_photo_sequence:photo_9:0 -> [update_objects] -> [save_history:true] -> [set:1] -> [set:photo_9:1] -> [set:npc_spawn_zora:1] -> [set:npc_zoraAnimation:spawn] -> [freeze:750] -> [set:npc_zoraAnimation:idle] -> photo_11_0 -> [wait:dialogOpen:0] -> [set:spawnMouseZora:1] -> [set:mouseSeqZoraFade:-75] -> [set:mouseSeqZoraMove:0,-52,1] -> [freeze:1] -> [set:mouseSeqZoraMove:40,0,1] -> [freeze:mouseSeqZoraMoving:0] -> [set:mouseSeqZoraAnimation:stand_1] -> [freeze:500] -> photo_11_1 -> [wait:dialogOpen:0] -> [set:photo_flash:1] -> [freeze:1000] -> [set:photoSequencePhoto:photo_9] -> [start_sequence:photo] -> [set:spawnMouseZora:0] -> [set:mouseSeqZoraFade:75] -> [save_history:false] -> [path:photo_count_increase]
+npc_zora_photo_sequence:photo_9:1 -> [path:npc_spawn_zora_normal]
+
+npc_zora:0 -> npc_zora
+
+// photo sequence mountain
+mountain_mouse_seq:photoMouseActive:0 ->
+mountain_mouse_seq:photoMouseActive:1 -> [path:start_mountain_seq]
+
+start_mountain_seq:0 -> [update_objects] -> [save_history:true] -> [freeze:500] -> [set:1] -> [set:photo_12:1] -> [set:mountain_beetle_hide:1] -> [set:spawnMouseMountain:1] -> [set:mouseSeqMountainFade:-75]] -> [set:mouseSeqMountainMove:96,0,1] -> [freeze:mouseSeqMountainMoving:0] -> [set:link_direction:0] -> photo_12_0 -> photo_12_1 -> photo_12_2 -> [freeze:dialogOpen:0] -> [set:mouseSeqMountainMove:-10,0,1] -> [set:mouseSeqMountainAnimation:walk_2] -> [freeze:1] -> [freeze:mouseSeqMountainMoving:0] -> photo_12_3 -> [freeze:dialogOpen:0] -> [set:mouseSeqMountainMove:-5,6,1] -> [set:mouseSeqMountainAnimation:duck] -> [freeze:1] -> [freeze:mouseSeqMountainMoving:0] -> photo_12_4 -> [freeze:dialogOpen:0] -> [set:mouseSeqMountainMove:0,48,1.5] -> [set:mouseSeqMountainAnimation:duck] -> [freeze:300] -> [set:photo_flash:1] -> [freeze:350] -> [set:photoSequencePhoto:photo_12] -> [start_sequence:photo] -> [set:spawnMouseMountain:0] -> [set:mouseSeqMountainFade:75] -> [set:mountain_beetle_hide:0] -> [save_history:false] -> [path:photo_count_increase]
+start_mountain_seq:1 ->
+
+
+// make sure to spawn the mouse before the real sequence is started when marin hits the ground
+seq_fountain_mouse_spawn:1 ->
+seq_fountain_mouse_spawn:has_marin:0 ->
+seq_fountain_mouse_spawn:has_marin:1 -> [path:seq_fountain_mouse_spawn_2]
+seq_fountain_mouse_spawn_2:photoMouseActive:0 ->
+seq_fountain_mouse_spawn_2:photoMouseActive:1 -> [set:seq_fountain_mouse_spawn:1] -> [set:spawnMouseFountain:1] -> [set:mouseSeqFountainAnimation:stand_1]
+
+// photo sequence fountain: active when the player talked to the mouse and marin is following the player
+seq_fountain:photoMouseActive:0 -> [path:sequence_fountain_marin]
+seq_fountain:photoMouseActive:1 -> [path:photo_sequence_fountain]
+
+// marin falling on link
+sequence_fountain_marin:fallen_on_link:0 -> [update_objects] -> [countdown:175] -> marin_fountain
+sequence_fountain_marin:fallen_on_link:1 -> [update_objects] -> [set:link_animation:stunned] -> [freeze:500] -> photo_08_1 -> [wait:dialogOpen:0] -> [set:link_idle:1]
+
+// marin falling onto link; in the original the player can move and prevent the sequence from happening
+photo_sequence_fountain:0 -> [update_objects] -> [save_history:true] -> [set:1] -> [set:photo_3:1] -> [set:link_animation:stunned] -> [freeze:500] -> photo_08_0 -> [wait:dialogOpen:0] -> [set:photo_flash:1] -> [freeze:250] -> photo_08_1 -> [wait:dialogOpen:0] -> [set:mouseSeqFountainMove:0,-48,1] -> [freeze:350] -> [set:link_idle:1] -> [freeze:mouseSeqFountainMoving:0] -> [set:spawnMouseFountain:0] -> [set:mouseSeqFountainFade:75] -> [save_history:false] -> [path:photo_count_increase]
+photo_sequence_fountain:1 -> [path:sequence_fountain_marin]
+
+
+// photo sequence weather bird
+start_weather_bird_seq:photoMouseActive:0 ->
+start_weather_bird_seq:photoMouseActive:1 -> [path:seq_weather_bird_marin]
+seq_weather_bird_marin:has_marin:0 ->
+seq_weather_bird_marin:has_marin:1 -> [path:photo_sequence_weather_bird]
+photo_sequence_weather_bird:0 -> [save_history:true] -> [set:1] -> [set:photo_4:1] -> [start_sequence:weatherBird] -> [path:photo_count_increase]
+photo_sequence_weather_bird:1 ->
+
+seq_weather_bird:0 -> [music:1:2] -> [seq_lerp:weatherBirdLink:130:0:0.5] -> [seq_lerp:weatherBirdMarin:133:0:0.5] -> [freeze:weatherBirdLinkMoving:0] -> [seq_play:weatherBirdLink:stand]  -> [freeze:weatherBirdMarinMoving:0] -> [seq_play:weatherBirdMarin:stand] -> [seq_play:weatherBirdUlrich:walk] -> [seq_lerp:weatherBirdUlrich:-48:0:0.5] -> [freeze:weatherBirdUlrichMoving:0] -> [seq_play:weatherBirdUlrich:stopped] -> photo_09_0 -> [wait:dialogOpen:0] -> [seq_lerp:weatherBirdUlrich:-48:0:0.5] -> [seq_play:weatherBirdUlrich:walk] -> [freeze:weatherBirdUlrichMoving:0] -> [seq_play:weatherBirdUlrich:stand] -> [seq_lerp:weatherBirdLink:8:0:0.5] -> [freeze:100] -> [seq_lerp:weatherBirdMarin:-2:0:0.5] -> [freeze:100] -> [set:weatherBirdUlrichFront:1] -> photo_09_1 -> [wait:dialogOpen:0] -> [sound:D378-63-40] -> [seq_color:weatherBirdPhotoFlash:255:255:255:255:0] -> [freeze:125] -> [seq_color:weatherBirdPhotoFlash:0:0:0:0:150] -> [freeze:1000] -> photo_09_2 -> [wait:dialogOpen:0] -> [seq_lerp:weatherBirdUlrich:-128:0:0.5] -> [seq_play:weatherBirdUlrich:walk] -> [freeze:1500] -> [music:-1:2] -> [close_overlay] -> [save_history:false]
+
+
+// photo sequence cliff
+check_cliff_sequence:1 ->
+check_cliff_sequence:photoMouseActive:1 -> [path:cliff_sequence_marin]
+check_cliff_sequence:0 ->
+cliff_sequence_marin:has_marin:0 ->
+cliff_sequence_marin:has_marin:1 -> [save_history:true] -> [set:check_cliff_sequence:1] -> [set:photo_2:1] -> [start_sequence:marinCliff]
+
+seq_cliff:0 -> [music:77:2] -> [freeze:750] -> marin_cliff_0 -> [wait:dialogOpen:0] -> [freeze:125] -> marin_cliff_1 -> [wait:dialogOpen:0] -> [freeze:125] -> marin_cliff_2 -> [wait:dialogOpen:0] -> [freeze:125] -> marin_cliff_1 -> [wait:dialogOpen:0] -> [freeze:125] -> marin_cliff_3 -> [wait:dialogOpen:0] -> [freeze:125] -> marin_cliff_1 -> [wait:dialogOpen:0] -> [freeze:1500] -> marin_cliff_4 -> [wait:dialogOpen:0] -> [freeze:750] -> [sound:D378-63-40] -> [seq_color:cliffPhotoFlash:255:255:255:255:0] -> [freeze:125] -> [seq_color:cliffPhotoFlash:0:0:0:0:150] -> [freeze:750] -> marin_cliff_5 -> [wait:dialogOpen:0] -> [freeze:500] -> [music:-1:2] -> [close_overlay] -> [path:photo_count_increase] -> [save_history:false]
+
+
+// photo sequence bridge
+photo_sequence_bridge:photoMouseActive:0 -> npc_bridge_5
+photo_sequence_bridge:photoMouseActive:1 -> [save_history:true] -> [set:1] -> [set:bridge_photo:1] -> [set:photo_8:1] -> photo_10_0 -> npc_bridge_3 -> [wait:dialogOpen:0] -> [set:mouse_catch:1] -> [freeze:mouse_pulled:1] -> [music_speed:2] -> [freeze:1000] -> [set:npc_bridgeAnimation:pull] -> [freeze:750] -> npc_bridge_4 -> [wait:dialogOpen:0] -> [set:mousePullUp:1] -> [freeze:mousePulledUp:1] -> [set:npc_bridgeAnimation:pull_look] -> photo_10_1 -> [wait:dialogOpen:0] -> [freeze:1000] -> [set:fisherman_fall:1] -> [freeze:250] -> [set:photo_flash:1] -> [freeze:500] -> [set:photoSequencePhoto:photo_8] -> [start_sequence:photo] -> [freeze:125] -> [set:fisherman_reset:1] -> [path:photo_count_increase] -> [music_speed:1] -> [save_history:false]
+
+
+// player enters the egg
+egg_entry:0 -> map_wind_fishs_egg -> [set:ulrira_d9:2]
+
+// == final boss ==
+final_boss_intro:0 -> [music:92:2] -> [freeze:1000] -> final_boss -> [wait:dialogOpen:0] -> [music:34:2]
+
+// killed the final boss
+final_boss_death:0 -> [save_history:true] -> [music:94:2] -> [countdown:1000] -> nightmareFinal1 -> [wait:dialogOpen:0] -> [countdown:750] -> [set:spawn_final_stairs:1] -> [set:1] -> [save_history:false]
+final_boss_death:1 ->
+
+// final
+// walk up into the final room
+final_stairs:0 -> [save_history:true] -> [set:final_remove_wall:1] -> [set:link_move:0,-0.35] -> [lock_player:transition_ended:1] -> [set:hide_hud:1]
+
+// walk up the final room
+final_stair_walk:0 -> [set:link_move_collision:0] -> [set:link_move:0,-0.5] -> [lock_player:link_move_collision:1] -> [path:final_stair_stand]
+final_stair_stand:0 -> [set:link_animation:final_stand] -> [set:owl:final]
+
+owl:final -> [update_objects] -> owl_final -> [wait:dialogOpen:0] -> [path:final_windfish]
+
+final_windfish:0 -> [update_objects] -> [freeze:1000] -> [set:spawn_windfish:1] -> [freeze:4000] -> [sound:D370-23-17] -> final_windfish -> [wait:dialogOpen:0] -> [freeze:1000] -> [set:spawn_windfish:0] -> [freeze:4000]  -> [path:final_instruments]
+final_instruments:0 -> [update_objects] -> [sound:D370-23-17] -> final_instruments -> [wait:dialogOpen:0] -> [set:link_final:1]
+
+final:0 -> [start_sequence:final]
+
+final_show_map:0 -> [update_objects] -> [set:maria_sing_final:1] -> [freeze:17500] -> [set:tarinFinalAnimation:show]-> [set:tarinMushroomAnimation:show]
+
+// debug stuff
+final_test_instrument:0 -> [set:link_final:1]
+
+final_test:0 -> [set:final_stair_stand:x] -> [start_sequence:final]
+// [update_objects] -> [freeze:100] -> [set:link_final:1]
+final_stair_stand:x ->

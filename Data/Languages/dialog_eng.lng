@@ -1,0 +1,1158 @@
+// items
+smallkey You got a Small Key!\nYou can open a locked door.
+compass You've got the Compass!\nNow, you can see where the chests and Nightmares are hidden!\fThis Compass has a new feature-- a tone will tell you if a key is hidden in a room when you enter!
+dmap At last, you got a Map!\nPress the SELECT Button to look at it!
+stonebeak You found a stone beak!\nLet's find the owl statue that belongs to it.
+
+sword1 You found your Sword! It must be yours because it has your name engraved on it!
+feather You've got the Roc's Feather! It feels like your body is a lot lighter!
+pegasusBoots You've got the Pegasus Boots! If you hold down the Button, you can dash!
+flippers You've got the Flippers! If you press the B Button while you swim, you can dive underwater!
+bracelet0 You found the Power Bracelet! At last, you can pick up pots and stones!
+bracelet1 You've got a more Powerful Bracelet! Now you can almost lift a whale!
+ocarina You've got the Ocarina! You should learn to play many songs!
+powder You got some Magic Powder! Try to sprinkle it on many things!
+mirrorShield You've got the Mirror Shield! You can now turn back the beams you couldn't block before!
+hookshot You've got the Hook Shot! Its chain stretches long when you use it!
+magicRod You've got the Magic Rod! Now you can burn things! Burn it! Burn, baby burn!
+shovel You've got a Shovel! Now you can feel the joy of digging!
+magicPowder You've got some Magic Powder! Try sprinkling it on a variety of things!
+bomb You've got a bomb!\nWay to go!
+sword2 You've got a new Sword! You should put your name on it right away!
+boomerang You got the Boomerang in exchange for the item you had.
+
+shield It's a Shield!\nThere is space for your name!
+shield_intro You got your shield back! Press the button and repel enemies with it!
+shield_back You got your shield back! You can use it to flip enemies!
+
+yoshiPickup You got a Yoshi Doll! Recently, he seems to be showing up in many games!
+
+// playing the ocarina without having learned a song
+ocarina_bad Well, it's an Ocarina, but you don't know how to play it...
+ocarina_bad_marin Not very good... Eh? What? Did I say something? No, you're hearing things...
+
+// trading alt + 0161
+trade0 You traded your ¡ for ¢! Maybe you can trade the ribbon for something else!
+trade1 You exchanged ¢ for £! It's full of juicy beef!
+trade2 You gave him £ and got bananas ¤ in return! Good deal!
+trade4 You found a stick a monkey left behind...\nYou take it!
+trade5 ¥ became the honeycomb ¦! You're not sure how it happened, but take it!
+trade6 You exchanged ¦ for §! It's not as sweet, but it is delicious!
+trade7 You traded the § for the ¨!
+trade8 You traded ¨ for a goat's letter ©! ...Great!?
+trade9 You got a Broom as your reward from Mr. Write! But that photo was not of...
+trade10 You exchanged ª for the fishing hook «! What will the fishing hook become?
+trade11 The « became a necklace ¬! L-l-lucky!
+trade12 You returned the necklace ¬ and got a scale ­ of the mermaid's tail. How will you use this?
+trade13 You've got the Magnifying Lens! This will reveal many things you couldn't see before!
+
+// keyholes
+keyhole_0 Hunh? A keyhole here?\nIt says, 'Tale Keyhole'
+keyhole_1 Hunh? A keyhole here?\nIt says, 'Slime Keyhole'
+keyhole_2 Hunh? A keyhole here?\nIt says, 'Angler Keyhole'
+keyhole_3 Hunh? A keyhole here?\nIt says, 'Face Keyhole'
+keyhole_4 Hunh? A keyhole here?\nIt says, 'Bird Keyhole'
+
+// collectables
+toadstool You pick the toadstool... As you hold it over your head, a mellow aroma flows into your nostrils.
+toadstool_hole It's the toadstool you picked in the woods. What is it for? You hold it over your head and a mellow aroma wafts into your nostrils.
+
+seashell You found a Secret Seashell! If you collect a lot of these, something good is bound to happen!
+
+heart You've got a Heart! Thump! One of your Heart Containers is filled!
+
+ruby20 You got 20 Rupees! JOY!
+ruby50 You got 50 Rupees!\nVery Nice!
+ruby100 You got 100 Rupees!\nYou're Happy!
+ruby200 You got 200 Rupees!\nYou're Ecstatic!
+
+// trendy game
+ruby30 It's 30 Rupees! You can play the game three more times with this!
+
+heartMeter You've got a Piece of Heart! Press SELECT on the Subscreen to see.
+heartMeterFilled You collected four Pieces of Heart. Now, you have a complete Heart Container!
+
+guardianAcorn You've got a Guardian Acorn!\nIt will reduce the damage you take by half!
+pieceOfPower You got a Piece of Power!\nYou can feel the energy flowing through you!
+
+potion You found the secret medicine! You should apply this and see what happens!
+
+dkey1 You've got the Tail Key! Now you can open the Tail Cave gate!
+dkey2 You've got the Slime Key! Now you can open the gate in Ukuku Prairie!
+dkey3 You've got the Angler Key!
+dkey4 You've got the Face Key!
+dkey5 You've got the Bird Key!
+
+nightmarekey You've got the Nightmare's Key! Now you can open the door to the Nightmare's Lair!
+
+instrument0 You've got the Full Moon Cello!
+instrument1 You've got the Conch Horn!
+instrument2 You've got the Sea Lily's Bell!
+instrument3 You've got the Surf Harp!
+instrument4 You've got the Wind Marimba!
+instrument5 You've got the Coral Triangle!
+instrument6 You've got the Organ of Evening Calm!
+instrument7 You've got the Thunder Drum!
+
+instrument0Collected {...SWAMP...}{A path opens...}{in the blooms...}
+instrument1Collected {...PRAIRIE...}{...PRAIRIE...} The Prairie is waiting...
+instrument2Collected {...WATERFALL...}{It is hidden in the}{waterfall...}
+instrument3Collected {...BAY...}{Your road goes into the}{bay...}
+instrument4Collected {...SHRINE...}{An island secret in the}{shrine...}
+instrument5Collected {...MOUNTAIN...}{Something calls...}{from the mountains...}
+instrument6Collected {...OCARINA...}{The music of the Ocarina}{leads...}
+instrument7Collected {...EGG....}{The Egg on the mountain}{calls!}
+
+goldLeaf You've found a Gold Leaf! Press SELECT to see how many you've collected!
+goldLeafLast At last! You've got the final Golden Leaf! Now go and see Richard about that key...
+
+// ° ± ² ³
+// <- alt + 0176 
+// -> 0177
+// v 0178
+signpost0 error
+signpost1 ± Tail Cave\n² Toronbo Shores
+signpost2 Mysterious Forest\n(It's a little bit\n mysterious)
+signpost3 East ± Ukuku\n       Prairie\fFarther East\n  Animal Village
+signpost4 Beware of Sea Urchins!\nDon't touch them with your bare hands!
+signpost5 Beware of floors with cracks! A heavy person should not stand on them!
+
+signpost6 Kanalet Castle 10 Min. ± ³
+signpost7 Kanalet Castle 5 Min. ±
+signpost8 Kanalet Castle 50 Paces ³
+
+signpost9 ± Animal Village\n² Martha's Bay
+signpost10 Seashell Mansion
+
+signpost11 You're close to Tal Tal Heights. The Camera Shop is nearby.
+signpost12 ± Tamaranch Mt.\n° Goponga Swamp
+signpost13 ± Crazy Tracy\n² Manbo's Pond
+signpost14 ± Cemetery\n² Ukuku Prairie
+signpost15 ± Gopongo Swamp\n² Mysterious Forest
+
+signpost16 DANGER!\nKeep out!\n(Except BowWow)
+signpost17 Richard's Villa
+signpost19 Telephone Booth\n² Signpost Maze
+
+signpost20 Mt. Tamaranch 
+signpost21 Do you want to challenge the river rapids on a raft? Proceed to the office at once, please!
+
+signpost22 Entrance to\nYarna Desert ±
+signpost23 ± Welcome to the\nAnimal Village!
+
+signpost_Down ² GO THIS WAY
+signpost_Up ³ GO THIS WAY
+signpost_Right ± GO THIS WAY
+signpost_Left ° GO THIS WAY
+signpost_TryAgain TRY AGAIN FROM THE START
+signpost_Great GREAT! YOU DID IT! YOUR REWARD IS ± THIS WAY!
+signpost_Gone GONE ON TOUR\nMAMU
+
+talking_tree Well that was a surprise! Hey! I'll tell you a secret! Use your sword to poke at dungeon walls... If you hear a hollow clank, you can break the wall with a Bomb!
+
+mamu0 Ribbit! Ribbit! Hey, man, I'm Mamu, on vocals! Brother, you look like you don't know squat about music! Ribbit!
+mamu1 Ribbit! Ribbit! I'm Mamu, on vocals! But I don't need to tell you that, do I? Everybody knows me! Want to hang out and listen to us jam? For 300 Rupees, we'll let you listen to a previously unreleased cut! What do you do?
+mamu2 Well, that's a shame, but we don't play for free!
+mamu3 Thank you... Thank you very much... Croak!
+ocarina_frog_song You've learned The Frog's Song of Soul! It's a very moving tune... It can even liven up unliving things!
+ocarina_frog_song_end If you play this song, you'll make everything around you feel more alive!
+
+manbo0 I am Manbo, child of the Sun Fish! Have you got an Ocarina?
+manbo1 Very well...\nGlub Blub Bloop!
+manbo2 Ahaha! Then I can teach you my song! Bloop!
+manbo3 Aha... You don't have an Ocarina, so... Glub glub!
+manbo4 I am Manbo, child of the Sun Fish! When you play my Mambo, you can warp to Manbo Pond! Try this tune in the dungeons, too! Cha-cha-cha!
+
+ocarina_manbo_song You've learned Manbo's Mambo! When you get out of the water, play it!
+
+choice_Pay Pay
+choice_Leave Leave
+
+signHead1 THE WIND FISH IN NAME ONLY, FOR IT IS NEITHER.
+signHead2 MUSIC, THE FISH STIRS IN THE EGG YOU ARE THERE...
+signHead3 SEA BEARS FOAM, SLEEP BEARS DREAMS. BOTH END IN THE SAME WAY CRASSSH!
+signHead4 SECRETS ARE LIKE WATER WHEN IT COMES TO BRIDGES
+signHead5 THE WIND FISH SLUMBERS LONG... THE HERO'S LIFE GONE...
+signHead6 AROUND HERE, SECRETS ARE NIGH
+signHead7 You are near the Eagle's Tower. Beware of the bird!
+signHead8 NOW YOU NEED LOOK FAR FOR A SECRET...
+signHead9 IN SOIL SLEEPS SECRETS, BENEATH YOUR SOLES...
+
+castle_button Hunh? It sounds like the castle gate opened! You can easily leave the castle now!
+
+door_nightmarekey Eh? It's locked! You can open the door with the Nightmare Key.
+
+dungeon_keyhole_block Hunh? This rock has a key hole! You should come back with a key!
+rock_cracks_message This rock has many cracks... There must be some way to shatter it...
+crystal_hard Oh? What a weird object! There must be some way to tackle this obstacle.
+
+stone Wow! This looks pretty heavy! You won't be able to lift it with just your bare hands...
+
+// nightmares
+nightmare1 {BUZZZZZ! BUZZZZ!}{OUTZZZIDER!}
+nightmareFinal0 This island is going to disappear... Our world is going to disappear... Our world... Our... world...
+nightmareFinal1 ...[NAME], you have beaten all the Nightmares! Climb the stairs before you!
+
+// maria
+maria_0_0 What a relief! I thought you'd never wake up! You were tossing and turning...\fWhat? Zelda? No, my name's Marin! You must still be feeling a little woozy.\nYou are on Koholint Island!
+maria_0_1 Follow the lane south to reach the beach where I found you. Since you washed ashore, lots of nasty monsters have been in the area, so be careful, okay?
+
+// marin standing outside
+maria_1_0 Hi! Tarin went to the forest to look for toadstools, but I'd rather sing. Listen to this, it's called the 'Ballad of the Wind Fish.'
+maria_1_1 I just love to sing-- what can I say? What do you like to do, [NAME]?
+
+// after talking to the owl
+maria_1_2 [NAME], Tarin's taking a nap at home. I don't know how he can sleep on such a nice day! It makes me want to sing a song... Yes, the song is 'Ballad of the Wind Fish!'
+
+// singing in the right village
+maria_1_3 Hey! That's a nice Ocarina you have there! Will you accompany me as I sing?
+maria_1_4 So, how do you like it? It's really touching, isn't it? Does it stick in your mind?
+maria_1_5 Please! I want you to learn it! This song is my favorite!
+
+maria_1_6 Please remember this song! You should play it every once in a while to keep it fresh in your mind!
+maria_1_7 Please, don't ever forget this song...or me...
+
+maria_1_8 They say the 'Ballad of the Wind Fish' is a song of awakening. I wonder, if the Wind Fish wakes up, will he make my wish come true?
+maria_1_9 Oh, [NAME]. I often come to this village to sing, too! It seems that just about everyone loves my 'Ballad of the Wind Fish!' [NAME], what is your favorite song?
+
+marin_letter At the beach... Marin ¶
+
+// maria at the beach
+marin_2_0 Oh, [NAME], I'm glad you found this place. Will you stay and talk to me for a while?    
+// Yes! No...
+marin_2_1 Okay, I'll just watch the waves for a while...
+marin_2_2 I wonder where these coconut trees come from? ...Tarin says there is nothing beyond the sea, but I believe there must be something over there... When I discovered you, [NAME], my heart skipped a beat! I thought, this person has come to give us a message...
+marin_2_3 ... ... ... ... ... ... ... ... If I was a sea gull, I would fly as far as I could! I would fly to far away places and sing for many people! ...If I wish to the Wind Fish, I wonder if my dream will come true... ... ...
+marin_2_4 Hey! Are you listening? [NAME], are you listening to me?
+marin_2_5 Humph! Your head is always in the clouds! Will you please listen to me next time?!
+marin_2_6 I want to know everything about you...Err...Uhh, Ha ha ha ha!
+marin_2_7 Hunh? The walrus wants me to go to him? It doesn't matter, I will go with you to him...
+
+maria_collected You got Marin! Is this your big chance?
+
+// going into a dungeon
+marin_dungeon Eh? You want me to go in there? No, I think I'll wait out here... Take care of yourself, [NAME]!
+marin_dungeon_leave [NAME]! You're back! Are you hurt?
+marin_dungeon_leave_time ...You're late! I thought you'd never come back!
+marin_dungeon_hearts ...EEEK! You're hurt! Arrrgh! Don't be so reckless!
+marin_dungeon_hearts_alt ...You idiot! I told you this would happen... Eh?! What? I didn't say anything, really!
+
+marin_cucco_0 Ha ha ha! Do it! Do it! Do it moooore! ... ... Hunh? No, it's nothing... I didn't mean it.
+marin_cucco_1 No!  No!  Poor  hen!\nStop that!
+
+marin_pot_0 Yes!! Yes!! Break them! Break them all! ... ... ... ... What? What's wrong?
+marin_pot_1 Ahhh! Ahhh, you are a bad boy, [NAME]!
+
+marin_digging Great! Dig it! Dig it! Dig to the center of the earth!!
+
+maria_game_0 Wow! [NAME], can I try this?! What do you say?
+// Okay No Way
+maria_game_1 C'mon! I want to do it! Can I? It looks so fun!
+// Yes  Okay
+maria_game_2 You're good! You're a pro, aren't you? ... ... ... ... Well, beat it! Pros aren't allowed in here!
+
+
+// walrus sequence
+maria_3_0 Yes, it's that lazy walrus! Shall we give him a little surprise?
+// Yes  No...
+marin_3_1 You're right, it would be mean to wake him up now! Let's let him sleep some more!
+maria_3_2 Aha ha ha! Wow! He certainly woke with a start!
+maria_3_3 Hunh? Oh, he's calling me... It's the same as always... Ha ha!
+maria_3_4 [NAME], I'm going to the Animal Village! Please drop by, okay?
+
+// marin falling into the fountain not falling on link
+marin_fountain Whew! What a surprise!
+
+// marin in the mountains
+marin_4_0 Somebody, HELP!
+marin_4_1 Hey! [NAME]! Some monsters put me up here! What should I do?! I'm afraid of heights!!
+marin_4_2 Yow! That was a surprise! [NAME], thank you!
+marin_4_3 ... ... ... ... ... ... ... ... Say... [NAME] ...
+marin_4_4 Uhh... I don't know how to say this... but...
+marin_4_5 MAAAAAAARINNNN!!
+marin_4_6 Hunh?! Tarin??! ... ... ... ... Uh... Nevermind, I... I gotta go!
+
+marin_5_0 Thank you for everything! [NAME], you are the kindest boy I know. One day I made a wish to the Wind Fish... What was the wish? It was... No, it's secret!
+marin_5_1 [NAME], some day you will leave this island... I just know it in my heart... ...Don't ever forget me... If you do, I'll never forgive you!
+
+walrus_0 {ZZZ ZZZ ZZZ ZZZ}{... ¶ ... ¶ ...}
+walrus_1 {Arfh! Arfh! Arf!}{¶  ¶!  ¶   ¶!}{..... ·??}
+
+animals_absorbed {... ... ... ...}It seems to be totally absorbed in Marin's song!
+
+ocarina_maria_song You've learned the 'Ballad of the Wind Fish!' This song will always remain in your heart!
+
+// tarin house
+tarin_chest Hey! What are ya doin' in my chest?! Where'd you learn ta do such a thing?!
+
+// tarin
+npc02_leave Whoa, boy! Where ya off to in such a hurry? Sit a spell, I got somethin' to tell ya!
+tarin_0 Well, [NAME], ya finally snapped out of it... Name's Tarin... Hope yer feelin' better... What? How did I know your name? You think it's weird, eh? Well, I saw it on back of this shield!
+tarin_1 Oh, yeah... Some other stuff like this washed up on the beach... If'n you go look watch out for monsters! Ever since you showed up, [NAME], I've seen 'em all over the place!
+
+// after the raccoon transformation
+tarin_raccoon_2 The last thing I kin remember was bitin' into a big juicy toad-stool... Then, I had the darndest dream... I was a raccoon! Yeah, sounds strange, but it sure was fun!
+tarin_raccoon_3 I'm all tucker'd out... I think I better set a spell before I head home...
+
+tarin_2 I'm tired... I'm goin' ta sleep now... Zzzzzz...
+tarin_3 Hrrrm...Snore... Hunh?... If'n ya don' know...call old man Ulrira! Zonk...Snore...
+
+// tarin with the bananas
+tarin_4 I was hungry somethin' fierce so I went and got bananas at the beach... [NAME], if you want some, you should go and get some!
+
+// tarin trading sequence
+tarin_stick Oh?! [NAME], I see ya have a nice stick... Can I borrow it for a second?
+tarin_stick_no Hmmm, [NAME], you are mean!
+
+// after the trading sequence sleeping in the bed
+tarin_5 Unnnngh! Owwwww! ... ... ... ... I've sure lost my taste for honey!
+
+
+// lady with the broom
+npc_broom_0 YAHOO! I'm fine, and you?!
+npc_broom_1 YAHOO! I worked too hard and now my broom is worn to the handle!
+npc_broom_2 YAHOO! YAHOO! A new broom?! For me? It is, isn't it?!
+npc_broom_3 Okay! In return you can have this fishing hook I found when I swept by the river bank!
+npc_broom_4 YAHOO! A new broom! Superb!
+npc_broom_5 Then YOU sweep the island!
+npc_broom_bowwow She's had an awful tragedy in the house across the way! It's just awful, and all I can do is sweep!
+
+npc04 Er...Uh...Hmm...How to say... Please call... Outside... ...
+npc04_game It seems that old man Ulrira is a shy guy, in person...
+
+// kid with hints
+//npc05_0 Hey, man! When you want to save just push all the Buttons at once! Uhh... Don't ask me what that means, I'm just a kid!
+npc05_1 Well, it seems that after you save, you will start at the last door you went through... I'm not really sure why that is 'cause I'm just a kid!
+npc05_2 I heard that you can press SELECT to look at the island map... But, I don't understand what they mean by that...
+npc05_3 When you're running out of Hearts, you'd better enter a house or cave... Why? I have no idea, I'm just a kid!
+
+npc_ball_left Where are you from, brother? ...Outside the island? What is 'outside?' I've never thought about it...
+npc_ball_right The giant egg on top of Tamaranch Mountain? They say the Wind Fish is sleeping inside of it... Why? I don't know either...
+
+// kid near the weather bird or next to the shop
+npc_boy_island Dude! You're asking me when we started to live on this island? What do you mean by 'when?' Whoa! The concept just makes my head hurt!
+npc_boy_marin Hey, dude! What do you think of Marin? Uhh... I don't know, I'm just a kid!
+npc_boy_shrine Hey hey, bro! About the Dream Shrine there... They say there's something good inside... ... I better not say anything else as I'm just a kid!
+npc_boy_marin_beach Marin? She likes to go stare at the ocean all by herself... Why? Hey, I'm just a kid, don't ask me!
+// kids while marin is with link
+npc_boy_marin_following Hey... Where're you two going together? Hunh? Uh, I didn't mean anything... I'm just a kid!
+npc_boy_marin_gone Hunh?! Marin's not with you? What happened to her?
+
+// when the player has the broom and the grandma is in the other village
+npc_boy_grandmother Grandma's not here. She's in the Animal Village. That's what Grandpa Ulrira said on the phone!
+
+// kids playing ball game after the village gets attacked
+npc_kid_attacked Hey buddy! It's serious! Yeah, really serious!! Yeah, it is! The Moblins came to the village! Yeah, that's right! A whole gang of Moblins! Then... It's for real! They all went to the house... Yeah, that house, and then they did something at Bow Wow's house!! It was a really bad scene, with the M-m-moblins! So, I mean, ahh! ... ... ... ... ... ... ... ... It might be faster to find out for yourself what happened!
+
+// chef in the right village
+npc_chef_0 My ultimate plan is to open a branch in Mabe Village!
+npc_chef_1 Rik'm rak'm! I ran out of ingredients! If I had honey, I could make this fit for a king!
+npc_chef_2 Hi ho! Hey you! Is that possibly a ¦ you have? I just ran out! Will you swap it for a pineapple?
+npc_chef_3 That's a crying shame, but I realize those are a rare delicacy!
+npc_chef_4 Hi ho! Yeah, I know, that tub of goo is asleep right in the way to Yarna Desert! Once he's asleep he won't budge for a loooooonng time. But hey! Take Little Marin and wake him up with her song! That slob would wake up with a jump if he heard her sing, for sure! Heh heh heh!
+npc_chef_marin HI HO! Little Marin! Welcome! ... ... ... ... Oh, shucks! You are here too... Sorry...
+
+// yoshi doll
+npc07_0 Because they all look alike, even I am sometimes confused...
+npc07_1 By the way, my baby wants a Yoshi Doll. I saw one at the Trendy Game, but I couldn't get it.
+npc07_2 Oh! Will you give that doll to my baby?!
+npc07_3 Tsk tsk... What a shame...
+npc07_4 Oh thank you! You are indeed a generous person! Ah! I will give you this in return!
+npc07_5 My husband is lost in the woods! Please go find him!
+
+npc_house_chest [NAME] checked the chest.\nWow! This is a nice chest!
+npc_house_chest_marin [NAME], do you always look in other people's drawers?
+
+npc_letter_boy_0 Well... I pretty much stick to myself, me and my letters... My name's Write! The only thing I don't like about my hobby is that I never receive a response...
+npc_letter_boy_1 What's this?! A letter for me?! I'm so happy! ...And look! The letter came with a photograph!
+npc_letter_boy_2 Mmm... She's so beautiful... I must give you something for your trouble... Hmm... Well, it looks like all I have is this broom... how'll that be?
+npc_letter_boy_3 Please! I really must insist you have this ª!
+npc_letter_boy_4 Oh boy! Letter writing is such a great hobby!
+npc_letter_boy_5 Hello! I'm writing back to Christine now!
+
+
+npc_letter_girl_0 You don't know the proper etiquette when dealing with a lady, do you? You should have brought flowers or something, then I might be more inclined to talk with you... Oh yes, in my case, hibiscus are best...
+npc_letter_girl_1 Oh, you brought me a hibiscus! How sweet! Well, since you are such a gentleman I have a request to make of you. Will you listen? 
+npc_letter_girl_2 I would like you to take this letter to a Mr. Write who lives on the border of the Mysterious Forest, please!
+npc_letter_girl_3 ...Is that so? And I thought you were a gentleman...
+npc_letter_girl_4 You know, sometimes I can't help eating a delicious piece of paper, even if it's a letter to my darling Mr. Write... How embarrassing!
+
+// fisher under the bridge
+npc_bridge_0 It's no use, little buddy! A fish took my hook... I keep casting my line into the water, but I haven't got a bite... I thought this would happen...
+npc_bridge_1 Oh! What is that you have in your hand? It's not a fishing hook, is it? You had better let me have it. I'll give you my next catch if you let me have it...
+npc_bridge_2 You should be more kind to me! I thought we were buddies!
+npc_bridge_3 Keep your eyes open and watch a pro at work.
+npc_bridge_4 My, that's a BIIIIG one!
+npc_bridge_5 I can't wait to see what I'll catch next!
+
+
+tracy_give Give
+tracy_dont Don't
+
+npc_tracy_0 Hi there, big guy! I'm Crazy Tracy! I've got a little secret for sale that'll pump you up!
+npc_tracy_1 Will you give me 28 Rupees for my secret?
+npc_tracy_2 How about it? 42 Rupees for my little secret...
+npc_tracy_3 ...You're so cute!\nI'll give you a 7 Rupee discount!
+npc_tracy_4 All right, come here and I'll rub it on you! ...There... I've applied my own secret medicine! It will take effect when you lose all heart! Drop by again, big guy!
+npc_tracy_5 Beat it, then! Come back when you have some cash!
+npc_tracy_6 ... ... ... ... But I won't sell it to you!
+npc_tracy_7 Well! I'm only offering you a secret that will make you strong! You're such a chicken!!
+npc_tracy_8 Here's some bonus treatment! Behold! Your Hearts are full!
+
+
+// npc lost boy
+npc_lost_boy_0 Yep, Papahl got lost, just like he said! Now, I am so famished I can't move! Can you give me some vittles?
+npc_lost_boy_1 You're one cold hombre...
+npc_lost_boy_2 This § is so delicious! I'm going to eat the § right now! Bon Appetit!
+npc_lost_boy_3 AH! This isn't meant to be a reward... Here, take this ¨! It's a hibiscus!
+npc_lost_boy_4 Delicious! Yum! I'm filled with energy, now!
+
+
+// mermaid
+npc_mermaid_0 When I was swimming in the bay, the waves took a very important necklace from around my neck! If you find it, I will let you take a scale from my tail!
+npc_mermaid_1 I have already looked around here!
+npc_mermaid_2 Ahh! That's it! That's my necklace! Give it! Give it back! I will give you a scale as I said!
+npc_mermaid_3 Promise! You'll only take one!
+npc_mermaid_4 You are heartless and cruel!
+npc_mermaid_5 An artist once asked me to pose for him, and he wanted a scale, too... Can the legend of the Magnifying Lens be true...?
+
+// mermaid statue
+mermaid_statue_0 THE MOURNING MERMAID By SCHULE? ...A scale is missing...
+mermaid_statue_1 You put the missing scale in the mermaid statue!
+
+
+// rabbit
+rabbit_0_0 Hey! Did ya know Animal Village and Mabe Village are sister cities? Yes, even though they aren't large enough to be called cities... Anyway, I heard from a very good source that they have a Dream Shrine in Mabe, and that it has something good inside... Is that true?
+rabbit_0_1 I dreamed that I turned into a carrot last night... What an odd dream...
+
+rabbit_1_0 I can't go to Mabe Village because of all the monsters. I hope Marin is all right.
+rabbit_1_1 Eh? How can an animal talk? How? Hey, I'm just a rabbit, so I don't know!
+
+rabbit_2_0 Yarna Desert? There's a way to get there to the south, but you might not be able to get through if that lazy walrus is in the way!
+rabbit_2_1 Have you heard of the Flying Rooster? They say it lived in Mabe Village a long time ago... I wonder if it's true...
+
+rabbit_3_0 Ahhh... Sigh... On such a nice day, we need a song from Marin!
+rabbit_3_1 Aaaah, Little Marin... I want her to come back again...Her song is the best...
+
+rabbit_marin Ahhh! It's her!\nLittle Marin!!
+
+
+// dialog choices
+choice_Yes Yes
+choice_YES YES
+choice_Yes! Yes!
+choice_Okay Okay
+choice_Yeah Yeah
+choice_Fine Fine
+
+choice_No No
+choice_NO NO
+choice_No... No...
+choice_No! No!
+choice_N-No N-No
+choice_No_Way No Way
+choice_No_way No way
+choice_Not_Now Not Now
+choice_Nope Nope
+choice_Give Give
+choice_Keep Keep
+choice_Dont Don't
+choice_Can Can
+choice_Cant Can't
+
+choice_Fish Fish
+choice_Cast Cast
+choice_Look Look
+  
+
+npc08_0 Yep! Those're my boys! I'm Papahl, please to meetcha! I'll be lost in the hills later, so keep a look out for me, hear?
+npc08_1 I've got to say, thanks again!
+
+// bowWow girl
+npc09_0 Ho ho ho! My BowWow is so proud of his fine fur coat!
+npc09_1 AIEEEEEEEE! It's terrrrible! My BowWow was dognapped by... Mo-mo-MOBLINS!! OHHH! AHHHH! Please! Somebody help my poor BowWow!!
+npc09_2 Oh thank you! I'm so happy you brought my baby back! Now, would you be a dear and take him for a walk? It would really help me out a lot! You will?! Thanks!
+npc09_3 Ho ho ho! I really appreciate what you did for my poor, precious BowWow! You are such a nice boy! How can I ever repay you? I know...\fSMOOOOOOOCH!\nYou got a reward from Madam Meow-Meow... ... ...\nL-l-lucky!
+
+
+// bowWow
+bowWow2 YIP YIP!\nYIP YIP!
+
+bowWow3_0 Make-up! Jewels! Dresses! I want it all! sigh... And some new accessories would be nice...
+bowWow3_1 Oh! That Ribbon! I need it! Will you trade for my dog food?       
+
+bowWow3_2 Eh?! I can't believe it! You are the worst!!
+bowWow3_3 Lucky! Thanks!\nWell, here's your £!
+
+bowWow_dig WOOF! Dig! RUFF!
+
+npc_trendy_open TRENDY GAME!\nOne Play 10 Rs.
+npc_trendy_no_cash Sorry kid! You don't have the Rupees! Come back when you have the cash!
+npc_trendy_start The A and B Buttons move the crane... The rest is just timing! Go over to the buttons to play! Good Luck!
+npc_trendy_again Challenge Again?
+npc_trendy_closed We're closing up for today! Come again, anytime!
+npc_trendy_good_luck Good Luck!
+
+npc_trendy_play Play
+npc_trendy_no_play No
+
+// 0176: <
+npc_fisherman_0 How about some fishing, little buddy?
+npc_fisherman_choice I'll only charge you 10 Rupees...
+npc_fisherman_1 You have to have more passion! Live a little!
+npc_fisherman_2 You're short of Rupees? Don't worry about it. You just come back when you have more money, little buddy.
+npc_fisherman_3 Okay, here's how you do it. Use ° and ± on the ´ to aim a cast. Once you hook a fish, press the Button rapidly to reel him in!
+npc_fisherman_4 Why not try one more time, little buddy?
+npc_fisherman_5 Wow! That one got away!\nWant to try again?
+npc_fisherman_6 Wow! Nice Fish! It's a lunker!! I'll give you a 20 Rupee prize!
+npc_fisherman_6_1 Try again?
+npc_fisherman_7 It's a runt! I'll only give you a 5 Rupees prize for that.
+npc_fisherman_7_1 You should try again!
+
+npc_fisherman_8 Oh! It's a big one! And it has a Piece of Heart, too! You get a 20 Rupee prize on top of that!
+npc_fisherman_8_full Oh! It's a big one! And it has a Piece of Heart, too! You have completed another Heart Container! On top of that, you get a 20 Rupee prize! Want to try again?
+
+npc_fisherman_8_1 Try again?
+npc_fisherman_9 This pond's all fished out.
+npc_fisherman_9_1 Why not try your luck in the sea?
+npc_fisherman_10 Did I say that? Forget it, okay? Run along now...
+
+
+// npc raft
+npc_raft_0 Want to go on a raft ride for a hundred Rupees?
+npc_raft_1 Okay, the raft is ready for you outside! Enjoy!
+// same string as for the fisherman
+npc_raft_2 You're short of Rupees? Don't worry about it. You just come back when you have more money, little buddy.
+
+// frog boy
+npc_frog_boy_0 Salutations! You wouldn't know by the look of me, but I used to live in the castle! My servants went berserk and I was forced to flee to my villa... So, you want the key to Ukuku Prairie, do you? I may be able to help you...  Let's make... a deal, shall we? I want you to retrieve the Golden Leaf I left behind in the castle when I fled...
+
+npc_frog_body_impressed I am impressed. There are five leaves in all. Remember to buy a shovel on your way back.
+npc_frog_body_coward Well, I never! I thought you looked cowardly, but...  Please, leave me... just get out here!
+
+npc_frog_body_please Ah! Bonjour! [NAME], for the love of justice, and my own sake, you must find all the leaves!
+
+npc_frog_body_bien Ahh! Tres Bien! I see you have recovered all of the leaves! Now, move this box and you will find your reward!
+npc_frog_body_debt I am forever in your debt for getting my leaves back!
+
+npc_frog_body_bowwow Ahem! Really, I must insist that you not bring that awful beast in here! Leave that creature outside and then we can talk! Good Bye!
+
+npc_zora If you keep me a secret, I'll tell you something useful. Go to Toronbo Shores, use the magnifying glass and you will find someone like me.
+
+alligator_0 Welcome to Sale's House O' Bananas! I'm Sale, this is my house! Actually, my hobby is collecting rare and unusual canned food. My brother is an artist, so I guess strange hobbies run in the family!
+alligator_1 What's that you have?! It's canned food! For heaven's sake, man, give that £ to ME!! PLEASE!
+alligator_2 He's hysterical! What do you do?
+alligator_3 I don't suppose it would do any good to beg? Well, if you change your mind, tell me.
+alligator_4 Oh thank you! I'll take that!
+alligator_5 MUNCH MUNCH!! ... ... ... ... That was great! I know it's not a fair trade, but here's some bananas! YUM...
+alligator_6 Thank you again! That was yummy!
+alligator_7 Hey friend! Have you ever ridden the rapids on a raft? You can, near Tal Tal Heights! You ought to try it!
+
+witch_0 Double double, toil and trouble a toadstool mix makes powder for tricks!
+witch_1 Ahhh... It has the Sleepy Toadstool, it does! We'll mix it up something in a jiffy, we will!
+witch_2 It's all ready, it is! Take care, as there's not much there! Why not try a bit in my hut?
+witch_3 Good job! Use it on your enemies and see what happens. If you run out, go to the forest, pick some mushrooms, and I will make you more.
+
+cukeman_0 Hey Mon!
+cukeman_1 You know me, I like short names the best...
+cukeman_2 It can display millions of polygons!
+cukeman_3 I definitely need it, as soon as possible!
+
+fairy_0 Let's heal your wounds and get rid of all that stress... Close your eyes and relax...
+
+
+// general dialog not used in the actual game
+itemShop_dialog [itemShopItem]\n[itemShopPrice] Rupees!
+itemShop_bow Bow & Arrow Set Only 980 Rupees!
+itemShop_arrow 10 Arrows 10 Rupees
+itemShop_shovel Deluxe Shovel 200 Rupees! Seems expensive!
+itemShop_hearts Three Hearts 10 Rupees!  
+itemShop_shield Shield 20 Rupees!
+itemShop_bomb Ten Bombs 10 Rupees  
+
+itemShop_buy Buy
+itemShop_dont Don't
+itemShop_no_way No Way
+itemShop_no_way! No Way!
+
+// shopkeeper
+shopkeeper_0 Hey! Welcome! See anything you like?! Just bring it here!
+shopkeeper_1 Thanks a lot! And come again!
+shopkeeper_2 Sorry kid! You don't have the Rupees! Come back when you have the cash!
+shopkeeper_3 Aye Caramba! Kid, you have a lot to learn, trying to buy something you have no use for!
+shopkeeper_4 Hey! You! Stop! You gotta pay! Put it back!
+shopkeeper_5 Guess what? You got it for free. Are you proud of yourself?
+
+itemShop_revenge I wasn't kidding when I said pay! Now, you'll pay the ultimate price!!
+
+weatherBird Here Sleeps The Flying Rooster
+
+rooster_0 Wow! The Rooster has recovered! He seems very friendly!
+
+// ghost that follows link
+ghost_0 {...the house...}{...take me...}{...the house...}{...at the bay...}
+// trying to enter a dungon
+ghost_1 {...N-N-No!...}{...N-not there!}
+ghost_2 {...Here!...}{...enter...}{...my house...}
+ghost_3 {...Nostalgia...}{...unchanged...}{...boo hoo...}
+ghost_4 {...Enough...}{...cemetery...}{...take me...}{...my grave...}
+ghost_5 {...my grave...}{...take me...}{...my grave...}
+ghost_6 {...Thank you...}{...a jar...}{...in my home...}{...look inside..}{...bye...bye...}
+
+ghost_grave_powder Cough Cough... Don't sprinkle that on me... ...I'll have to curse you! Cough Cough...
+
+
+// == owl ==
+owl_1_0 Hoot! Hoot!\nSo you are the lad who owns the sword...\fNow I understand why the monsters are starting to act so violently...\fA courageous lad has come to wake the Wind Fish...\fIt is said that you cannot leave the island unless you wake the Wind Fish...\fYou should now go north, to the Mysterious Forest.\nI will wait for you there! Hoot!
+owl_1_1 Hoot! Ho, brave lad, on your quest to wake the dreamer! Welcome to the Mysterious Wood! Much of mystery you will find on this uncharted Koholint island! I'm afraid you may find it a trifle difficult to leave the island while the Wind Fish naps. ...By the by, have you ever visited the Tail Cave, which is south of the village? Go there with the key you find in this forest... The Wind Fish is watching... Hoot!
+owl_1_2 Hoot! Take the key and go to the Tail Cave. Retrieve the Instrument that is hidden there! Go now! The Wind Fish is waiting! Hooot!
+
+owl_2_0 Hoooot! That is an 'Instrument of the Sirens!' I have to admit, at first I did not believe you were real... That Instrument, along with the seven others in the set, has the power to wake the Wind Fish! You must collect them all! I was instructed to give you directions... Your next goal is north, in Goponga Swamp!! Hoot, indeed!
+owl_2_1 Hoot! That is a fearsome looking animal you have there! Do not forget, the next Instrument is in Goponga Swamp!
+
+// post dungeon 3
+owl_3_0 Hoot! How many Instruments have you gotten so far? When you play the Instruments in front of the Egg, the Wind Fish will wake and you will leave this island. Now, you must hasten to the Yarna Desert! The dark, monstrous inhabitants of the sand will show you the way! Hoot Hoot!
+owl_3_1 Hoot! The shape of the key shows a fish, swimming up a cascade of water! Go now to the mountain waterfall! A leap from the top and you will reach your goal!
+
+// at the grave of the ghost
+owl_5_0 Hoot! It has been some time since our paths crossed, lad. You must dive into the waters of Martha's Bay to enter the Catfish's Maw... The closer you get to the Wind Fish, the more restless he sleeps. Carry onward! Hoot!
+
+// owl sitting infront of the egg on the stairs
+owl_stairs Hoooot! The Wind Fish sleeps long and dreamily in the Egg above... When you play the eight Siren Instruments in front of the Egg he will awaken. This, my friend, is the only way for you to leave the island! Hoo!
+
+// pre dungeon 6
+owl_6_0 Hoot! There are two shrines, one to the north, the other to the south. First, head south, where ancient ruins speak of the Wind Fish... You will learn much there...
+owl_6_1 Hoot! I see you have read the relief... While it does say the island is but a dream of the Wind Fish, no one is really sure... Just as you cannot know if a chest holds treasure until you open it, so you cannot tell if this is a dream until you awaken... The only one who knows for sure is the Wind Fish... Trust your feelings... Someday you will know for sure...
+
+// after dungeon 6
+owl_7_0 Hoot! The many monsters of this island fear that the Wind Fish is about to awaken! The monsters' power is real! They may conquer the island and destroy their foes! That day may come soon! Now, go to the mountain tower! Fly like a bird! Hoot! Hoot!
+// after dungeon 6 on the mountain entry
+owl_7_1 Hoot hoot! Your path is not easy, but you are almost there. Go east. The Wind Fish is getting restless.
+
+// after saving marin
+owl_8_0 Hoot! That girl sang her song in front of the Egg! Her 'Ballad of the Wind Fish' is a song of awakening! Did she actually intend to wake the Wind Fish?! The next Sirens' Instrument is in the west. Play your melodies so the unliving stones might hear! Show your courage! The Wind Fish waits for you! Hoot!
+
+// after opening the egg
+owl_9_0 The time has come... The Wind Fish awaits... Enter the Egg... Hoot! Hoot!
+
+owl_final Hoot! Young lad, I mean... [NAME], the hero! You have defeated the Nightmares! You have proven your wisdom, courage and power! ... ... ... ... As part of the Wind Fish's spirit, I am the guardian of his dream world... But one day, the Nightmares entered the dream and began wreaking havoc. Then you, [NAME], came to rescue the island... I have always trusted in your courage to turn back the Nightmares. Thank you, [NAME]... My work is done... The Wind Fish will wake soon. Good bye...Hoot!
+
+
+
+// raccoon in the forest
+raccoon_0 As a raccoon, my nose is verrry sensitive, ta stuff like dust and powder...
+raccoon_1 Heh heh heh ho! You're goin' ta be lost, thanks to me!  Heh heh!
+
+dog GRRRR...
+
+desert_bone_0 Ahhh... Yess... That dust was so refreshing... For that, I'll tell you a hint! Use a Bomb in a place where the sand swallows you... There is a treat on the other side of the wall... Bye!
+
+// chicken dude in the mountains
+chicken_dude_0 Chickens these days don't have the fighting spirit they used to! In the old days, they could fly, flap flap! But now, see? Cluck cluck!
+chicken_dude_1 Wow! Amazing! That rooster is actually flying! It's just like I said, eh? Have you tried to hold him over your head? Cluck Cluck!
+chicken_dude_2 Wooo! Finally! This flying rooster is the greatest!
+
+// hidden npc that trades the boomerang
+npc_hidden_0 I found a good item washed up on the beach... I'll trade it to you for what you have in your B Button...
+npc_hidden_1 Okay, let's do it! When you don't want the Boomerang anymore, come back!
+npc_hidden_2 Oh, yeah, uh... okay, whatever.
+npc_hidden_3 Give me back the Boomerang, I beg you! I'll return the item you gave to me!
+npc_hidden_4 The item came back to you. You returned the Boomerang.
+npc_hidden_5 Ah... Don't give me that item... How about something else?
+
+
+// bat in cave
+npcBat_Intro Hey, Kid! You woke me up from a fine nap!! ...Thanks a lot!\nBut now, I'll get my revenge!\nAre you ready?!
+npcBat_End Heh Heh Heh! You deserve it! Now look at all that junk you have to carry!\nHah! Take care! See you again!
+
+npcBat_Powder I'll let you carry more Magic Powder! He He! Are you ready?! 
+npcBat_Bombs Okay, I'll let you carry more Bombs! He He He! Are you ready?! 
+npcBat_Arrows Fine, I'll let you have more arrows! Heh Heh! Are you ready?! 
+
+bat_yes
+
+book Read this book?
+book_read Do you want to read this book?
+book_realy_read Do you really want to read it?
+
+book_yes YES
+book_no NO
+book_look Look
+book_dont Don't
+
+bookcase This is not a chest... What? You knew that? Okay.
+
+book1_0 'Selecting The Item That's Right For You'
+book1_1 'You can select your favorite item for the A and B Buttons on the Sub-Screen. Using different items, you can fight without a sword! Try many different things to find what's right for you!'
+
+book2_0 'Auto Map And Memo Guide Book'
+book2_1 'You can see an island map by pressing the SELECT Button. The dark parts of the map are the places you have not yet visited. Move the cursor and press the A Button to get more information about an area, or to replay the message you got there...'
+
+book3_0 'Secrets Of The Whirling Blade'
+book3_1 'The Whirling Blade technique has been handed down from generation by the family of the hero. To use it, hold down the Sword Button and build up your power. When you have enough, you can released the Button! Can you master this?'
+
+book4_0 'How To Handle Your Shield Like A Pro!'
+book4_1 'If you hold the Button down, you can defend yourself from enemy attacks, and you can flip some enemies, to... Besides the standard shield there is also a mirrored variety which can defend against beams!'
+
+book5_0 'Fun With Bombs'
+book5_1 'After you put a Bomb down, you can pick it up by pressing the Button again. You can then throw it by pushing the Button one more time. Did you know that?'
+
+book6_0 'The Properties Of Warp Holes'
+book6_1 'There are some Warp Holes on Koholint Island. You can warp to and fro using these holes. If you jump into the Warp Hole at which you arrived, you will go back to the next one in the sequence. You can only warp to a hole you have seen with your own eyes...'
+
+book7_0 'Atlas Of Koholint Island'
+book7_1 You can move the cursor and look up the name of a place... Do you want to look at this map?
+
+book8_0 'Dark Secrets And Mysteries Of Koholint'
+book8_1 Gasp! Wha-what's this! ... ... You can't read the tiny print without the aid of a magnifying glass...
+book8_2 Round and round, the passageways of the Egg...\n{° ° ³ ± ± ³ ° ³}{??}...Hmmmmmm, this book reeks of secrets...
+book8_3 Round and round, the passageways of the Egg...\n{± ³ ³ ± ³ ³ ± ³}{??}...Hmmmmmm, this book reeks of secrets...
+book8_4 Round and round, the passageways of the Egg...\n{° ³ ± ³ ° ³ ± ³}{??}...Hmmmmmm, this book reeks of secrets...
+book8_5 Round and round, the passageways of the Egg...\n{± ± ± ± ³ ³ ³ ³}{??}...Hmmmmmm, this book reeks of secrets...
+
+
+// ° ± ² ³
+// <- alt + 0176
+// -> 0177 
+// v 0178 
+
+// ° ± ² ³
+book9_1 New world of color under the 5 gravestones.\f{3³  4±  5³}{2°  1²   }\fTry with all your might. Open a new path! Whoever is worthy receives the power of color. I wonder what the world of color is?
+
+// phone in the house of ulrira
+ulrira_telephone 'BRRING! BRRING! BRRING! CLICK! Yeees! It's the Bucket Mouse! Thanks for calling! ...Well... CLICK!' ??? ... You must have dialed a wrong number...
+
+// ulrira dialog
+ulrira_0 'BRRING! BRRING! Hello! It's me, Ulrira! Ask me anything about the island! If you get lost, give me a call! Bye! CLICK!'
+ulrira_1 'BRRING! BRRING! Ulrira speaking! You know, there is a library in the village that might have some good information for you! Talk to you later! CLICK!'
+
+ulrira_2_0 'BRRING! BRRING! Hello, this is Ulrira! ...Well, most Moblins live in the Mysterious Forest, but some live in the caves of Tal Tal Heights... I hope that is what you wanted to know! CLICK!'
+ulrira_2_1 'BRRING! BRRING! Yes, this is Ulrira. The Indigestible Flowers of Goponga Swamp... Those flowers are BowWow's favorite. Why don't you take him for a walk there? CLICK!'
+
+ulrira_3_0 'BRRING! BRRING! Ulrira at your service! Oh? You should take BowWow home now, Madam MeowMeow would appreciate it! Bye! CLICK!'
+ulrira_3_1 'BRRING! BRRING! Hi, it's Ulrira! ...Have you met everyone on the island? There's a man named Richard who lives in Pothole Field, southeast of the village. Why not pay him a visit? That's all I can tell you for now! Bye! CLICK!'
+ulrira_3_2 'BRRING! BRRING! Old man Ulrira here! ...Do you like bananas? Try talking to people in the village again! Bye! CLICK!'
+
+ulrira_leaf_0 'BRRING! BRRING! Ya, it's Ulrira! You haven't found the 5 Golden Leaves? Keep an eye on the ones you have. Someone might try and take 'em! Bye! CLICK!'
+ulrira_leaf_1 'BRRING! BRRING! Ya, it's Ulrira! You haven't found the 5 Golden Leaves? Try bombing suspicious places. Hope that helps. Bye! CLICK!'
+ulrira_leaf_2 'BRRING! BRRING! Ya, it's Ulrira! You haven't found the 5 Golden Leaves? Go scare that crow by the castle and see if that helps! Bye! CLICK!'
+ulrira_shovel 'BRRING! BRRING! Ulrira here! ... Shovel... Did you purchase a shovel? You may find something if you dig here and there! Bye! CLICK!'
+
+ulrira_3_3 'BRRING! BRRING! Ya, it's Ulrira! The cave in the Ukuku Prairie is the key! Yes, I mean the key cave, no pun intended. Bye! CLICK!'
+
+ulrira_4_0 'BRRING! BRRING! Hi, this is Ulrira! In the Yarna Desert, which is located in the southeast of the island, you will find something called the Angler Key. Hmmm... How much more obvious do I have to be? Bye! CLICK!'
+ulrira_4_1 'BRRING! BRRING! This is Ulrira! Oh, I heard from grandma that there is something hidden behind the falls in the Tal Tal Mountains. Does that help? Bye! CLICK!'
+
+ulrira_5_0 'BRRING! BRRING! Hi, it's Ulrira! The Catfish's mouth is wide open? It sounds like a great place to dive! Bye! CLICK!'
+
+ulrira_6_0 'BRRING! BRRING! Ulrira here! ... Have you been to the Face Shrine? It is north of Animal Village. That is a very interesting ruin... CLICK!'
+
+ulrira_7_0 'BRRING! BRRING! Hi, it's Ulrira! Have you heard of the Flying Rooster of Mabe Village? In the good old days, it used to give us rides if we held it above our heads... Now it is lying under the Weathercock... Is that useful for you? I hope so! Bye! CLICK!'
+ulrira_7_1 'BRRING! BRRING! Hi, it's Ulrira! You are doing great! Your efforts will end soon... By the way, have you visited the Hen House on the mountain? There is a cave nearby with something important in it. Bye! CLICK!'
+ulrira_7_2 'BRRING! BRRING! Ulrira here... Yes, when I was just a lad, I recall seeing a high tower in the mountains! You should go there! Is that helpful for you? Bye! CLICK!'
+
+ulrira_8_0 'BRRING! BRRING! Hi, it's Ulrira! The head of the turtle is in your way? Put life into it and it will move! It's true! True! Bye! CLICK!'
+ulrira_8_1 'BRRING! BRRING! Ulrira here! ... Go for it! You're almost there! I'm pulling for you! Bye! CLICK!'
+
+ulrira_9_0 'BRRING! BRRING! Hello, this is Ulrira speaking! [NAME], it's time for you to face the Egg on Mt. Tamaranch! Be careful, [NAME]! Bye! CLICK!'
+ulrira_9_1 'BRRING! BRRING! This is Ulrira! You're lost in the Egg? Hmmmm. No sir, I can't help you on that one. How about the library? And hey, don't stop calling me because I didn't know one little answer! CLICK!'
+
+ulrira_wife 'BRRING! BRRING! Ya, it's Ulrira! My wife went to the Animal Village and left me all alone. Can you tell her to come home as soon as she is done cleaning? Bye! CLICK!'
+ulrira_ghost 'BRRING! BRRING! This is Ulrira! Now you're being haunted by a ghost?! Well, how about taking him where he wants to go? Bye! CLICK!'
+ulrira_mamu 'BRRING! BRRING! Yeah, this is Ulrira! You are starting to like music, eh? Well, a frog named Mamu, who lives in the Signpost Maze, might know some new songs, but he charges a lot to play them! Bye! CLICK!'
+
+// TODO: not sure when this is shown in the game
+ulrira_seashells 'BRRING! BRRING! Ulrira speaking! Are your enemies too strong for you? In that case, you better collect all the Seashells... Just believe in yourself and do your best! CLICK!'
+
+
+// dungeon intro
+dungeon_1 Level 1--\n     Tail Cave
+dungeon_2 Level 2--\n     Bottle Grotto
+dungeon_3 Level 3--\n     Key Cavern
+dungeon_4 Level 4--\n     Angler's Tunnel
+dungeon_5 Level 5--\n     Catfish's Maw
+dungeon_6 Level 6--\n     Face Shrine
+dungeon_7 Level 7--\n     Eagle's Tower
+dungeon_8 Level 8--\n     Turtle Rock
+
+beak_nop This owl statue is trying to say something, but you can't understand it because it has no beak.
+
+beak_d1_1 Turn aside the spined ones with a shield...
+beak_d1_2 If there is a door that you can't open, move a stone block.
+
+
+// shrine
+shrine_dark ?? There is a picture carved on the wall, but you can't see it because it's too dark in here...
+shrine_message TO THE FINDER... THE ISLE OF KOHOLINT, IS BUT AN ILLUSION... HUMAN, MONSTER, SEA, SKY... A SCENE ON THE LID OF A SLEEPER'S EYE... AWAKE THE DREAMER, AND KOHOLINT WILL VANISH MUCH LIKE A BUBBLE ON A NEEDLE... CAST-AWAY, YOU SHOULD KNOW THE TRUTH! ... ... ... ... What?  Illusion?
+
+
+// dungeon two
+beak_d2_1 Part of the floor is raised. Tap the blue crystal.
+beak_d2_2 Make every block design the same. A new path will open.
+beak_d2_3 First, defeat the imprisoned Pols Voice, Last, Stalfos...
+
+// genie
+d2_boss_0 HO HO HO! I'm your bad guy this time!! HO HO HO!
+d2_boss_1 NYAH NYAH! You can't hurt me as long as I have my bottle!
+d2_boss_2 . . . .! I can't move!\nBut I am still all right. Your little sword won't break this bottle!
+d2_boss_3 Waaaah! You- you broke my bottle! Why, you... You make me hopping mad!!!
+
+// dungeon three
+beak_d3_1 Far away...\nDo not fear, dash and fly!
+beak_d3_2 To defeat the black monster with the hard shell, feed him something explosive.
+beak_d3_3 Poke suspicious parts of the wall with your sword and listen to the sounds it makes.
+
+d3_boss {NEENER NEENER!}{You can't find me!}{NYAH NYAH!}
+
+bow_wow_cave_entry Ennh? Who's this suspicious looking runt?!\nOkay boys, let's get ridda him!
+bow_wow_cave_boss You must be an assassin sent by Madam MeowMeow to rescue the mutt! You came here to get me, but it is I who will get you!!
+bow_wow_cave_bw You've saved BowWow! What a fearsome beast!
+
+castle_monkey_hunger Chi-kiita! Chi-kiita! Kiki the monkey! Hungry! Kiki the monkey!
+castle_monkey_bowwow Kiiiki! What?! All right, mutt! Let's battle!!
+
+castle_monkey_banana {¤!    ¤!}{Oooh!  Oooh!}{Give to Kiki!?}
+castle_monkey_banana_yes {¤!    ¤!}{Oooh! Ooh! Kiki!}{Monkeys!  Come!}{Repay him! Kiki!}
+castle_monkey_done {Monkey business!}{Done!  Bye bye!}{Oooh!  Kiki!}
+
+// dungeon four
+beak_d4_1 The glint of the tile will be your guide...
+
+d4_nightmare {BLOOOP! BLOOOP!  }{GLUB!  GLUB!   }{OGGGH!  FOOOOD!}{BLOOOOP!  GLUB!   }
+
+// dungeon five
+beak_d5_1 If you can't destroy a skeleton with your sword, try using a bomb.
+beak_d5_2 Dive under where torchlight beams do cross...
+
+master_stalfos_0 Arrgh! I can't beat you! I'm outta here!
+master_stalfos_1 Gulp! You found me!\nYou're a real pesky kid, you know that?!
+master_stalfos_2 You again?! You keep going and going... I can't outlast you!\nAll right, let's do it!
+master_stalfos_3 'I've got what was inside this box. Come and get it, if you can!' Master µ
+
+slime_eel_0 Ssso...you are the outsssider, come to wake the Wind Fisssh... KEEE-HEE-HEEEH!\nI shall eat you!
+slime_eel_1 TSSSK, TSSSK! You don't ssseem to know what kind of island thisss iss... KEEE-HEEE-HEEE! What a fool... KEE-HEE-HEH!!
+
+// dungeon six
+beak_d6_1 Enter the space where the eyes have walls...
+beak_d6_2 Hop on top of the crystals to move forward.
+beak_d6_3 To open a treasure chest, use the pots around it.
+
+facade_opening Hey dummy! Need a hint? My weak point is... !! Whoops! There I go, talking too much again...
+facade_death Okay, listen up! If the Wind Fish wakes up, everything on this island will be gone forever! And I do mean... EVERYTHING!
+
+// dungeon seven
+grim_creeper_enter Hey runt! You think you can take me?! All right boys, get this punk out of my face!
+grim_creeper_1 Ha! That's all you've got?! Get ready for THIS!
+grim_creeper_2 You dirty rat! You k-k-k...beat my brothers! You'll pay!! I'll never forget you!
+grim_creeper_3 BAH! I'm not going to hold back! I'm going to make you wish you were never born!!
+grim_creeper_4 My energy... gone...I...lost! But you will be lost too, if the Wind Fish wakes! Same as me...you ...are...in... his...dream...
+
+beak_d7_1 Jump off the floor above to reach the chest on the table.
+beak_d7_2 The riddle is solved when the pillars fall!
+beak_d7_3 If you can't go over the poles, try throwing things you have in your hands.
+
+// dungeon eight
+beak_d8_1 To defeat the monsters who hold the key, attack them from a higher place.
+beak_d8_2 If the statue looks strange, shoot it with the bow.
+beak_d8_3 Fill all the holes with the rock that rolls, this (´) is the key!
+
+ice_block_message Brrrr... This is a block of solid ice! It's very cold!
+
+hot_head_0 CRACKLE-FWOOOSH! You're finished! I will never let you play the Instruments of the Sirens!!
+hot_head_1 C-C-CRACKLE! Why did you come here? If it weren't for you, nothing would have to change! You cannot wake the Wind Fish! Remember, you... too...are in... ...the dream...
+
+// color dungeon
+grave_locked If you have no courage, then you have no strength. Gravestones won't move for cowards.
+
+beak_dc_1 Here is your clue. Make all the red blue.
+
+stone_hinox What a greedy fool! You want more power?! A buffoon like you might as well give up and go home!
+
+giant_buzz_blob_enter BOO! I am no weakling! Your pitiful sword is no match for me!
+giant_buzz_blob_sword You fool! Your sword won't work! Try something else!
+
+// is this only shown on the normal gameboy?
+// I am sorry, but this is the Color Dungeon. Only those with the power of color may enter. If you can tell who wears red and who wears blue, you may enter. Farewell.
+npc_color_0 Our colors are never the same! If I am red, he is blue! If he is red, I am blue! What color is my cloth?
+npc_color_1 No,  no. Take a closer look and try again.
+npc_color_2 Don't tell anyone.
+npc_color_3 The fairy queen is waiting for you.
+npc_color_4 Do you have the powder?\nIf not, you must go back.
+
+choice_Red Red
+choice_Blue Blue
+
+hardhit_beetle_0 Blue is safe. Yellow is caution. Red is danger.
+hardhit_beetle_1 Blue. Start over. Yellow is caution. Red is danger.
+hardhit_beetle_2 Yellow is caution. Red is danger, Take your time.
+
+choice_RED RED
+choice_BLUE BLUE
+
+color_fairy_0 Welcome, [NAME]. I admire you for coming this far. I will give you the power of color. If you want offense, choose red. If you want defense choose blue. Which power do you want?
+color_fairy_1 Red for offense, blue for defense. Which do you choose?  
+color_fairy_2 Are you sure?
+color_fairy_3 Relax and close your eyes.
+color_fairy_4 I will now take you out.
+
+cloak_blue You've got the Blue Clothes! Your damage will be reduced by half!
+cloak_red You've got the Red Clothes! Your body is full of energy!
+
+// desert
+desertLanmola Annoyance! You are only getting in the way!
+
+// shell mansion
+shell_mansion_0 I am the spirit of the mansion. I have been waiting for someone to overcome the darkness. Find all the secret shells and go through the gate to receive the ultimate sword!
+shell_mansion_1 Hmmm. No response. You must not have enough shells.
+shell_mansion_2 My job here is finished.
+
+npc_hippo_0 Go away!
+npc_hippo_1 Quit it!
+npc_hippo_2 Leave me alone! I'm trying to sit still so Schule can paint my portrait!
+
+npc_painter_0 Ya, I am Schule Donavitch! Zee mermaid statue by zee bay iz my masterpiece! ... To tell you zee truth, zis werk iz not complete! Zee art, it'z... difficult for you to grasp, iz it not?
+npc_painter_1 Iz zat zee Mermaid scale? I can't use it now. I have to werk on zis drawing. You should go finish zee mermaid statue for me.
+npc_painter_2 Ach! Vat are you looking at vith zat magnifying lens? Stop it at vonce!
+
+// photo house
+photo_book 'The Travels of [NAME]' Do you want to look at your album?
+photo_book_text Which picture would you like to see? Use + to select, then press the A Button!
+
+// entering with a follower
+photo_mouse_follower See me later, when you're alone!
+
+photo_left_11 11 shots left! What kind of picture should I take?
+photo_left_10 10 shots left! What kind of picture should I take?
+photo_left_9 9 shots left! What kind of picture should I take?
+photo_left_8 8 shots left! What kind of picture should I take?
+photo_left_7 7 shots left! What kind of picture should I take?
+photo_left_6 6 shots left! What kind of picture should I take?
+photo_left_5 5 shots left! What kind of picture should I take?
+photo_left_4 4 shots left! What kind of picture should I take?
+photo_left_3 3 shots left! What kind of picture should I take?
+photo_left_2 2 shots left! What kind of picture should I take?
+photo_left_1 1 shots left! What kind of picture should I take?
+photo_left_0 Oh no! You're out of film! Don't forget to look at your album!
+
+
+// photo sequence photo house
+photo_01_0 I just LOVE to take pictures. Will you let me take your picture?
+photo_01_1 Go to the back of the room and stand in front of the screen.
+photo_01_2 I'll call this 'Here Stands A Brave Man.' Say cheese!
+photo_01_3 What's your name, young man? [NAME]? Well here's your album, [NAME]. Give it a look before you leave!
+photo_01_4 Let's see if we can fill that album!
+photo_01_5 Let's take a picture!
+photo_01_6 No picture?!\nAre you pullin' my leg?
+photo_01_7 What a bummer!
+photo_01_8 Beautiful! I'll call this 'Game Over.'
+photo_01_9 Hey! I haven't taken your picture yet! Go back and stand in front of the screen!
+
+// photo sequence ulrira house
+photo_02_0 Hi! It's me, the photographer! You seem curious about Grandpa Ulrira.
+photo_02_1 I'll call this '[NAME] Discovers Ulrira's Secret!'
+
+// photo sequences BowWow
+photo_03_0 Hey, that looks great! I'll call it '[NAME] Plays With BowWow!' Now get closer to BowWow!
+photo_03_1 Grrrr!
+photo_03_2 [NAME], get closer!
+photo_03_3 Grrrr! Grrrr!!
+photo_03_4 Grrrr! Grrrr!! GRRRR!
+photo_03_5 Much closer! OK, I'm ready. Smile!
+
+// photo sequences castle
+photo_05_0 Hi, [NAME]. You know I love to take pictures. Wouldn't this old castle make a great photo?
+photo_05_1 Nothing yet?! I grow tired of waiting. I want those Golden Leaves delivered soon! Courage like this deserves a photo, don't you think?
+photo_05_2 Go ahead and take a picture of me. Any angle you like!
+photo_05_3 I'm not afraid. I just decided to wait at home.
+
+// photo sequences grave
+photo_06_0 Ah how I love pictures. Hey, [NAME]! What are you doing here?
+photo_06_1 You want to know about that ghost? I'll bet he's happy thanks to you. Are you ready for a picture?
+photo_06_2 I'll call this 'I Was Very Afraid.' Smile!
+
+// photo sequences marin cliff
+marin_cliff_0 This is my first walk with you, [NAME].
+marin_cliff_1 . . . . .
+marin_cliff_2 This cliff will be our secret place. 
+marin_cliff_3 Aren't you going to say anything?
+marin_cliff_4 Oh how I love pictures! Why don't you take a picture when no one is around?\nYou can call it . . .
+marin_cliff_5 I'll go develop this. Come see it later, OK?
+
+// photo sequences fountain
+photo_08_0 Hi! I'm the photographer! What a great photo moment! I'll call this 'Heads Up!'
+photo_08_1 Ohh! I'm sorry! Are you okay?! [NAME]?
+
+// photo sequences weather bird
+photo_09_0 Hey, Marin and [NAME]! Are you taking pictures? You should take pictures of everyone, including me.
+photo_09_1 I use this to take pictures. Are you ready? Say 'mushroom!'
+photo_09_2 OK, I'm done. I'll go home now.
+
+// photo sequences fisher
+photo_10_0 I have a feelin' that I'll catch a big fish again.
+photo_10_1 WHOA! That's a big one! Hey, photo guy! Can you take a picture of this?
+photo_10_2 Hey! Be more careful next time!
+
+// photo sequences zora
+photo_11_0 Hey, you can see me?! You must have a magnifying glass. I'm not a trouble maker. I just want to live in peace.
+photo_11_1 Hi there! It's me, the photographer! You say Zora is in the house? I HAVE to take a picture of that. I'll call it 'I Found Zora.'
+
+// photo sequences mountain
+photo_12_0 Hey, this represents your adventures perfectly!
+photo_12_1 I'll call this one 'Close Call.' Hmm.
+photo_12_2 I'm too close.
+photo_12_3 I should back up.
+photo_12_4 Aaaaaah!
+
+// map
+map_tal_tal Tal Tal Mountain Range
+map_wind_fishs_egg Wind Fish's Egg
+map_mt_tamaranch Mt. Tamaranch
+map_hen_house Hen House
+map_telephone_booth Telephone Booth
+map_goponga_swamp Goponga Swamp
+map_tal_tal_heights Tal Tal Heights
+map_weird_mr_write Weird Mr. Write
+map_photo_both Step right up and get your souvenir photo!
+map_raft_shop Raft Shop
+map_mysterious_woods Mysterious Woods
+map_koholint_prairie Koholint Prairie
+map_crazy_tracy Crazy Tracy's\nHealth Spa
+map_tabahl_wasteland Tabahl Wasteland
+map_kanalet_castle Kanalet Castle
+map_rapids_ride Rapids Ride
+map_witchs_hut Witch's Hut
+map_cementry Cemetery
+map_fishing_pond Fishing Pond
+map_quadruplets_house Quadruplet's House
+map_dream_shrine Dream Shrine
+map_ukuku_prairie Ukuku Prairie
+map_seashell_mansion Seashell Mansion
+map_face_shrine Face Shrine
+map_mabe_village Mabe Village
+map_town_tool_shop Town Tool Shop
+map_madam_meow Madam MeowMeow's House\nBeware of Dog!
+map_marin_tarin Marin and Tarin's House
+map_village_library Village Library
+map_old_man_house Old Man Ulrira's House
+map_trendy_game Trendy Game
+map_south_village South of the Village
+map_signpost_maze Signpost Maze
+map_pothole_field Pothole Field
+map_maraths_bay Martha's Bay
+map_animal_village Animal Village
+map_yarna_desert Yarna Desert
+map_richards_villa Richard's Villa
+map_toronbo_shores Toronbo Shores
+map_banana_house Sale's House O'Bananas
+map_bay_east East of the Bay
+map_house_bay House By The Bay
+
+
+map_level_1 Level 1--\n     Tail Cave
+map_level_2 Level 2--\n     Bottle Grotto
+map_level_3 Level 3--\n     Key Cavern
+map_level_4 Level 4--\n     Angler's Tunnel
+map_level_5 Level 5--\n     Catfish's Maw
+map_level_6 Level 6--\n     Face Shrine
+map_level_7 Level 7--\n     Eagle's Tower
+map_level_8 Level 8--\n     Turtle Rock
+
+
+final_boss We were born of nightmares... To take over this world, we made the Wind Fish sleep endlessly! If the Wind Fish doesn't wake up, this island will never disappear! We would have been the masters of this place... But you had to come here and disrupt our plans! Heh heh! You can never defeat us!!! Let's rumble!
+
+final_windfish ... ... ... ...  ... ... ... ... I AM THE WIND FISH... LONG HAS BEEN MY SLUMBER... IN MY DREAMS... AN EGG APPEARED AND WAS SURROUNDED BY AN ISLAND, WITH PEOPLE, ANIMALS, AN ENTIRE WORLD! ... ... ... ... BUT, VERILY, IT BE THE NATURE OF DREAMS TO END! WHEN I DOST AWAKEN, KOHOLINT WILL BE GONE... ONLY THE MEMORY OF THIS DREAM LAND WILL EXIST IN THE WAKING WORLD... SOMEDAY, THOU MAY RECALL THIS ISLAND... THAT MEMORY MUST BE THE REAL DREAM WORLD... ... ... ... ... COME, [NAME]... LET US AWAKEN... TOGETHER!!
+final_instruments PLAY THE EIGHT INSTRUMENTS! PLAY THE SONG OF AWAKENING!!
+
+// credits
+// 1998
+credits_0 1998 STAFF
+
+credits_1 SUPERVISOR
+credits_1_0 TAKASHI TEZUKA
+
+credits_2 DIRECTOR
+credits_2_0 YOSINORI TUTIYAMA
+
+credits_3 SCRIPT WRITER
+credits_3_0 NOBUO MATSUMIYA
+
+credits_4 PROGRAMMER
+credits_4_0 EIJI NOTO
+credits_4_1 KIYOSHI KODA
+credits_4_2 SIGEHIRO KASAMATU
+
+credits_5 CHARACTER DESIGNER
+credits_5_0 MIKIO MISHIMA
+credits_5_1 KYOKO KIMURA
+
+credits_6 SOUND COMPOSER
+credits_6_0 YUICHI OZAKI
+
+credits_7 ART WORK
+credits_7_0 KEIKO IZAWA
+
+credits_8 TECHNICAL SUPPORT
+credits_8_0 N KOGANEZAWA
+
+credits_9 ENGLISH SCRIPT
+credits_9_0 JIM WORNELL
+credits_9_1 KEIKO TAMURA
+credits_9_2 TAMAYO ITO
+
+credits_10 SPECIAL THANKS TO
+credits_10_0 AKIYA SAKAMOTO
+credits_10_1 R&D2 DEBUG STAFF
+
+credits_11 DEBUG STAFF
+credits_11_0 SUPER MARIO CLUB
+
+// 1993
+credits_12 1993 STAFF
+
+credits_13 DIRECTOR
+credits_13_0 TAKASHI TEZUKA
+
+credits_14 DUNGEON DESIGNER
+credits_14_0 YASUHISA YAMAMURA
+
+credits_15 SCRIPT WRITER
+credits_15_0 KENSUKE TANABE
+credits_15_1 YOSHIAKI KOIZUMI
+
+credits_16 PROGRAMMER
+credits_16_0 KAZUAKI MORITA
+credits_16_1 TAKAMITSU KUZUHARA
+
+credits_17 CHARACTER DESIGNER
+credits_17_0 MASANAO ARIMOTO
+credits_17_1 SHIGEFUMI HINO
+
+credits_18 SOUND COMPOSER
+credits_18_0 KAZUMI TOTAKA
+credits_18_1 MINAKO HAMANO
+credits_18_2 KOZUE ISHIKAWA
+
+credits_19 ILLUSTRATOR
+credits_19_0 YOUICHI KOTABE
+
+credits_20 ENGLISH SCRIPT
+credits_20_0 DAN OWSEN
+
+credits_21 SPECIAL THANKS TO
+credits_21_0 TOSHIHIKO NAKAGO
+credits_21_1 KOJI KONDO
+credits_21_2 TOMOAKI KUROUME
+credits_21_3 MASAICHI OKUMURA
+credits_21_4 KANAE WADA
+
+credits_22 PRODUCER
+credits_22_0 SHIGERU MIYAMOTO
+
+credits_23 EXECUTIVE PRODUCER
+credits_23_0 HIROSHI YAMAUCHI
+
+credits_24 
+credits_24_0 
+
+credits_25 
+credits_25_0 THE END

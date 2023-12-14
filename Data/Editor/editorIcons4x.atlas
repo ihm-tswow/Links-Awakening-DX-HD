@@ -1,0 +1,39 @@
+1
+4
+editor 2d mode:176,0,16,16,0,0
+editor bed:87,2,8,11,0,0
+editor color shift:144,0,16,16,0,0
+editor compass sound:16,16,16,16,0,0
+editor dialog box:112,2,9,11,0,0
+editor door:32,16,16,16,0,0
+editor dungeon:128,0,16,16,0,0
+editor dungeon blacker:192,0,16,16,0,0
+editor egg teleport:32,0,16,16,0,0
+editor enemy trigger:160,0,16,16,0,0
+editor floor:16,0,16,16,0,0
+editor grave trigger:160,16,16,16,0,0
+editor hit trigger:208,0,16,16,0,0
+editor intro:104,3,7,9,0,0
+editor item disabler:96,0,16,16,0,0
+editor jump:48,0,16,16,0,0
+editor key condition setter:144,16,16,16,0,0
+editor key setter:128,16,16,16,0,0
+editor kill trigger:160,16,16,16,0,0
+editor ladder:80,16,16,16,0,0
+editor ladder top:96,16,16,16,0,0
+editor light:112,16,16,16,0,0
+editor music:0,16,16,16,0,0
+editor object hider:208,16,16,16,0,0
+editor object respawner:224,0,16,16,0,0
+editor object spawner:64,0,16,16,0,0
+editor overworld:0,0,16,16,0,0
+editor position dialog:64,0,16,16,0,0
+editor room darkener:176,16,16,16,0,0
+editor script on touch:80,0,16,16,0,0
+editor shadow disabler:112,0,16,16,0,0
+editor shadow setter:80,5,7,7,0,0
+editor shore sound:16,16,16,16,0,0
+editor slow:64,16,16,16,0,0
+editor teleporter:32,0,16,16,0,0
+editor upper level:192,16,16,16,0,0
+editor water:48,16,16,16,0,0

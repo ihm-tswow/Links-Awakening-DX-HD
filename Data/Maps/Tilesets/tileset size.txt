@@ -1,0 +1,3 @@
+// this file can be used to set the size of tiles for tilesets that do not uses tiles that are 16x16
+//dungeon five.png:32
+//tileset0.png:48

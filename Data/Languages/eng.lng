@@ -1,0 +1,82 @@
+main_menu_select_header Player Select
+main_menu_bottom_header 
+main_menu_new_game New Game
+main_menu_settings Settings
+main_menu_copy Copy
+main_menu_erase Erase
+
+main_menu_delete_confirmation_header Erase Save?
+main_menu_delete_confirmation_header_yes Yes
+main_menu_delete_confirmation_header_no No
+
+main_menu_copy_confirmation_header Copy Save?
+main_menu_copy_confirmation_header_yes Yes
+main_menu_copy_confirmation_header_no No
+
+main_menu_copy_header Copy Save
+main_menu_copy_from From
+main_menu_copy_to To
+main_menu_copy_empty -Empty-
+main_menu_copy_arrow ±
+main_menu_copy_back Back
+
+new_game_menu_save_name YOUR NAME? 
+new_game_menu_back Back
+new_game_menu_start_game Start Game
+
+game_menu_header Menu
+game_menu_back_to_game Back to Game
+game_menu_settings Settings
+game_menu_exit_to_the_menu Exit to the Menu
+
+game_menu_exit_header Are you sure?
+game_menu_exit_no No
+game_menu_exit_yes Yes
+
+gameover_header GameOver
+gameover_continue Continue
+gameover_quit Quit
+
+settings_menu_header Settings
+settings_menu_game Game
+settings_menu_audio Audio
+settings_menu_controls Controls
+settings_menu_video Video
+settings_menu_back Back
+
+settings_audio_header Audio Settings
+settings_audio_music_volume Music Volume:
+settings_audio_effect_volume Effect Volume:
+
+settings_game_header Game Settings
+settings_game_language Language: English
+settings_game_change_language Change Language
+settings_game_autosave Autosave
+settings_game_change_smooth_camera Smooth Camera
+settings_game_fullscreen_windowed Borderless Windowed
+settings_game_fullscreen_mode Fullscreen
+
+settings_controls_header Control Settings
+settings_controls_keyboad Keyboard
+settings_controls_gamepad Gamepad
+settings_controls_Left Left
+settings_controls_Right Right
+settings_controls_Up Up
+settings_controls_Down Down
+settings_controls_A A
+settings_controls_B B
+settings_controls_X X
+settings_controls_Y Y
+settings_controls_Select Select
+settings_controls_Start Start
+settings_controls_reset Reset
+
+settings_graphics_header Video Settings
+settings_graphics_game_scale Game Scale:
+settings_graphics_ui_scale UI Scale:
+settings_graphics_shadow Shadows
+settings_graphics_fps_lock FPS Lock
+
+map_overlay_close Close
+overlay_map Map
+overlay_inventory Inventory
