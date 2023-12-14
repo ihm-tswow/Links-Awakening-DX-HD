@@ -33,6 +33,11 @@
     <PackageReference Include="MonoGame.Framework.WindowsDX" Version="3.8.1.303" />
     <PackageReference Include="System.Resources.Extensions" Version="8.0.0" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\**">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
     <PropertyGroup>
     <StartupObject>ProjectZ.Program</StartupObject>
     <AssemblyName>Link's Awakening DX HD</AssemblyName>
@@ -43,5 +48,20 @@
   <Target Name="RestoreDotnetTools" BeforeTargets="Restore">
     <Message Text="Restoring dotnet tools" Importance="High" />
     <Exec Command="dotnet tool restore" />
+  </Target>
+  <Target Name="RemovePreviousPublish" BeforeTargets="Build">
+    <RemoveDir Directories="$(PublishDir)"></RemoveDir>
+  </Target>
+  <Target Name="CleanPublish" AfterTargets="Publish">
+    <Delete Files="$(PublishDir)/assimp.dll" />
+    <Delete Files="$(PublishDir)/ffmpeg.exe" />
+    <Delete Files="$(PublishDir)/ffprobe.exe" />
+    <Delete Files="$(PublishDir)/FreeImage.dll" />
+    <Delete Files="$(PublishDir)/freetype6.dll" />
+    <Delete Files="$(PublishDir)/libmojoshader_64.dll" />
+    <Delete Files="$(PublishDir)/Link's Awakening DX HD.dll.config" />
+    <Delete Files="$(PublishDir)/Link's Awakening DX HD.pdb" />
+    <Delete Files="$(PublishDir)/nvtt.dll" />
+    <Delete Files="$(PublishDir)/PVRTexLibWrapper.dll" />
   </Target>
 </Project>

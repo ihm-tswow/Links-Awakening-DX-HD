@@ -2,3 +2,5 @@ bin
 obj
 .vs
 Content/bin
+Publish
+Properties/PublishProfiles/FolderProfile.pubxml.user
