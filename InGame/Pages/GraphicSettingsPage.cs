@@ -8,6 +8,7 @@ namespace ProjectZ.InGame.Pages
 {
     class GraphicSettingsPage : InterfacePage
     {
+        private readonly InterfaceSlider _gameScaleSlider;
         private readonly InterfaceListLayout _bottomBar;
         private readonly InterfaceListLayout _toggleFullscreen;
 
@@ -25,14 +26,15 @@ namespace ProjectZ.InGame.Pages
 
             var contentLayout = new InterfaceListLayout { Size = new Point(width, (int)(height * Values.MenuContentSize)), Selectable = true, ContentAlignment = InterfaceElement.Gravities.Top };
 
-            contentLayout.AddElement(new InterfaceSlider(Resources.GameFont, "settings_graphics_game_scale",
+            _gameScaleSlider = new InterfaceSlider(Resources.GameFont, "settings_graphics_game_scale",
                 buttonWidth, new Point(1, 2), -1, 11, 1, GameSettings.GameScale + 1,
                 number =>
                 {
                     GameSettings.GameScale = number;
                     Game1.ScaleSettingChanged = true;
                 })
-            { SetString = number => GameSettings.GameScale == 11 ? "auto" : " x" + (number < 1 ? "1/" + (2 - number) : number.ToString()) });
+            { SetString = number => GameSettings.GameScale == 11 ? "auto" : " x" + (number < 1 ? "1/" + (2 - number) : number.ToString()) };
+            contentLayout.AddElement(_gameScaleSlider);
 
             //contentLayout.AddElement(_uiScaleSlider = new InterfaceSlider(Resources.GameFont, "settings_graphics_ui_scale",
             //    buttonWidth, new Point(1, 2), 1, Game1.ScreenScale + 1, 1, GameSettings.UiScale - 1,
@@ -92,6 +94,8 @@ namespace ProjectZ.InGame.Pages
 
             //UpdateScaleSlider();
 
+            UpdateGameScaleSlider();
+
             // close the page
             if (ControlHandler.ButtonPressed(CButtons.B))
                 Game1.UiPageManager.PopPage();
@@ -113,6 +117,12 @@ namespace ProjectZ.InGame.Pages
             var toggle = ((InterfaceToggle)_toggleFullscreen.Elements[1]);
             if (toggle.ToggleState != GameSettings.IsFullscreen)
                 toggle.SetToggle(GameSettings.IsFullscreen);
+        }
+
+        private void UpdateGameScaleSlider()
+        {
+            var currentScale = GameSettings.GameScale;
+            _gameScaleSlider.CurrentStep = currentScale + 1;
         }
 
         //private void UpdateScaleSlider()
