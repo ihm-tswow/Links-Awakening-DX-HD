@@ -6,6 +6,7 @@ using Microsoft.Xna.Framework.Graphics;
 using ProjectZ.Base;
 using ProjectZ.Base.UI;
 using ProjectZ.InGame.Controls;
+using ProjectZ.InGame.Interface;
 using ProjectZ.InGame.Overlay.Sequences;
 using ProjectZ.InGame.Pages;
 using ProjectZ.InGame.Things;
@@ -21,6 +22,12 @@ namespace ProjectZ.InGame.Overlay
         enum MenuState
         {
             None, Menu, Inventory, PhotoBook, GameSequence
+        }
+
+        enum GameScaleDirection: short
+        {
+            Smaller = -1, 
+            Bigger = 1
         }
 
         private MenuState _currentMenuState = MenuState.None;
@@ -133,6 +140,12 @@ namespace ProjectZ.InGame.Overlay
             if ((_currentMenuState == MenuState.None || _currentMenuState == MenuState.Inventory) &&
                 ControlHandler.ButtonPressed(CButtons.Select) && !DisableInventoryToggle && !_hideHud && !TextboxOverlay.IsOpen)
                 ToggleState(MenuState.Inventory);
+
+            // toggle map scale
+            if (_currentMenuState == MenuState.None && ControlHandler.ButtonPressed(CButtons.L))
+                UpdateGameScale(GameScaleDirection.Smaller);
+            if (_currentMenuState == MenuState.None && ControlHandler.ButtonPressed(CButtons.R))
+                UpdateGameScale(GameScaleDirection.Bigger);
 
             if (_currentMenuState == MenuState.None)
             {
@@ -455,6 +468,16 @@ namespace ProjectZ.InGame.Overlay
             _fadeDir = 1;
             _lastMenuState = _currentMenuState;
             _currentMenuState = newState;
+        }
+
+        private static void UpdateGameScale(GameScaleDirection scaleDirection)
+        {
+            var newScale = GameSettings.GameScale + (short)scaleDirection;
+            if (newScale >= -1 && newScale <= 11)
+            {
+                GameSettings.GameScale = newScale;
+                Game1.ScaleSettingChanged = true;
+            }
         }
 
         public void CloseOverlay()

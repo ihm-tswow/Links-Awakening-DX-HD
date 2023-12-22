@@ -69,6 +69,8 @@ settings_controls_X X
 settings_controls_Y Y
 settings_controls_Select Select
 settings_controls_Start Start
+settings_controls_L L
+settings_controls_R R
 settings_controls_reset Reset
 
 settings_graphics_header Video Settings
