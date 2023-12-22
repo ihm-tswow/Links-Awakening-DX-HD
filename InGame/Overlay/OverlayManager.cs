@@ -143,9 +143,9 @@ namespace ProjectZ.InGame.Overlay
 
             // toggle map scale
             if (_currentMenuState == MenuState.None && ControlHandler.ButtonPressed(CButtons.L))
-                HandleGameScaleChanged(GameScaleDirection.Smaller);
+                UpdateGameScale(GameScaleDirection.Smaller);
             if (_currentMenuState == MenuState.None && ControlHandler.ButtonPressed(CButtons.R))
-                HandleGameScaleChanged(GameScaleDirection.Bigger);
+                UpdateGameScale(GameScaleDirection.Bigger);
 
             if (_currentMenuState == MenuState.None)
             {
@@ -470,7 +470,7 @@ namespace ProjectZ.InGame.Overlay
             _currentMenuState = newState;
         }
 
-        private static void HandleGameScaleChanged(GameScaleDirection scaleDirection)
+        private static void UpdateGameScale(GameScaleDirection scaleDirection)
         {
             var newScale = GameSettings.GameScale + (short)scaleDirection;
             if (newScale >= -1 && newScale <= 11)
