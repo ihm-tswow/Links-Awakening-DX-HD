@@ -1,6 +1,6 @@
 # Links Awakening DX HD
 
-This is an **unaffiliated fork** off [Link's Awakening DX HD](https://linksawakeningdxhd.itch.io/links-awakening-dx-hd). Currently it's just slightly easier to build/publish than the itch.io version.
+This is an **UNAFFILIATED FORK** off [Link's Awakening DX HD](https://linksawakeningdxhd.itch.io/links-awakening-dx-hd). Currently it's just slightly easier to build/publish than the itch.io version.
 
 Check the [wiki](https://github.com/ihm-tswow/Links-Awakening-DX-HD/wiki) for a brief documentation of the in-game tools.
 
