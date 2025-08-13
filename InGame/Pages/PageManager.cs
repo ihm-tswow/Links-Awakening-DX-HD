@@ -61,6 +61,7 @@ namespace ProjectZ.InGame.Pages
             AddPage(new GameMenuPage(_width, _height));
             AddPage(new ExitGamePage(_width, _height));
             AddPage(new GameOverPage(_width, _height));
+            AddPage(new QuitGamePage(_width, _height));
         }
 
         public virtual void Update(GameTime gameTime)

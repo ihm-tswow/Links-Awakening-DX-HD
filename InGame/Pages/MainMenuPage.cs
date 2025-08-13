@@ -183,6 +183,19 @@ namespace ProjectZ.InGame.Pages
                         Game1.UiPageManager.ChangePage(typeof(SettingsPage));
                     }
                 });
+
+                var smallButtonLayout2 = new InterfaceGravityLayout { Size = new Point(smallButtonWidth, buttonHeight) };
+                smallButtonLayout2.AddElement(new InterfaceLabel("main_menu_quit") { Gravity = InterfaceElement.Gravities.Center });
+                _menuBottomBar.AddElement(new InterfaceButton
+                {
+                    Size = new Point(smallButtonWidth, buttonHeight),
+                    InsideElement = smallButtonLayout2,
+                    Margin = new Point(smallButtonMargin, 2),
+                    ClickFunction = element =>
+                    {
+                        Game1.UiPageManager.ChangePage(typeof(QuitGamePage));
+                    }
+                });
             }
 
             // main layout
